@@ -1,0 +1,224 @@
+/* global settings */
+$primary_color:#A65CF0;
+$primary_color_light: #C998FB;
+$primary_color_shade: #7033AC;
+$secondary_color: #FF862F;
+$secondary_color_light: #FFBD59;
+$secondary_color_shade:#BB370E;
+$pink_color_light:#F8EFFF;
+$pink_color_violet: #EBD1FF;
+$red_input_color: #FF6972;
+$green_input_color:#B8EC64;
+$gold_color:#D5B986;
+$white_color: #fff;
+$grey_color:#999999;
+$grey_color_light: #F7F7F7;
+$grey_color_medium: #EAEAEA;
+$grey_color_shade: #666666;
+$black: #333;
+$lime_color:#DAFFD1;
+$bone_color:#FFF5D1;
+
+.section {
+  padding: 70px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1320px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 26px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: $black;
+}
+.title-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: $black;
+
+}
+
+.primary-btn,
+.secondary-btn {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  border-radius: 10px;
+  transition: color .2s linear, background-color .2s linear;
+}
+.primary-btn {
+  max-width: 187px;
+  width: 100%;
+  height: 60px;
+  font-weight: 700;
+  color: $white_color;
+  background: $primary_color;
+  &:hover {
+    background: $primary_color_light;
+  }
+  &:focus-visible {
+    background: $primary_color_light;
+    border: 2px solid $primary_color_shade;
+  }
+  &:active {
+    background: $primary_color_shade;
+  }
+  &.disable {
+    color: $grey_color;
+    background: $grey_color_medium;
+    cursor: not-allowed;
+  }
+}
+.secondary-btn {
+  max-width: 128px;
+  width: 100%;
+  height: 54px;
+  border: 2px solid $primary_color;
+  font-weight: 600;
+  color: $primary_color;
+  transition: color .2s linear, background-color .2s linear, border-color .2s linear;
+  &:hover {
+    background: $primary_color;
+    color: $white_color;
+  }
+  &:focus-visible {
+    background: $primary_color_light;
+    border: 2px solid $primary_color;
+    color: $white_color;
+  }
+  &:active {
+    background: $primary_color_shade;
+    border-color: $primary_color_shade;
+    color: $white_color;
+  }
+}
+
+.header-top-link,
+.header-bottom-link,
+.another-links {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  transition: color .2s linear;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    right: 0;
+    width: calc(100% + 20px);
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: $pink_color_violet;
+    z-index: -1;
+    transition: opacity .2s linear, visibility .2s linear;
+  }
+  &:hover {
+    color: $primary_color;
+  }
+  &:focus-visible::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:active {
+    color: $primary_color_shade;
+  }
+}
+.header-top-link,
+.another-links {
+  font-size: 14px;
+  line-height: 100%;
+  color: $grey_color;
+  &:focus-visible {
+    color: $primary_color_shade;
+  }
+}
+.header-bottom-link {
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  &:focus-visible {
+    color: $black;
+  }
+}
+
+.property-name {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: $grey_color_shade;
+}
+
+.check {
+  max-width: max-content;
+  align-items: center;
+  cursor: pointer;
+  &:hover .check__text {
+    color: $primary_color;
+  }
+  &:hover .check__box{
+    border-color: $primary_color;
+  }
+  .check__input {
+    position: absolute;
+    appearance: none;
+    &:checked + .check__box{
+      background-color: $primary_color;
+      background-image: url(../img/check-big.svg);
+      background-repeat: no-repeat;
+      background-position: 2px 3px;
+      border-color: $primary_color;
+    }
+    &:focus-visible + .check__box{
+      border-color: $primary_color;
+    }
+    &:focus-visible + .check__text{
+      color: $primary_color;
+    }
+  }
+  .check__box {
+    margin-right: 12px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $grey_color;
+    border-radius: 2px;
+    transition: border-color .2s linear;
+  }
+  .check__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: $grey_color_shade;
+    transition: color .2s linear;
+  }
+}
