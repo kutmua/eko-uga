@@ -1,0 +1,32 @@
+.header {
+  .header__nav {
+    padding: 25px 0;
+    background-color: $--hedear_color;
+  }
+  .header__logo {
+    align-items: center;
+    justify-content: center;
+    img {
+      margin-right: 10px;
+      width: 60px;
+      height: 40px;
+    }
+    span {
+      @include font-settings (normal, 700, 18px, 25px, $--text_color);
+    }
+  }
+  .header__nav-list {
+    max-width: 700px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__phones-list {
+    padding-left: 15px;
+    .header__phones-list-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

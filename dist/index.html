@@ -4,43 +4,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="...">
+  <meta name="description" content="Эко-Юга. Компания по утилизации мусора в городе Краснодар.">
   <!-- favicons -->
-  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="img/favicons/site.webmanifest">
-  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons//favicon-16x16.png">
+  <link rel="manifest" href="img/favicons//site.webmanifest">
+  <link rel="mask-icon" href="img/favicons//safari-pinned-tab.svg" color="#ff5200">
+  <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
   <!-- fonts -->
-  <link rel="preload" href="fonts/.woff2" as="font">
-  <link rel="preload" href="fonts/.woff" as="font">
-  <link rel="preload" href="fonts/.woff2" as="font">
-  <link rel="preload" href="fonts/.woff" as="font">
-  <link rel="preload" href="fonts/.woff2" as="font">
-  <link rel="preload" href="fonts/.woff" as="font">
-  <link rel="preload" href="fonts/.woff2" as="font">
-  <link rel="preload" href="fonts/.woff" as="font">
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
 
   <!-- styles -->
-  <link rel="stylesheet" href="styles/normalize.min.css?_v=20221122170804">
-  <link rel="stylesheet" href="styles/style.min.css?_v=20221122170804">
-  <link rel="stylesheet" href="styles/media.min.css?_v=20221122170804">
-  <title>Главная</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css?_v=20221124202501">
+  <link rel="stylesheet" href="styles/normalize.min.css?_v=20221124202501">
+  <link rel="stylesheet" href="styles/style.min.css?_v=20221124202501">
+  <link rel="stylesheet" href="styles/media.min.css?_v=20221124202501">
+  <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
 <body>
   <header class="header">
-  <div class="container">
-  </div>
+  <nav class="header__nav navbar navbar-expand-lg fixed-top">
+    <div class="header__container container">
+      <a class="header__logo navbar-brand d-flex" href="#">
+        <img src="img/logo.png" alt="Логотип">
+        <span>
+          Эко-Юга
+        </span>
+      </a>
+
+      <button class="header__burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="headerNav">
+        <ul class="header__nav-list navbar-nav m-auto">
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link" href="#">Примеры работ</a>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link" href="#">Получить скидку</a>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link" href="#">Вид услуг</a>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link" href="#">Отзывы</a>
+          </li>
+        </ul>
+
+        <ul class="header__phones-list">
+          <li class="header__phones-list-item">
+            <a class="header__phones-list-link header-phone-link" href="tel:+79184187167" aria-label="Наш телефон">
+              + 7 (918) 418-71-67
+            </a>
+          </li>
+          <li class="header__phones-list-item">
+            <a class="header__phones-list-link header-phone-link" href="tel:+79996306966" aria-label="Наш телефон">
+              + 7 (999) 630-69-66
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
+
+  <section class="hero section">
+    <div class="hero__container container">
+      <div class="row">
+        <div class="col-12">
+          <div id="typed-strings">
+            <p>любые окна и двери</p>
+            <p>строительный мусор</p>
+            <p>бытовой мусор</p>
+            <p>старую мебель</p>
+          </div>
+          <h1 class="hero__title title text-center">
+            Утилизируем <strong id="typed"></strong>в Краснодаре, за собой уберем на 100%
+          </h1>
+
+          <p class="hero__heading text-center heading-small">Соседи не узнают, честно</p>
+
+          <strong class="hero__offer heading-small m-auto d-block text-center">-30% на первый заказ</strong>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
   <div class="container">
   </div>
 </footer>
 
+  <!-- Подключение скриптов -->
+
+<!-- main script -->
+<script src="js/bootstrap.bundle.min.js?_v=20221124202501"></script>
+<script src="js/typed.min.js?_v=20221124202501"></script>
+<script type="module" src="js/main.min.js?_v=20221124202501"></script>
+
+  <script>
+    const typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 150,
+      backSpeed: 100,
+      loop: true,
+      loopCount: Infinity,
+    });
+  </script>
 </body>
 </html>

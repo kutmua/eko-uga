@@ -1,8 +1,12 @@
+@import "../blocks-styles/mixins.scss";
 @import "../blocks-styles/fonts.scss";
 @import "../blocks-styles/reset.scss";
-@import "../blocks-styles/global-settings.scss";
+@import "../blocks-styles/vars.scss";
 /* ------------------------------ */
 /* Подлючение стилей */
 @import "../blocks-styles/header.scss";
+@import "../blocks-styles/hero.scss";
 
 @import "../blocks-styles/footer.scss";
+
+@import "../blocks-styles/global-settings.scss";
