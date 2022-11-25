@@ -1,0 +1,20 @@
+.discount {
+  background: rgba(0, 0, 0, .7) url(../img/discount-bg.webp);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  .discount__title {
+    color: $--white_color;
+  }
+  .discount__descr {
+    margin-bottom: 15px;
+    @include font-settings (normal, 400, 20px, normal,  $--white_color);
+  }
+  .discount__sub-descr {
+    margin-bottom: 15px;
+    display: block;
+    @include font-settings (normal, 400, 16px, normal,  $--white_color);
+  }
+}

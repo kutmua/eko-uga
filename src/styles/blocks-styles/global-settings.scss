@@ -23,13 +23,16 @@
 
 .title {
   margin-bottom: 26px;
-  @include font-settings (normal, 400, 36px, 50px,  $--hero_text_color);
+  text-align: center;
+  text-transform: uppercase;
+  @include font-settings (normal, 600, 36px, 50px,  $--hero_text_color);
 }
 
 .title-small {
   margin-bottom: 26px;
   text-align: center;
-  @include font-settings (normal, 400, 32px, normal,  $--text_color);
+  text-transform: uppercase;
+  @include font-settings (normal, 600, 32px, normal,  $--text_color);
 }
 
 .heading {
@@ -187,6 +190,10 @@
       }
       label {
         @include font-settings(normal, 400, 16px, normal, $--text_color);
+      }
+    }
+    .phone-container {
+      label {
         &::after {
           content: '*';
           color: #ff0000;
