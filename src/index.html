@@ -22,8 +22,7 @@
           </h1>
 
           <p class="hero__heading text-center heading-small">Соседи не узнают, честно</p>
-
-          <strong class="hero__offer heading-small m-auto d-block text-center">-30% на первый заказ</strong>
+          @@include('html-blocks/counter.html',{})
         </div>
       </div>
     </div>
@@ -32,15 +31,5 @@
 
   @@include('html-blocks/footer.html',{})
   @@include('html-blocks/scripts.html',{})
-
-  <script>
-    const typed = new Typed('#typed', {
-      stringsElement: '#typed-strings',
-      typeSpeed: 150,
-      backSpeed: 100,
-      loop: true,
-      loopCount: Infinity,
-    });
-  </script>
 </body>
 </html>

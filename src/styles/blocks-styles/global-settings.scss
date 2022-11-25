@@ -17,7 +17,7 @@
   display: grid;
 }
 
-.btn {
+.button {
   background-color: transparent;
   cursor: pointer;
 }
@@ -117,12 +117,140 @@
     background-color: $black;
   }
 }
+
 .header-phone-link {
   white-space: nowrap;
   @include font-settings (normal, 700, 18px, 25px, $--text_color);
   transition: color .2s linear, transform .2s linear, background-color .2s linear, box-shadow .2s linear;
+  &:hover {
+    color: $--hedear_phone_link_color;
+  }
 }
 
+
+.offer {
+  margin-bottom: 10px;
+  color: $--hero_text_color;
+  font-weight: 700;
+}
+
+.counter {
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  svg {
+    margin: 10px 0;
+    .digits {
+      fill: $--text_color;
+    }
+    .labels{
+      fill: $--hero_text_color;
+    }
+    .digits,
+    .labels {
+      text-anchor: middle;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  .counter__form-head {
+    padding: 10px 20px;
+    border-radius: 20px 20px 0 0;
+    background: rgb(223,89,89);
+    background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df5959",endColorstr="#fc0000",GradientType=1);
+    .counter__title {
+      @include font-settings(normal, 400, 16px, normal, $--counter_header_text);
+      text-align: center;
+    }
+  }
+  .counter__form-body {
+    .counter__form-input-container {
+      margin-bottom: 10px;
+      flex-direction: column;
+      input {
+        padding: 4px 10px;
+        border: 1px solid $--counter_input_border_color;
+        border-radius: 5px;
+        @include font-settings(normal, 400, 14px, normal, $--text_color);
+        transition: color .2s linear, box-shadow .2s linear, border-color .2s linear;
+        &:hover {
+          border-color:$--counter_input_focus_color;
+        }
+        &:focus-visible {
+          border-color:$--counter_input_focus_color;
+          -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+          box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        }
+      }
+      label {
+        @include font-settings(normal, 400, 16px, normal, $--text_color);
+        &::after {
+          content: '*';
+          color: #ff0000;
+        }
+      }
+    }
+    .counter__form-btn {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 58px;
+      border-radius: 5px;
+      background: rgb(223,89,89);
+      background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      @include font-settings(normal, 400, 18px, normal, $--counter_btn_text);
+      transition: background-color .2s linear, transform .2s linear;
+      &:hover,
+      &:focus-visible  {
+        transform: translateY(-2px);
+        background: rgb(223,89,89);
+        background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+        background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df5959",endColorstr="#460000",GradientType=1);
+      }
+      &:active {
+        background: rgb(223,89,89);
+        background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+        background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+        transform: translateY(0px);
+      }
+    }
+  }
+  .counter__form-footer,
+  .counter__form-body {
+    padding: 10px 15px;
+    background-color: $--counter_form_body_bg;
+  }
+  .counter__form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    .counter__form-footer-descr,
+    .counter__form-footer-link {
+      @include font-settings(normal, 400, 12px, normal, $--text_color);
+    }
+    .counter__form-footer-link {
+      text-decoration: underline;
+      transition: color .2s linear;
+      &:hover,
+      &:focus-visible {
+        color: #ff0000;
+      }
+      &:active {
+        color: $--text_color;
+      }
+    }
+  }
+}
 
 
 .header-top-link,
@@ -176,15 +304,6 @@
   &:focus-visible {
     color: $black;
   }
-}
-
-.property-name {
-  margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 130%;
-  color: $grey_color_shade;
 }
 
 .check {

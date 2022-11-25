@@ -28,9 +28,9 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
+    "gulp-typograf": "^4.0.3",
     "gulp-uglify-es": "^3.0.0",
     "gulp-version-number": "^0.2.4",
-    "gulp-typograf": "^4.0.3",
     "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.1.0",
     "sass": "^1.54.9"
