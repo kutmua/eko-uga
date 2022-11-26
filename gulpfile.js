@@ -125,7 +125,16 @@ const cssMinify = () => {
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
-      overrideBrowserslist: ["last 5 versions"]
+      overrideBrowserslist: ["last 5 versions"],
+      browsers: [
+				'Android >= 4',
+				'Chrome >= 20',
+				'Firefox >= 24',
+				'Explorer >= 11',
+				'iOS >= 6',
+				'Opera >= 12',
+				'Safari >= 6',
+			]
     }))
     .pipe(gulpIf(isProd, cleanCss()))
     .pipe(rename({
@@ -142,7 +151,16 @@ const cssLibraries = () => {
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
-      overrideBrowserslist: ["last 5 versions"]
+      overrideBrowserslist: ["last 5 versions"],
+      browsers: [
+				'Android >= 4',
+				'Chrome >= 20',
+				'Firefox >= 24',
+				'Explorer >= 11',
+				'iOS >= 6',
+				'Opera >= 12',
+				'Safari >= 6',
+			]
     }))
     .pipe(gulpIf(isProd, cleanCss()))
     .pipe(gulpIf(!isProd, sourcemaps.write()))
