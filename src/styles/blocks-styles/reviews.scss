@@ -1,0 +1,57 @@
+.reviews {
+  .reviews__wrapper {
+    // background-color: $--portfolio_bg_color;
+    background-image: radial-gradient(rgb(14, 77, 153) 0%, rgb(46, 43, 1) 100%);
+    .reviews-swiper {
+      position: relative;
+      overflow: hidden;
+      .reviews-swiper__slide {
+        padding: 50px 20px 100px 20px;
+        cursor: default;
+        .reviews-text {
+          margin: 0 auto;
+          margin-bottom: 30px;
+          max-width: 700px;
+          // @include font-settings (normal, 700, 28px, normal, $--text_color);
+          @include font-settings (normal, 700, 28px, normal, $--white_color);
+        }
+        .reviews-name {
+          text-transform: uppercase;
+        }
+        .reviews-city,
+        .reviews-name {
+          @include font-settings (normal, 400, 13px, normal, $--white_color);
+        }
+      }
+      .swiper-pagination-bullet {
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
+        height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));
+      }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: $--white_color;
+      }
+      .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 40px;
+      }
+      .reviews-swiper-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .reviews-swiper-btn-prev{
+        transform: rotate(180deg);
+        top: calc(50% - 20px);
+        left: 0;
+      }
+      .reviews-swiper-btn-next {
+        top: calc(50% - 20px);
+        right: 0;
+      }
+    }
+  }
+}
