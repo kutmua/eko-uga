@@ -8,9 +8,10 @@
     height: 50px;
   }
   .services__descr {
-    margin: 40px auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
     max-width: 730px;
-    @include font-settings (italic, 400, 18px, normal, $--text_color);
+    @include font-settings (italic, 600, 18px, normal, $--text_color);
     opacity: .8;
   }
   .services__card {
