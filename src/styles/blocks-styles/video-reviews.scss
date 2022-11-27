@@ -1,0 +1,16 @@
+.video-reviews.section {
+  padding: 0 0 50px 0;
+  .video-reviews__descr {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @include font-settings (italic, 600, 18px, normal,  $--text_color);
+    opacity: 0.8;
+  }
+  .video-container {
+    iframe {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
