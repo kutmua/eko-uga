@@ -1,0 +1,13 @@
+.area {
+  background-color: $--area_bg_color;
+  .area__descr {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    @include font-settings (italic, 600, 18px, normal,  $--text_color);
+    opacity: 0.8;
+  }
+  .area__bg-img {
+    width: 100px;
+    height: 100px;
+  }
+}
