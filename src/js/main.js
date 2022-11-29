@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
-  /* typed */
+    /* typed */
   const typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
     typeSpeed: 150,
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loopCount: Infinity,
   });
 
-  /* reviews-swiper */
+    /* reviews-swiper */
   const swiper = new Swiper('.reviews-swiper', {
     direction: 'horizontal',
 
@@ -25,4 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
   });
-});
+  });

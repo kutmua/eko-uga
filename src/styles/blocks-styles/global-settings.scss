@@ -89,9 +89,17 @@
   }
 }
 
-.header-phone-link {
+.header-phone-link,
+.phone-link {
   white-space: nowrap;
-  @include font-settings (normal, 700, 18px, 25px, $--text_color);
+  @include font-settings (normal, 700, 18px, normal, $--text_color);
+  transition: color .2s linear, transform .2s linear, background-color .2s linear, box-shadow .2s linear;
+  &:hover {
+    color: $--hedear_phone_link_color;
+  }
+}
+.email-link {
+  @include font-settings (normal, 400, 20px, normal,  $--text_color);
   transition: color .2s linear, transform .2s linear, background-color .2s linear, box-shadow .2s linear;
   &:hover {
     color: $--hedear_phone_link_color;
