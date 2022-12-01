@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+    /* открытие бургера */
+  const burgerBtn = document.querySelector('.header__burger');
+  burgerBtn.addEventListener('click', function() {
+    this.classList.toggle('is-open')
+  })
+
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
     /* typed */

@@ -25,7 +25,7 @@
   margin-bottom: 26px;
   text-align: center;
   text-transform: uppercase;
-  @include font-settings (normal, 600, 36px, 50px,  $--hero_text_color);
+  @include font-settings (normal, 700, 36px, normal,  $--hero_text_color);
 }
 
 .title-small {
@@ -70,7 +70,7 @@
   background-color: transparent;
   border-radius: 5px;
   text-transform: uppercase;
-  @include font-settings (normal, 600, 15px, 22px, $--text_color);
+  @include font-settings (normal, 600, 15px, normal, $--text_color);
 }
 
 .header-phone-link,
@@ -276,4 +276,43 @@
     -moz-box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
   }
+}
+
+.navbar-toggler {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 40px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 0;
+  .burger-line {
+    width: 100%;
+    height: 6px;
+    background-color: #333;
+    border-radius: 5px;
+    transform-origin: center;
+    transition: transform .2s linear, background-color .2s linear;
+  }
+}
+.navbar-toggler.is-open {
+  .burger-line {
+    background-color: $--primary_btn_bg;
+  }
+  .burger-second-line {
+    transform: scaleX(0);
+  }
+  .burger-first-line {
+    transform: translateY(12px) rotate(45deg);
+  }
+  .burger-third-line {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
 }
