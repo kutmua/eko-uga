@@ -31,4 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
   });
-  });
+
+    /* iunput-mask */
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+  const telSelector = document.querySelectorAll('input[type="tel"]');
+
+  telSelector.forEach(tel => {
+    inputMask.mask(tel)
+  })
+});
