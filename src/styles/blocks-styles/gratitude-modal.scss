@@ -1,0 +1,32 @@
+.thanks-modal {
+  .thanks-modal__body {
+    svg {
+      margin: 0 auto;
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+    .thanks-modal__title {
+      @include font-settings (normal, 700, 30px, normal,  $--text_color);
+      opacity: .8;
+    }
+  }
+  .thanks-modal__footer.modal-footer {
+    border-top: none;
+    .thanks-modal__close-btn {
+      padding: 10px 32px;
+      background-color: #42aaff;
+      border-radius: 5px;
+      @include font-settings (normal, 600, 17px, normal,  $--white_color);
+      transition: background-color .2s linear, transform .2s linear;
+      &:hover,
+      &:focus-visible  {
+        transform: translateY(-2px);
+        background: #6495ed;
+      }
+      &:active {
+        background: #6495ed;
+      }
+    }
+  }
+}

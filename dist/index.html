@@ -26,13 +26,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221208151733">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221208180332">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221208151733">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221208151733">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20221208151733">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20221208151733">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221208180332">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221208180332">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20221208180332">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20221208180332">
   <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
@@ -145,13 +145,13 @@
       <form class="counter-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name" type="text" name="name">
+          <input class="counter-form__name" type="text" name="name" data-form-name="">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone" type="tel" name="phone" required id="phone">
+          <input class="counter-form__phone" type="tel" name="phone" data-form-phone="" required>
         </div>
-        <button class="counter__form-btn button d-flex" type="submit">Отправить заявку!</button>
+        <button class="counter__form-btn button d-flex">Отправить заявку!</button>
       </form>
     </div>
 
@@ -371,13 +371,13 @@
       <form class="counter-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name" type="text" name="name">
+          <input class="counter-form__name" type="text" name="name" data-form-name="">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone" type="tel" name="phone" required id="phone">
+          <input class="counter-form__phone" type="tel" name="phone" data-form-phone="" required>
         </div>
-        <button class="counter__form-btn button d-flex" type="submit">Отправить заявку!</button>
+        <button class="counter__form-btn button d-flex">Отправить заявку!</button>
       </form>
     </div>
 
@@ -847,14 +847,45 @@
   </div>
 </footer>
 
+  <div class="thanks-modal modal fade" id="gratitudeModal" tabindex="-1" aria-labelledby="Модальное окно благодарности" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="thanks-modal__body modal-body">
+        <svg version="1.1" viewBox="0 0 612 792" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <style type="text/css">
+            .st0{fill:#41AD49;}
+          </style>
+          <g>
+            <path class="st0" d="M562,396c0-141.4-114.6-256-256-256S50,254.6,50,396s114.6,256,256,256S562,537.4,562,396L562,396z    M501.7,296.3l-241,241l0,0l-17.2,17.2L110.3,421.3l58.8-58.8l74.5,74.5l199.4-199.4L501.7,296.3L501.7,296.3z"/>
+          </g>
+        </svg>
+
+        <h2 class="thanks-modal__title text-center">
+          Спасибо!
+        </h2>
+        <h2 class="thanks-modal__title text-center">
+          Ваша заявка отправлена.
+        </h2>
+        <h2 class="thanks-modal__title text-center">
+          В ближайшее время мы с Вами свяжемся!
+        </h2>
+      </div>
+
+      <div class="thanks-modal__footer modal-footer">
+        <button class="thanks-modal__close-btn button m-auto" type="button" data-bs-dismiss="modal" aria-label="Кнопка закрыть Модальное окно благодарности">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- main script -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221208151733"></script>
-<script src="./js/map.min.js?_v=20221208151733"></script>
-<script src="./js/swiper-bundle.min.js?_v=20221208151733"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20221208151733"></script>
-<script src="./js/typed.min.js?_v=20221208151733"></script>
-<script src="./js/inputmask.min.js?_v=20221208151733"></script>
-<script src="./js/just-validate.production.min.js?_v=20221208151733"></script>
-<script src="./js/main.min.js?_v=20221208151733"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221208180332"></script>
+<script src="./js/map.min.js?_v=20221208180332"></script>
+<script src="./js/swiper-bundle.min.js?_v=20221208180332"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20221208180332"></script>
+<script src="./js/typed.min.js?_v=20221208180332"></script>
+<script src="./js/inputmask.min.js?_v=20221208180332"></script>
+<script src="./js/just-validate.production.min.js?_v=20221208180332"></script>
+<script src="./js/main.min.js?_v=20221208180332"></script>
 </body>
 </html>

@@ -67,7 +67,15 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ])
     .onSuccess((event) => {
-      console.log('Validation passes and form submitted', event);
+      const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+        keyboard: false
+      })
+      gratitudeModal.show(event.submitter);
+
+      setTimeout(()=>{
+        event.path[0][0].value = '';
+        event.path[0][1].value = '';
+      }, 500);
     });
   })
 });
