@@ -32,11 +32,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-    /* iunput-mask */
+    /* iunput-mask, just-validate */
   const inputMask = new Inputmask('+7 (999) 999-99-99');
-  const telSelector = document.querySelectorAll('input[type="tel"]');
+  const forms = document.querySelectorAll('.counter-form');
 
-  telSelector.forEach(tel => {
-    inputMask.mask(tel)
+  forms.forEach(form => {
+    // iunput-mask
+    const inputTel = form.querySelector('input[type="tel"]');
+
+    inputMask.mask(inputTel);
+
+    /* --------- */
+
+    // just-validate
+    const validation = new JustValidate(form, {
+      errorFieldCssClass: 'is-invalid',
+    });
+
+    validation
+    .addField('.counter-form__phone', [
+      {
+        validator: (value)=>{
+          let phone = inputMask.unmaskedvalue(value);
+          if (phone.length === 10){
+            return true
+          }
+          else return false
+        },
+        errorMessage: 'Введите номер телефона',
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+    .onSuccess((event) => {
+      console.log('Validation passes and form submitted', event);
+    });
   })
 });

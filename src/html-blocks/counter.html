@@ -39,14 +39,14 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form" action="#">
+      <form class="counter-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input type="text" name="name">
+          <input class="counter-form__name" type="text" name="name">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input type="tel" name="phone" required>
+          <input class="counter-form__phone" type="tel" name="phone" required id="phone">
         </div>
         <button class="counter__form-btn button d-flex" type="submit">Отправить заявку!</button>
       </form>

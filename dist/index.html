@@ -26,13 +26,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221208105748">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221208151733">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221208105748">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221208105748">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20221208105748">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20221208105748">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221208151733">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221208151733">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20221208151733">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20221208151733">
   <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
@@ -142,14 +142,14 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form" action="#">
+      <form class="counter-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input type="text" name="name">
+          <input class="counter-form__name" type="text" name="name">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input type="tel" name="phone" required>
+          <input class="counter-form__phone" type="tel" name="phone" required id="phone">
         </div>
         <button class="counter__form-btn button d-flex" type="submit">Отправить заявку!</button>
       </form>
@@ -368,14 +368,14 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form" action="#">
+      <form class="counter-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input type="text" name="name">
+          <input class="counter-form__name" type="text" name="name">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input type="tel" name="phone" required>
+          <input class="counter-form__phone" type="tel" name="phone" required id="phone">
         </div>
         <button class="counter__form-btn button d-flex" type="submit">Отправить заявку!</button>
       </form>
@@ -848,12 +848,13 @@
 </footer>
 
   <!-- main script -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221208105748"></script>
-<script src="./js/map.min.js?_v=20221208105748"></script>
-<script src="./js/swiper-bundle.min.js?_v=20221208105748"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20221208105748"></script>
-<script src="./js/typed.min.js?_v=20221208105748"></script>
-<script src="./js/inputmask.min.js?_v=20221208105748"></script>
-<script src="./js/main.min.js?_v=20221208105748"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221208151733"></script>
+<script src="./js/map.min.js?_v=20221208151733"></script>
+<script src="./js/swiper-bundle.min.js?_v=20221208151733"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20221208151733"></script>
+<script src="./js/typed.min.js?_v=20221208151733"></script>
+<script src="./js/inputmask.min.js?_v=20221208151733"></script>
+<script src="./js/just-validate.production.min.js?_v=20221208151733"></script>
+<script src="./js/main.min.js?_v=20221208151733"></script>
 </body>
 </html>

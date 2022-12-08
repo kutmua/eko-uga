@@ -124,6 +124,7 @@
   .counter__form-body {
     .counter__form-input-container {
       margin-bottom: 10px;
+      position: relative;
       flex-direction: column;
       input {
         padding: 4px 10px;
@@ -131,6 +132,11 @@
         border-radius: 5px;
         @include font-settings(normal, 400, 14px, normal, $--text_color);
         transition: color .2s linear, box-shadow .2s linear, border-color .2s linear;
+        &.is-invalid {
+          border-color:$--counter_input_focus_color;
+          -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
+          box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
+        }
         &:hover {
           border-color:$--counter_input_focus_color;
         }
@@ -141,10 +147,18 @@
         }
       }
       label {
-        @include font-settings(normal, 400, 16px, normal, $--text_color);
+        margin-left: 5px;
+        @include font-settings(normal, 600, 16px, normal, $--text_color);
+      }
+      .just-validate-error-label {
+        position: absolute;
+        bottom: -17px;
+        left: 5px;
+        @include font-settings(normal, 400, 12px, normal, $--error_color);
       }
     }
     .phone-container {
+      margin-bottom: 25px;
       label {
         &::after {
           content: '*';
