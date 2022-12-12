@@ -5,6 +5,60 @@ document.addEventListener("DOMContentLoaded", function () {
     this.classList.toggle('is-open')
   })
 
+    /* счетчик скидки */
+  const clocks = document.querySelectorAll('.counter');
+  const deadline = new Date();
+  // let yearsDifference = 1;
+  // let monthsDifference = 1;
+  // let dayDifference = 1;
+  let hoursDifference = 1;
+  let minutesDifference = 30;
+
+    /* установки для счетчика */
+  deadline.setHours(deadline.getHours() + hoursDifference)
+  deadline.setMinutes(deadline.getMinutes() + minutesDifference);
+
+  function getTimeRemaining(endtime){
+    const t = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor( (t/1000) % 60 );
+    const minutes = Math.floor( (t/1000/60) % 60 );
+    const hours = Math.floor( (t/(1000*60*60)) % 24 );
+    const days = Math.floor( t/(1000*60*60*24) );
+    return {
+      'total': t,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
+
+  function initializeClock(selector, endtime){
+    const daysSpan = selector.querySelector('[data-counter-indicator="day"]');
+    const hoursSpan = selector.querySelector('[data-counter-indicator="hour"]');
+    const minutesSpan = selector.querySelector('[data-counter-indicator="minutes"]');
+    const secondsSpan = selector.querySelector('[data-counter-indicator="seconds"]');
+
+    function updateClock(){
+      const t = getTimeRemaining(endtime);
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = t.hours;
+      minutesSpan.innerHTML = t.minutes;
+      secondsSpan.innerHTML = t.seconds;
+
+      if (t.total<=0) {
+        clearInterval(timeinterval);
+      }
+    }
+    updateClock();
+    const timeinterval = setInterval(updateClock,1000);
+  }
+
+  clocks.forEach(clock => {
+    initializeClock(clock, deadline);
+  })
+
+
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
     /* typed */
