@@ -1,11 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
-    /* открытие бургера */
+  /* открытие и закрытие бургера */
+  const burger = document.querySelector('.navbar-collapse.collapse');
   const burgerBtn = document.querySelector('.header__burger');
   burgerBtn.addEventListener('click', function() {
     this.classList.toggle('is-open')
   })
 
-    /* счетчик скидки */
+  function burgerClose() {
+    if (burgerBtn.classList.contains('is-open')) {
+      burgerBtn.classList.remove('is-open');
+      burger.classList.remove('show')
+    }
+  }
+/* -------------------------------------------- */
+
+  /* плавный скролл */
+  function smoothScroll() {
+    const anchors = document.querySelectorAll('.anchor-link');
+
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', function(event){
+        event.preventDefault();
+
+        const blockID = anchor.getAttribute('href');
+        let headerHeight = document.querySelector('.header__nav').offsetHeight;
+        let y = document.querySelector('' + blockID).offsetTop - headerHeight;
+        window.scrollTo(0, y);
+
+        burgerClose();
+      });
+    })
+  }
+
+/* -------------------------------------------- */
+
+  /* счетчик скидки */
   const clocks = document.querySelectorAll('.counter');
   const deadline = new Date();
   // let yearsDifference = 1;
@@ -58,7 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeClock(clock, deadline);
   })
 
+/* -------------------------------------------- */
 
+  /* ЗАПУСК ФУНКЦИЙ */
+  smoothScroll();
+  window.addEventListener('resize',smoothScroll);
+
+/* -------------------------------------------- */
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
     /* typed */
