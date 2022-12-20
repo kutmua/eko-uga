@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* iunput-mask, just-validate */
   const inputMask = new Inputmask('+7 (999) 999-99-99');
-  const forms = document.querySelectorAll('.counter-form');
+  const forms = document.querySelectorAll('._validate-form');
 
   forms.forEach(form => {
     // iunput-mask
@@ -137,9 +137,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const validation = new JustValidate(form, {
       errorFieldCssClass: 'is-invalid',
     });
+    const requestModal = new bootstrap.Modal('#requestModal', {
+      keyboard: true
+    });
 
     validation
-    .addField('.counter-form__phone', [
+    .addField('._validate-form__phone', [
       {
         validator: (value)=>{
           let phone = inputMask.unmaskedvalue(value);
@@ -157,8 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ])
     .onSuccess((event) => {
       const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
-        keyboard: false
+        keyboard: true
       })
+      requestModal.hide();
       gratitudeModal.show(event.submitter);
 
       setTimeout(()=>{

@@ -7,7 +7,7 @@
       height: 100px;
     }
     .thanks-modal__title {
-      @include font-settings (normal, 700, 30px, normal,  $--text_color);
+      @include font-settings (normal, 700, 24px, normal,  $--text_color);
       opacity: .8;
     }
   }

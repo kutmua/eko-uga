@@ -26,13 +26,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221212134738">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221220103256">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221212134738">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221212134738">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20221212134738">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20221212134738">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221220103256">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221220103256">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20221220103256">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20221220103256">
   <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
@@ -142,14 +142,14 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form" action="#" method="post">
+      <form class="counter-form _validate-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name" type="text" name="name" data-form-name="">
+          <input class="counter-form__name _validate-form__name" type="text" name="name" data-form-name="">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone" type="tel" name="phone" data-form-phone="" required>
+          <input class="counter-form__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
         </div>
         <button class="counter__form-btn button d-flex">Отправить заявку!</button>
       </form>
@@ -228,7 +228,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">ВЫВОЗ МУСОРА</strong>
             <p class="case-blanket__descr text-center">Мы можем сами упаковать все в мешки и вывезти с вашей территории.</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img1.webp" alt="Фото портфолио">
@@ -238,7 +238,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">КАЧЕСТВЕННАЯ УБОРКА</strong>
             <p class="case-blanket__descr text-center">После работы мы качественно уберем место нашей работы.</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img2.webp" alt="Фото портфолио">
@@ -248,7 +248,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">ЛЮБОЙ МУСОР ИЗ ЛЮБОГО ДОМА</strong>
             <p class="case-blanket__descr text-center">Мы заберем любой мусор любой сложности в удобное для Вас время.</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img3.webp" alt="Фото портфолио">
@@ -258,7 +258,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">ВАШИ СОСЕДИ НАС НЕ УСЛЫШАТ</strong>
             <p class="case-blanket__descr text-center">Действуем тихо, чтобы не доставлять хлопот вашим соседям!</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img4.webp" alt="Фото портфолио">
@@ -268,7 +268,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">РАБОТАЕМ БЫСТРО</strong>
             <p class="case-blanket__descr text-center">Наша команда быстро погрузит весь мусор и уберет за собой.</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img5.webp" alt="Фото портфолио">
@@ -278,7 +278,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">РАБОТАЕМ АККУРАТНО</strong>
             <p class="case-blanket__descr text-center">Работаем очень аккуратно и ничего не повредим!</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img6.webp" alt="Фото портфолио">
@@ -288,7 +288,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">В ОТВЕТЕ ЗА ЭКОЛОГИЮ</strong>
             <p class="case-blanket__descr text-center">Правильная утилизация — это наши ключевые приоритеты!</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img7.webp" alt="Фото портфолио">
@@ -298,7 +298,7 @@
           <div class="case-blanket">
             <strong class="case-blanket__title d-block text-center">РАЗУМНЫЕ ЦЕНЫ</strong>
             <p class="case-blanket__descr text-center">Самые демократичные цены и удобные системы лояльности-Вы это заметите!</p>
-            <button class="case-blanket__btn primary-button button">Подать заявку</button>
+            <button class="case-blanket__btn primary-button button" data-bs-toggle="modal" data-bs-target="#requestModal">Подать заявку</button>
           </div>
 
           <img src="img/portfolio-img8.webp" alt="Фото портфолио">
@@ -368,14 +368,14 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form" action="#" method="post">
+      <form class="counter-form _validate-form" action="#" method="post">
         <div class="name-container counter__form-input-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name" type="text" name="name" data-form-name="">
+          <input class="counter-form__name _validate-form__name" type="text" name="name" data-form-name="">
         </div>
         <div class="phone-container counter__form-input-container d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone" type="tel" name="phone" data-form-phone="" required>
+          <input class="counter-form__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
         </div>
         <button class="counter__form-btn button d-flex">Отправить заявку!</button>
       </form>
@@ -848,7 +848,7 @@
 </footer>
 
   <div class="thanks-modal modal fade" id="gratitudeModal" tabindex="-1" aria-labelledby="Модальное окно благодарности" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="thanks-modal__body modal-body">
         <svg version="1.1" viewBox="0 0 612 792" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -878,14 +878,40 @@
   </div>
 </div>
 
+<div class="request request-modal modal fade" id="requestModal" tabindex="-1" aria-labelledby="Модальное окно заявки" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="request-modal__header modal-header">
+        <h1 class="request-modal__title modal-title">Заявка</h1>
+        <button type="button" class="request-modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Кнопка закрытия модального окна"></button>
+      </div>
+
+      <div class="request-modal__body modal-body">
+        <form class="request__form d-flex _validate-form" action="#">
+          <div class="name-container request__form-input-container d-flex">
+            <label for="name">Имя</label>
+            <input class="request__name _validate-form__name" type="text" name="name" data-form-name="">
+          </div>
+          <div class="phone-container request__form-input-container d-flex">
+            <label for="phone">Телефон</label>
+            <input class="request__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
+          </div>
+          <button class="request__form-btn button d-flex">Отправить заявку!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- main script -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221212134738"></script>
-<script src="./js/map.min.js?_v=20221212134738"></script>
-<script src="./js/swiper-bundle.min.js?_v=20221212134738"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20221212134738"></script>
-<script src="./js/typed.min.js?_v=20221212134738"></script>
-<script src="./js/inputmask.min.js?_v=20221212134738"></script>
-<script src="./js/just-validate.production.min.js?_v=20221212134738"></script>
-<script src="./js/main.min.js?_v=20221212134738"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221220103256"></script>
+<script src="./js/map.min.js?_v=20221220103256"></script>
+<script src="./js/swiper-bundle.min.js?_v=20221220103256"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20221220103256"></script>
+<script src="./js/typed.min.js?_v=20221220103256"></script>
+<script src="./js/inputmask.min.js?_v=20221220103256"></script>
+<script src="./js/just-validate.production.min.js?_v=20221220103256"></script>
+<script src="./js/main.min.js?_v=20221220103256"></script>
 </body>
 </html>
