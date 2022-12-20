@@ -121,81 +121,6 @@
       text-align: center;
     }
   }
-  .counter__form-body {
-    .counter__form-input-container {
-      margin-bottom: 10px;
-      position: relative;
-      flex-direction: column;
-      input {
-        padding: 4px 10px;
-        border: 1px solid $--counter_input_border_color;
-        border-radius: 5px;
-        @include font-settings(normal, 400, 14px, normal, $--text_color);
-        transition: color .2s linear, box-shadow .2s linear, border-color .2s linear;
-        &.is-invalid {
-          border-color:$--counter_input_focus_color;
-          -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
-          box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
-        }
-        &:hover {
-          border-color:$--counter_input_focus_color;
-        }
-        &:focus-visible {
-          border-color:$--counter_input_focus_color;
-          -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
-          box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
-        }
-      }
-      label {
-        margin-left: 5px;
-        @include font-settings(normal, 600, 16px, normal, $--text_color);
-      }
-      .just-validate-error-label {
-        position: absolute;
-        bottom: -17px;
-        left: 5px;
-        @include font-settings(normal, 400, 12px, normal, $--error_color);
-      }
-    }
-    .phone-container {
-      margin-bottom: 25px;
-      label {
-        &::after {
-          content: '*';
-          color: #ff0000;
-        }
-      }
-    }
-    .counter__form-btn {
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 58px;
-      border-radius: 5px;
-      background: rgb(223,89,89);
-      background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-      background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-      background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-      @include font-settings(normal, 400, 18px, normal, $--counter_btn_text);
-      transition: background-color .2s linear, transform .2s linear;
-      &:hover,
-      &:focus-visible  {
-        transform: translateY(-2px);
-        background: rgb(223,89,89);
-        background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
-        background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
-        background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df5959",endColorstr="#460000",GradientType=1);
-      }
-      &:active {
-        background: rgb(223,89,89);
-        background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-        background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-        background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
-        transform: translateY(0px);
-      }
-    }
-  }
   .counter__form-footer,
   .counter__form-body {
     padding: 10px 15px;
@@ -329,4 +254,160 @@
   text-decoration: none;
   outline: 0;
   box-shadow: none;
+}
+
+.modal-header .btn-close {
+  background-size: 15px 15px;
+  transition: opacity .2s linear;
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+._form {
+  display: flex;
+  flex-direction: column;
+  ._form__input-container {
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    textarea{
+      resize: none;
+    }
+    input[type="radio"]{
+      border-radius: 100%;
+    }
+    input,
+    textarea {
+      padding: 4px 10px;
+      border: 1px solid $--counter_input_border_color;
+      border-radius: 5px;
+      @include font-settings(normal, 400, 14px, normal, $--text_color);
+      transition: color .2s linear, box-shadow .2s linear, border-color .2s linear;
+      &.is-invalid {
+        border-color:$--counter_input_focus_color;
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(223 89 89 / 60%);
+      }
+      &:hover {
+        border-color:$--counter_input_focus_color;
+      }
+      &:focus-visible {
+        border-color:$--counter_input_focus_color;
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+      }
+    }
+    &.req label{
+      &::after {
+        content: '*';
+        color: #ff0000;
+      }
+    }
+    label {
+      margin-left: 5px;
+      @include font-settings(normal, 600, 16px, normal, $--text_color);
+    }
+    ._form-label {
+      margin-left: 5px;
+      margin-bottom: 5px;
+      @include font-settings(normal, 600, 16px, normal, $--text_color);
+
+    }
+    .just-validate-error-label {
+      position: absolute;
+      bottom: -17px;
+      left: 5px;
+      @include font-settings(normal, 400, 12px, normal, $--error_color);
+    }
+  }
+  ._phone-container {
+    margin-bottom: 25px;
+  }
+  ._form__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 58px;
+    border-radius: 5px;
+    background: rgb(223,89,89);
+    background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+    @include font-settings(normal, 400, 18px, normal, $--counter_btn_text);
+    transition: background-color .2s linear, transform .2s linear;
+    &:hover,
+    &:focus-visible  {
+      transform: translateY(-2px);
+      background: rgb(223,89,89);
+      background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+      background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df5959",endColorstr="#460000",GradientType=1);
+    }
+    &:active {
+      background: rgb(223,89,89);
+      background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
+      transform: translateY(0px);
+    }
+  }
+}
+
+.check {
+  max-width: max-content;
+  align-items: center;
+  cursor: pointer;
+  &:hover .check__text {
+    color: $--check_bg_color;
+  }
+  &:hover .check__box{
+    border-color: $--check_bg_color;
+  }
+  .check__box {
+    margin-right: 12px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $--border_color;
+    border-radius: 2px;
+    transition: border-color .2s linear, box-shadow .2s linear;
+  }
+  .check__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: $--text_color;
+    transition: color .2s linear;
+  }
+  .check__input {
+    position: absolute;
+    appearance: none;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    &:checked + .check__box{
+      background-color: $--check_bg_color;
+      background-image: url(../img/check-big.svg);
+      background-repeat: no-repeat;
+      background-position: 1px 2px;
+      border-color: $--check_bg_color;
+    }
+    &:focus-visible + .check__box{
+      border-color: $--check_bg_color;
+      -webkit-box-shadow: 0px 0px 8px 0px rgba(102, 175, 233, 1);
+      -moz-box-shadow: 0px 0px 8px 0px rgba(102, 175, 233, 1);
+      box-shadow: 0px 0px 8px 0px rgba(102, 175, 233, 1);
+    }
+    &:focus-visible + .check__text{
+      color: $--check_bg_color;
+    }
+  }
 }

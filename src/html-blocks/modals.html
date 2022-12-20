@@ -39,17 +39,37 @@
       </div>
 
       <div class="request-modal__body modal-body">
-        <form class="request__form d-flex _validate-form" action="#">
-          <div class="name-container request__form-input-container d-flex">
+        <form class="request__form d-flex _form validate-form-js" action="#">
+          <div class="name-container request__form-input-container _form__input-container _name-container d-flex">
             <label for="name">Имя</label>
-            <input class="request__name _validate-form__name" type="text" name="name" data-form-name="">
+            <input class="request__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
           </div>
-          <div class="phone-container request__form-input-container d-flex">
+          <div class="phone-container request__form-input-container _form__input-container _phone-container req d-flex">
             <label for="phone">Телефон</label>
-            <input class="request__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
+            <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
           </div>
-          <button class="request__form-btn button d-flex">Отправить заявку!</button>
+          <button class="request__form-btn _form__btn button d-flex">Отправить заявку!</button>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="price-modal modal fade" id="priceModal" tabindex="-1" aria-labelledby="Модальное окно расчета стоимости" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="price-modal__header modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        @@include('price-form.html',{})
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

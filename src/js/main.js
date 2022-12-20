@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* открытие и закрытие бургера */
-  const burger = document.querySelector('.navbar-collapse.collapse');
-  const burgerBtn = document.querySelector('.header__burger');
+  const burger = document.querySelector('.header-nav-js');
+  const burgerBtn = document.querySelector('.header-burger-js');
   burgerBtn.addEventListener('click', function() {
     this.classList.toggle('is-open')
   })
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* -------------------------------------------- */
 
   /* счетчик скидки */
-  const clocks = document.querySelectorAll('.counter');
+  const clocks = document.querySelectorAll('.counter-js');
   const deadline = new Date();
   // let yearsDifference = 1;
   // let monthsDifference = 1;
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       minutesSpan.innerHTML = t.minutes;
       secondsSpan.innerHTML = t.seconds;
 
-      if (t.total<=0) {
+      if (t.total <= 0) {
         clearInterval(timeinterval);
       }
     }
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* iunput-mask, just-validate */
   const inputMask = new Inputmask('+7 (999) 999-99-99');
-  const forms = document.querySelectorAll('._validate-form');
+  const forms = document.querySelectorAll('.validate-form-js');
 
   forms.forEach(form => {
     // iunput-mask
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     validation
-    .addField('._validate-form__phone', [
+    .addField('.validate-form-phone-js', [
       {
         validator: (value)=>{
           let phone = inputMask.unmaskedvalue(value);

@@ -1,0 +1,5 @@
+.request-modal {
+  .request-modal__title {
+    @include font-settings (normal, 700, 16px, normal,  $--text_color);
+  }
+}

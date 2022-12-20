@@ -26,13 +26,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221220103256">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221220190125">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221220103256">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221220103256">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20221220103256">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20221220103256">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221220190125">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221220190125">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20221220190125">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20221220190125">
   <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
@@ -47,13 +47,13 @@
         </span>
       </a>
 
-      <button class="header__burger navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Кнопка бургер меню">
+      <button class="header__burger navbar-toggler header-burger-js" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Кнопка бургер меню">
         <span class="burger-line burger-first-line"></span>
         <span class="burger-line burger-second-line"></span>
         <span class="burger-line burger-third-line"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="headerNav">
+      <div class="collapse navbar-collapse header-nav-js" id="headerNav">
         <ul class="header__nav-list navbar-nav">
           <li class="header__nav-list-item nav-item">
             <a class="header__nav-list-item-link nav-link header-link link anchor-link" href="#portfolio">Примеры работ</a>
@@ -103,7 +103,7 @@
           <p class="hero__heading text-center heading-small">Соседи не узнают, честно</p>
           <strong class="offer heading-small m-auto d-block text-center">-30% на первый заказ</strong>
 
-<div class="counter">
+<div class="counter counter-js">
   <svg class="clock"viewBox="-6 -6 932 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <path class="shape" fill="#ffffff" d="M671.707057,133 L671.679126,133 C656.247994,166.552191 621.006381,190 580,190 C538.993619,190 503.752006,166.552191 488.320874,133 L488.292943,133 L488.292552,132.99895 C484.173876,121.930171 476.061786,106.4 460,106.4 C443.938214,106.4 435.826106,121.930184 431.707438,132.998977 L431.707057,133 L431.679126,133 C416.247994,166.552191 381.006381,190 340,190 C298.993619,190 263.752006,166.552191 248.320874,133 L248.292943,133 L248.292552,132.99895 C244.173876,121.930171 236.061786,106.4 220,106.4 C203.938214,106.4 195.826106,121.930184 191.707438,132.998977 L191.707057,133 L191.679126,133 C176.247994,166.552191 141.006381,190 100,190 C44.771525,190 0,147.467051 0,95 C0,42.5329488 44.771525,-2.7000624e-14 100,0 C141.006381,1.3500312e-14 176.247994,23.4478091 191.679126,57 L191.707057,57 L191.707448,57.0010498 C195.826124,68.069829 203.938214,83.6 220,83.6 C236.061786,83.6 244.173894,68.0698159 248.292562,57.0010225 L248.292943,57 L248.320874,57 C263.752006,23.4478091 298.993619,-1.3500312e-14 340,0 C381.006381,1.3500312e-14 416.247994,23.4478091 431.679126,57 L431.707057,57 L431.707448,57.0010498 C435.826124,68.069829 443.938214,83.6 460,83.6 C476.061786,83.6 484.173894,68.0698159 488.292562,57.0010225 L488.292943,57 L488.320874,57 C503.752006,23.4478091 538.993619,-1.3500312e-14 580,0 C621.006381,1.3500312e-14 656.247994,23.4478091 671.679126,57 L671.707057,57 L671.707448,57.0010498 C675.826124,68.069829 683.938214,83.6 700,83.6 C716.061786,83.6 724.173894,68.0698159 728.292562,57.0010225 L728.292943,57 L728.320874,57 C743.752006,23.4478091 778.993619,-1.3500312e-14 820,0 C875.228475,2.7000624e-14 920,42.5329488 920,95 C920,147.467051 875.228475,190 820,190 C778.993619,190 743.752006,166.552191 728.320874,133 L728.292943,133 L728.292552,132.99895 C724.173876,121.930171 716.061786,106.4 700,106.4 C683.938214,106.4 675.826106,121.930184 671.707438,132.998977 L671.707057,133 L671.707057,133 Z"></path>
     <g class="digits" font-size="80">
@@ -142,16 +142,16 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form _validate-form" action="#" method="post">
-        <div class="name-container counter__form-input-container d-flex">
+      <form class="counter-form _form validate-form-js" action="#" method="post">
+        <div class="name-container counter__form-input-container _form__input-container _name-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name _validate-form__name" type="text" name="name" data-form-name="">
+          <input class="counter-form__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
         </div>
-        <div class="phone-container counter__form-input-container d-flex">
+        <div class="phone-container counter__form-input-container _form__input-container _phone-container req d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
+          <input class="counter-form__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
         </div>
-        <button class="counter__form-btn button d-flex">Отправить заявку!</button>
+        <button class="counter__form-btn _form__btn button d-flex">Отправить заявку!</button>
       </form>
     </div>
 
@@ -209,6 +209,71 @@
           <img src="img/motive-img6.png" alt="Фото раздела - ПОЧЕМУ МЫ">
           <p class="motive__chapter-title text-center">Оперативность</p>
           <p class="motive__chapter-descr text-center">У нас свой парк машин, поэтому ждать Вам не прийдется</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price section" id="price">
+    <div class="price-container container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="price__title title-small">
+            Рассчитать стоимость со скидкой
+          </h2>
+          <form class="price-form _form validate-form-js" action="#">
+  <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
+    <label for="select">Выберите из списка</label>
+    <input class="price-form__select _validate-form__select _form__select validate-form-select-js" type="text" name="select" data-form-select="" required>
+  </div>
+
+  <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
+    <label for="value">Какой объем в кубах (не обязательно)</label>
+    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="value" data-form-value="" value="1" min="0">
+  </div>
+
+  <div class="worker-container price-form__input-container _form__input-container _worker-container d-flex">
+    <label for="worker">Сколько рабочих нужно</label>
+    <input class="price-form__worker _validate-form__worker _form__worker validate-form-worker-js" type="number" name="worker" data-form-worker="" value="1" min="0">
+  </div>
+
+  <div class="tools-container price-form__input-container _form__input-container _tools-container d-flex">
+    <p class="_form-label">Брать ли нам инструменты, мешки? </p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioYes" checked>
+      <label class="form-check-label" for="toolsRadioYes">
+        Да
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioNo">
+      <label class="form-check-label" for="toolsRadioNo">
+        Нет
+      </label>
+    </div>
+  </div>
+
+  <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
+    <label for="info">Можете описать, что нужно сделать</label>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
+  </div>
+
+  <div class="input-group">
+    <input class="form-control" type="file" id="files">
+  </div>
+
+  <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
+    <label for="name">Имя</label>
+    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
+  </div>
+
+  <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
+    <label for="phone">Телефон</label>
+    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
+  </div>
+
+  <button class="price-form__btn _form__btn button d-flex">Отправить заявку!</button>
+</form>
         </div>
       </div>
     </div>
@@ -329,7 +394,7 @@
 
           <strong class="offer heading-small m-auto d-block text-center">-30% на первый заказ</strong>
 
-<div class="counter">
+<div class="counter counter-js">
   <svg class="clock"viewBox="-6 -6 932 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <path class="shape" fill="#ffffff" d="M671.707057,133 L671.679126,133 C656.247994,166.552191 621.006381,190 580,190 C538.993619,190 503.752006,166.552191 488.320874,133 L488.292943,133 L488.292552,132.99895 C484.173876,121.930171 476.061786,106.4 460,106.4 C443.938214,106.4 435.826106,121.930184 431.707438,132.998977 L431.707057,133 L431.679126,133 C416.247994,166.552191 381.006381,190 340,190 C298.993619,190 263.752006,166.552191 248.320874,133 L248.292943,133 L248.292552,132.99895 C244.173876,121.930171 236.061786,106.4 220,106.4 C203.938214,106.4 195.826106,121.930184 191.707438,132.998977 L191.707057,133 L191.679126,133 C176.247994,166.552191 141.006381,190 100,190 C44.771525,190 0,147.467051 0,95 C0,42.5329488 44.771525,-2.7000624e-14 100,0 C141.006381,1.3500312e-14 176.247994,23.4478091 191.679126,57 L191.707057,57 L191.707448,57.0010498 C195.826124,68.069829 203.938214,83.6 220,83.6 C236.061786,83.6 244.173894,68.0698159 248.292562,57.0010225 L248.292943,57 L248.320874,57 C263.752006,23.4478091 298.993619,-1.3500312e-14 340,0 C381.006381,1.3500312e-14 416.247994,23.4478091 431.679126,57 L431.707057,57 L431.707448,57.0010498 C435.826124,68.069829 443.938214,83.6 460,83.6 C476.061786,83.6 484.173894,68.0698159 488.292562,57.0010225 L488.292943,57 L488.320874,57 C503.752006,23.4478091 538.993619,-1.3500312e-14 580,0 C621.006381,1.3500312e-14 656.247994,23.4478091 671.679126,57 L671.707057,57 L671.707448,57.0010498 C675.826124,68.069829 683.938214,83.6 700,83.6 C716.061786,83.6 724.173894,68.0698159 728.292562,57.0010225 L728.292943,57 L728.320874,57 C743.752006,23.4478091 778.993619,-1.3500312e-14 820,0 C875.228475,2.7000624e-14 920,42.5329488 920,95 C920,147.467051 875.228475,190 820,190 C778.993619,190 743.752006,166.552191 728.320874,133 L728.292943,133 L728.292552,132.99895 C724.173876,121.930171 716.061786,106.4 700,106.4 C683.938214,106.4 675.826106,121.930184 671.707438,132.998977 L671.707057,133 L671.707057,133 Z"></path>
     <g class="digits" font-size="80">
@@ -368,16 +433,16 @@
     </div>
 
     <div class="counter__form-body">
-      <form class="counter-form _validate-form" action="#" method="post">
-        <div class="name-container counter__form-input-container d-flex">
+      <form class="counter-form _form validate-form-js" action="#" method="post">
+        <div class="name-container counter__form-input-container _form__input-container _name-container d-flex">
           <label for="name">Имя</label>
-          <input class="counter-form__name _validate-form__name" type="text" name="name" data-form-name="">
+          <input class="counter-form__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
         </div>
-        <div class="phone-container counter__form-input-container d-flex">
+        <div class="phone-container counter__form-input-container _form__input-container _phone-container req d-flex">
           <label for="phone">Телефон</label>
-          <input class="counter-form__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
+          <input class="counter-form__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
         </div>
-        <button class="counter__form-btn button d-flex">Отправить заявку!</button>
+        <button class="counter__form-btn _form__btn button d-flex">Отправить заявку!</button>
       </form>
     </div>
 
@@ -411,7 +476,7 @@
             <p class="services__card-descr text-center">Вывозим любой вид мусора в Краснодаре и крае. За собой убираем</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -422,7 +487,7 @@
             <p class="services__card-descr text-center">Мы вывезем любую мебель из любого места. Разберем, погрузим и увезем</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -433,7 +498,7 @@
             <p class="services__card-descr text-center">Вывозим окна, двери. Аккуратно спускаем вручную, загружаем и вывозим</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -444,7 +509,7 @@
             <p class="services__card-descr text-center">Вывозим дерева, ветки, спил любой сложности. Подберем машину быстро</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -455,7 +520,7 @@
             <p class="services__card-descr text-center">Вывозим траву, землю, любой грунт с любых участков</p>
             <p class="services__card-price text-center">от 300 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -466,7 +531,7 @@
             <p class="services__card-descr text-center">Сделаем демонтаж любой сложности. Собственный инструмент и рабочие</p>
             <p class="services__card-price text-center">от 250 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
     </div>
@@ -771,7 +836,7 @@
                 <p class="phone-list__item-descr">Принимаем звонки с 6:00 до 23:00</p>
               </li>
               <li class="phone-list__item">
-                <button class="phone-list__item-btn button primary-button">Заказать звонок</button>
+                <button class="phone-list__item-btn button primary-button" data-bs-toggle="modal" data-bs-target="#requestModal">Заказать звонок</button>
               </li>
             </ul>
           </div>
@@ -888,30 +953,101 @@
       </div>
 
       <div class="request-modal__body modal-body">
-        <form class="request__form d-flex _validate-form" action="#">
-          <div class="name-container request__form-input-container d-flex">
+        <form class="request__form d-flex _form validate-form-js" action="#">
+          <div class="name-container request__form-input-container _form__input-container _name-container d-flex">
             <label for="name">Имя</label>
-            <input class="request__name _validate-form__name" type="text" name="name" data-form-name="">
+            <input class="request__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
           </div>
-          <div class="phone-container request__form-input-container d-flex">
+          <div class="phone-container request__form-input-container _form__input-container _phone-container req d-flex">
             <label for="phone">Телефон</label>
-            <input class="request__phone _validate-form__phone" type="tel" name="phone" data-form-phone="" required>
+            <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
           </div>
-          <button class="request__form-btn button d-flex">Отправить заявку!</button>
+          <button class="request__form-btn _form__btn button d-flex">Отправить заявку!</button>
         </form>
       </div>
     </div>
   </div>
 </div>
 
+<div class="price-modal modal fade" id="priceModal" tabindex="-1" aria-labelledby="Модальное окно расчета стоимости" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="price-modal__header modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form class="price-form _form validate-form-js" action="#">
+  <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
+    <label for="select">Выберите из списка</label>
+    <input class="price-form__select _validate-form__select _form__select validate-form-select-js" type="text" name="select" data-form-select="" required>
+  </div>
+
+  <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
+    <label for="value">Какой объем в кубах (не обязательно)</label>
+    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="value" data-form-value="" value="1" min="0">
+  </div>
+
+  <div class="worker-container price-form__input-container _form__input-container _worker-container d-flex">
+    <label for="worker">Сколько рабочих нужно</label>
+    <input class="price-form__worker _validate-form__worker _form__worker validate-form-worker-js" type="number" name="worker" data-form-worker="" value="1" min="0">
+  </div>
+
+  <div class="tools-container price-form__input-container _form__input-container _tools-container d-flex">
+    <p class="_form-label">Брать ли нам инструменты, мешки? </p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioYes" checked>
+      <label class="form-check-label" for="toolsRadioYes">
+        Да
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioNo">
+      <label class="form-check-label" for="toolsRadioNo">
+        Нет
+      </label>
+    </div>
+  </div>
+
+  <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
+    <label for="info">Можете описать, что нужно сделать</label>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
+  </div>
+
+  <div class="input-group">
+    <input class="form-control" type="file" id="files">
+  </div>
+
+  <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
+    <label for="name">Имя</label>
+    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
+  </div>
+
+  <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
+    <label for="phone">Телефон</label>
+    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
+  </div>
+
+  <button class="price-form__btn _form__btn button d-flex">Отправить заявку!</button>
+</form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- main script -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221220103256"></script>
-<script src="./js/map.min.js?_v=20221220103256"></script>
-<script src="./js/swiper-bundle.min.js?_v=20221220103256"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20221220103256"></script>
-<script src="./js/typed.min.js?_v=20221220103256"></script>
-<script src="./js/inputmask.min.js?_v=20221220103256"></script>
-<script src="./js/just-validate.production.min.js?_v=20221220103256"></script>
-<script src="./js/main.min.js?_v=20221220103256"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221220190125"></script>
+<script src="./js/map.min.js?_v=20221220190125"></script>
+<script src="./js/swiper-bundle.min.js?_v=20221220190125"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20221220190125"></script>
+<script src="./js/typed.min.js?_v=20221220190125"></script>
+<script src="./js/inputmask.min.js?_v=20221220190125"></script>
+<script src="./js/just-validate.production.min.js?_v=20221220190125"></script>
+<script src="./js/main.min.js?_v=20221220190125"></script>
 </body>
 </html>

@@ -76,6 +76,19 @@
     </div>
   </section>
 
+  <section class="price section" id="price">
+    <div class="price-container container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="price__title title-small">
+            Рассчитать стоимость со скидкой
+          </h2>
+          @@include('html-blocks/price-form.html',{})
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="portfolio section" id="portfolio">
     <div class="portfolio__container container">
       <div class="row">
@@ -214,7 +227,7 @@
             <p class="services__card-descr text-center">Вывозим любой вид мусора в Краснодаре и крае. За собой убираем</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -225,7 +238,7 @@
             <p class="services__card-descr text-center">Мы вывезем любую мебель из любого места. Разберем, погрузим и увезем</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -236,7 +249,7 @@
             <p class="services__card-descr text-center">Вывозим окна, двери. Аккуратно спускаем вручную, загружаем и вывозим</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -247,7 +260,7 @@
             <p class="services__card-descr text-center">Вывозим дерева, ветки, спил любой сложности. Подберем машину быстро</p>
             <p class="services__card-price text-center">от 200 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -258,7 +271,7 @@
             <p class="services__card-descr text-center">Вывозим траву, землю, любой грунт с любых участков</p>
             <p class="services__card-price text-center">от 300 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
 
@@ -269,7 +282,7 @@
             <p class="services__card-descr text-center">Сделаем демонтаж любой сложности. Собственный инструмент и рабочие</p>
             <p class="services__card-price text-center">от 250 руб.</p>
 
-            <button class="services__card-btn primary-button button m-auto" type="button">Рассчитать стоимость</button>
+            <button class="services__card-btn primary-button button m-auto" type="button" data-bs-toggle="modal" data-bs-target="#priceModal">Рассчитать стоимость</button>
           </div>
         </div>
     </div>
@@ -575,7 +588,7 @@
                 <p class="phone-list__item-descr">Принимаем звонки с 6:00 до 23:00</p>
               </li>
               <li class="phone-list__item">
-                <button class="phone-list__item-btn button primary-button">Заказать звонок</button>
+                <button class="phone-list__item-btn button primary-button" data-bs-toggle="modal" data-bs-target="#requestModal">Заказать звонок</button>
               </li>
             </ul>
           </div>
