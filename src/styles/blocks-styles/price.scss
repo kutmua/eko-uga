@@ -1,43 +1,4 @@
 .price {
-  ._form ._form__input-container {
-    margin-bottom: 15px;
-  }
-  ._form ._phone-container {
-    margin-bottom: 25px;
-  }
-  ._tools-container._form__input-container {
-    label {
-      margin-left: 0;
-      margin-bottom: 7px;
-    }
-    input:not(input[type="radio"]) {
-      border: none;
-    }
-    input {
-      padding: 0;
-    }
-    .form-check {
-      margin-bottom: 0;
-      .form-check-input {
-        &:checked + .form-check-label {
-          color: #66afe9;
-        }
-        &:hover + .form-check-label{
-          color: #66afe9;
-        }
-        &:focus-visible + .form-check-label{
-          color: #66afe9;
-        }
-      }
-      .form-check-label {
-        margin-bottom: 0;
-        transition: color .2s linear;
-      }
-    }
-  }
-  .input-group {
-    margin-bottom: 15px;
-  }
   .input-group-text,
   .form-control {
     padding: 4px 10px;

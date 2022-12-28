@@ -89,6 +89,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* -------------------------------------------- */
 
+  /* открытие селекта */
+  const formSelect = document.querySelectorAll('._form__select');
+
+  formSelect.forEach(select => {
+    select.addEventListener('click', () => {
+      select.classList.toggle('open')
+    })
+  })
+  document.addEventListener('click', (event) => {
+    if (!event.target.classList.contains('_form__select')) {
+      formSelect.forEach(select => {
+        if(select.classList.contains('open')) {
+          select.classList.remove('open')
+        }
+      })
+    }
+  })
+
+/* -------------------------------------------- */
+
   /* ЗАПУСК ФУНКЦИЙ */
   smoothScroll();
   window.addEventListener('resize',smoothScroll);

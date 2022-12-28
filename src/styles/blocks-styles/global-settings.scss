@@ -267,9 +267,11 @@
 }
 
 ._form {
+  margin: auto;
   display: flex;
   flex-direction: column;
-  ._form__input-container {
+  max-width: 900px;
+  ._form__input-container:not(._file-container) {
     margin-bottom: 10px;
     position: relative;
     display: flex;
@@ -278,9 +280,16 @@
       resize: none;
     }
     input[type="radio"]{
+      padding: 0;
       border-radius: 100%;
+      width: 14px;
+      height: 14px;
+    }
+    select {
+      cursor: pointer;
     }
     input,
+    select,
     textarea {
       padding: 4px 10px;
       border: 1px solid $--counter_input_border_color;
@@ -322,6 +331,57 @@
       bottom: -17px;
       left: 5px;
       @include font-settings(normal, 400, 12px, normal, $--error_color);
+    }
+  }
+  ._form__input-container._phone-container {
+    margin-bottom: 25px;
+  }
+  ._form__select{
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='307.053px' height='307.053px' viewBox='0 0 307.053 307.053' style='enable-background:new 0 0 307.053 307.053;' xml:space='preserve'%3E%3Cg%3E%3Cg id='_x34_86._Down'%3E%3Cg%3E%3Cpath d='M302.445,80.796l-11.101-11.103c-6.123-6.131-16.074-6.131-22.209,0L153.67,183.707L37.907,67.959 c-6.134-6.13-16.08-6.13-22.209,0L4.597,79.06c-6.129,6.133-6.129,16.067,0,22.201l137.83,137.829 c6.129,6.136,16.067,6.136,22.203,0l137.815-136.096C308.589,96.864,308.589,86.926,302.445,80.796z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 14px;
+    transition: background-image .2s linear;
+    &.open{
+      background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='307.054px' height='307.054px' viewBox='0 0 307.054 307.054' style='enable-background:new 0 0 307.054 307.054;' xml:space='preserve'%3E%3Cg%3E%3Cg id='_x34_85._Up'%3E%3Cg%3E%3Cpath d='M302.445,205.788L164.63,67.959c-6.136-6.13-16.074-6.13-22.203,0L4.597,205.788c-6.129,6.132-6.129,16.069,0,22.201 l11.101,11.101c6.129,6.136,16.076,6.136,22.209,0l115.62-115.626L269.151,239.09c6.128,6.136,16.07,6.136,22.201,0 l11.101-11.101C308.589,221.85,308.589,211.92,302.445,205.788z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+  }
+  ._file-container{
+    margin-bottom: 10px;
+  }
+  ._tools-container._form__input-container {
+    label {
+      margin-left: 0;
+      margin-bottom: 7px;
+    }
+    input:not(input[type="radio"]) {
+      border: none;
+    }
+    input {
+      padding: 0;
+    }
+    .form-check {
+      margin-bottom: 0;
+      max-width: max-content;
+      cursor: pointer;
+      .form-check-input {
+        cursor: pointer;
+        &:checked + .form-check-label {
+          color: #66afe9;
+        }
+        &:hover + .form-check-label{
+          color: #66afe9;
+        }
+        &:focus-visible + .form-check-label{
+          color: #66afe9;
+        }
+      }
+      .form-check-label {
+        margin-bottom: 0;
+        cursor: pointer;
+        user-select: none;
+        transition: color .2s linear;
+      }
     }
   }
   ._phone-container {

@@ -26,13 +26,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221220190125">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20221228112641">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221220190125">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221220190125">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20221220190125">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20221220190125">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20221228112641">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20221228112641">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20221228112641">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20221228112641">
   <title>Эко-Юга. Компания по утилизации мусора в городе Краснодар.</title>
 </head>
 
@@ -224,7 +224,17 @@
           <form class="price-form _form validate-form-js" action="#">
   <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
     <label for="select">Выберите из списка</label>
-    <input class="price-form__select _validate-form__select _form__select validate-form-select-js" type="text" name="select" data-form-select="" required>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="select" data-form-select="" required>
+      <option value="stroitelniy" selected>Вывезти строительный мусор</option>
+      <option value="bitovoi">Вывезти бытовой мусор</option>
+      <option value="mebel">Вывезти старую мебель</option>
+      <option value="okna">Вывезти окна, двери</option>
+      <option value="derevo">Вывезти дерево, ветки</option>
+      <option value="trava">Вывезти землю, траву</option>
+      <option value="sneg">Вывезти и очистить от снега</option>
+      <option value="demontazh">Произвести демонтаж</option>
+
+    </select>
   </div>
 
   <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
@@ -258,7 +268,7 @@
     <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
   </div>
 
-  <div class="input-group">
+  <div class="file-container price-form__input-container _form__input-container _file-container input-group">
     <input class="form-control" type="file" id="files">
   </div>
 
@@ -981,7 +991,17 @@
         <form class="price-form _form validate-form-js" action="#">
   <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
     <label for="select">Выберите из списка</label>
-    <input class="price-form__select _validate-form__select _form__select validate-form-select-js" type="text" name="select" data-form-select="" required>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="select" data-form-select="" required>
+      <option value="stroitelniy" selected>Вывезти строительный мусор</option>
+      <option value="bitovoi">Вывезти бытовой мусор</option>
+      <option value="mebel">Вывезти старую мебель</option>
+      <option value="okna">Вывезти окна, двери</option>
+      <option value="derevo">Вывезти дерево, ветки</option>
+      <option value="trava">Вывезти землю, траву</option>
+      <option value="sneg">Вывезти и очистить от снега</option>
+      <option value="demontazh">Произвести демонтаж</option>
+
+    </select>
   </div>
 
   <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
@@ -1015,7 +1035,7 @@
     <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
   </div>
 
-  <div class="input-group">
+  <div class="file-container price-form__input-container _form__input-container _file-container input-group">
     <input class="form-control" type="file" id="files">
   </div>
 
@@ -1041,13 +1061,13 @@
   </div>
 </div>
   <!-- main script -->
-<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221220190125"></script>
-<script src="./js/map.min.js?_v=20221220190125"></script>
-<script src="./js/swiper-bundle.min.js?_v=20221220190125"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20221220190125"></script>
-<script src="./js/typed.min.js?_v=20221220190125"></script>
-<script src="./js/inputmask.min.js?_v=20221220190125"></script>
-<script src="./js/just-validate.production.min.js?_v=20221220190125"></script>
-<script src="./js/main.min.js?_v=20221220190125"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20221228112641"></script>
+<script src="./js/map.min.js?_v=20221228112641"></script>
+<script src="./js/swiper-bundle.min.js?_v=20221228112641"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20221228112641"></script>
+<script src="./js/typed.min.js?_v=20221228112641"></script>
+<script src="./js/inputmask.min.js?_v=20221228112641"></script>
+<script src="./js/just-validate.production.min.js?_v=20221228112641"></script>
+<script src="./js/main.min.js?_v=20221228112641"></script>
 </body>
 </html>

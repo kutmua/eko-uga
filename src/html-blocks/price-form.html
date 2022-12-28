@@ -1,7 +1,17 @@
 <form class="price-form _form validate-form-js" action="#">
   <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
     <label for="select">Выберите из списка</label>
-    <input class="price-form__select _validate-form__select _form__select validate-form-select-js" type="text" name="select" data-form-select="" required>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="select" data-form-select="" required>
+      <option value="stroitelniy" selected>Вывезти строительный мусор</option>
+      <option value="bitovoi">Вывезти бытовой мусор</option>
+      <option value="mebel">Вывезти старую мебель</option>
+      <option value="okna">Вывезти окна, двери</option>
+      <option value="derevo">Вывезти дерево, ветки</option>
+      <option value="trava">Вывезти землю, траву</option>
+      <option value="sneg">Вывезти и очистить от снега</option>
+      <option value="demontazh">Произвести демонтаж</option>
+
+    </select>
   </div>
 
   <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
@@ -35,7 +45,7 @@
     <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
   </div>
 
-  <div class="input-group">
+  <div class="file-container price-form__input-container _form__input-container _file-container input-group">
     <input class="form-control" type="file" id="files">
   </div>
 
