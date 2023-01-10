@@ -41,7 +41,7 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 
   /* ПУТИ */
 const srcFolder = './src';
-const buildFolder = './dist';
+const buildFolder = './docs';
 
 const srcPaths = {
   srcFavicons: `${srcFolder}/favicons/**/*.*`,
@@ -258,6 +258,12 @@ const fontsTransfer = () => {
     .pipe(gulp.dest(buildPaths.buildFolderFonts));
 }
 
+  /* OTHER FILES */
+const otherFiles = () => {
+  return gulp.src(`${srcFolder}/other/**/*.*`)
+    .pipe(gulp.dest(buildFolder));
+}
+
   /* ZIP */
 const zip = () => {
   deleteAsync(`./${rootFolder}.zip`)
@@ -303,6 +309,7 @@ function watchFiles() {
   gulp.watch(`${srcPaths.srcImg}/svg/**/*.svg`, svgTransfer);
   gulp.watch(srcPaths.srcFavicons, faviconsTransfer);
   gulp.watch(srcPaths.srcFonts, fontsTransfer);
+  gulp.watch(`${srcFolder}/other/**/*.*`, otherFiles);
 }
 
 const mainTasks = gulp.series(
@@ -318,6 +325,7 @@ const mainTasks = gulp.series(
   svgTransfer,
   faviconsTransfer,
   fontsTransfer,
+  otherFiles,
   zip
 )
 

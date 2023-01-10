@@ -178,12 +178,25 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage: 'Обязательное поле',
       },
     ])
+    // TODO: переделать закрытие окна после прохождения валидации
     .onSuccess((event) => {
       const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
         keyboard: true
       })
-      requestModal.hide();
-      gratitudeModal.show(event.submitter);
+      // const requestModal = new bootstrap.Modal('#requestModal', {
+      //   keyboard: true
+      // });
+
+      requestModal.hide()
+      if (requestModal.hide()) {
+        console.log('закрыл');
+      }
+      else {
+        console.log('не закрыл');
+      }
+
+      // gratitudeModal.show(event.submitter);
+      gratitudeModal.show();
 
       setTimeout(()=>{
         event.path[0][0].value = '';

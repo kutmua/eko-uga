@@ -1,4 +1,4 @@
-<form class="price-form _form validate-form-js" action="#">
+<form class="price-form _form validate-form-js" action="#" method="POST" enctype="multipart/form-data">
   <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
     <label for="select">Выберите из списка</label>
     <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="select" data-form-select="" required>
@@ -46,7 +46,7 @@
   </div>
 
   <div class="file-container price-form__input-container _form__input-container _file-container input-group">
-    <input class="form-control" type="file" id="files">
+    <input class="form-control" type="file" name="file[]" multiple id="files">
   </div>
 
   <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
