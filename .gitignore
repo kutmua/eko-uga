@@ -1,3 +1,5 @@
 node_modules
 gulp-ver
 .vscode
+/src/other/mail.php
+/docs/mail.php
