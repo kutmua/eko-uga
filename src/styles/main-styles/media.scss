@@ -50,6 +50,16 @@
       }
     }
   }
+  .dropdown-li {
+    .arrow {
+      top: 15px;
+      right: 0;
+    }
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+    width: calc(100% + 13px);
+  }
 
   /*hero*/
   .hero.section {

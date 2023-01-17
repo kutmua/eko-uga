@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.target.reset();
       /* --------------------------------- */
 
+      /* рабочий блок отправки формы на почту для хостинга*/
       // let formData = new FormData(event.target);
 
       // let xhr = new XMLHttpRequest();

@@ -185,12 +185,18 @@
     opacity: 0;
     transition: opacity .3s linear, transform .2s linear;
   }
-  &:hover {
+  &:hover:not(:focus-visible) {
     color: $--primary_btn_bg;
   }
-  &:hover::before {
+  &:hover:not(:focus-visible)::before {
     transform: scaleX(1);
     opacity: .7;
+  }
+  &:hover:not(:focus-visible) + .arrow{
+    border-color: $--primary_btn_bg;
+  }
+  &:hover:not(:focus-visible)::before + .arrow{
+    border-color: $--primary_btn_bg;
   }
   &:focus-visible:after{
     opacity: 1;
@@ -199,13 +205,32 @@
   &:focus-visible{
     color: $--white_color;
   }
-  &:active {
-    color: $--text_color;
+  &:focus-visible + .arrow{
+    border-color: transparent;
   }
-  &:active::before {
+  &:active:not(:focus-visible) {
+    color: $--primary_btn_bg;
+  }
+  &:active:not(:focus-visible)::before {
     transform: scaleX(1);
     opacity: .7;
   }
+}
+.link.dropdown-toggle {
+  &::before {
+    width: calc(100% + 13px);
+  }
+}
+.link.show {
+  color: $--primary_btn_bg;
+  &::before {
+    transform: scaleX(1);
+    opacity: .7;
+  }
+}
+.link.show + .arrow {
+  transform: rotate(135deg) translate(2px, -2px);
+  border-color: $--primary_btn_bg;
 }
 
 .logo {
@@ -470,4 +495,54 @@
       color: $--check_bg_color;
     }
   }
+}
+
+.dropdown-li {
+  position: relative;
+  .arrow {
+    position: absolute;
+    display: block;
+    top: 11px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid $--text_color;
+    border-left: 2px solid $--text_color;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    transition: transform .2s linear, border-color .2s linear;
+  }
+  .dropdown-toggle {
+    &::after {
+      content: '';
+      margin-left: 0;
+      vertical-align: 0;
+      border: none;
+    }
+  }
+  .dropdown-item {
+    @include font-settings (normal, 400, 16px, normal,  $--text_color);
+    transition: color .2s linear, background-color .2s linear;
+  }
+  .dropdown-item.active, .dropdown-item:active {
+    color: $--white_color;
+    text-decoration: none;
+    background-color: #c2c2c2;
+  }
+}
+.dropdown-menu {
+  li {
+    position: relative;
+  }
+}
+
+
+.dropdown-item-js {
+  &:hover + .ppp {
+    display: block;
+  }
+}
+.ppp {
+  position: absolute;
+  display: none;
 }
