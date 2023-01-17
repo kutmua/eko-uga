@@ -147,6 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const requestModal = new bootstrap.Modal('#requestModal', {
     keyboard: true
   });
+  const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+    keyboard: true
+  })
 
   forms.forEach(form => {
     // iunput-mask
@@ -186,6 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       gratitudeModal.show();
       requestModal.hide();
+      event.target.reset();
       /* --------------------------------- */
 
       let formData = new FormData(event.target);
@@ -196,11 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
 
-            requestModal.hide()
-
-            const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
-              keyboard: true
-            })
+            requestModal.hide();
             gratitudeModal.show();
             console.log('Отправлено');
             event.target.reset();
