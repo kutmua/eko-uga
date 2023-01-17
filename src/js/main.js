@@ -144,6 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
     /* iunput-mask, just-validate */
   const inputMask = new Inputmask('+7 (999) 999-99-99');
   const forms = document.querySelectorAll('.validate-form-js');
+  const requestModal = new bootstrap.Modal('#requestModal', {
+    keyboard: true
+  });
 
   forms.forEach(form => {
     // iunput-mask
@@ -157,10 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const validation = new JustValidate(form, {
       errorFieldCssClass: 'is-invalid',
     });
-    const requestModal = new bootstrap.Modal('#requestModal', {
-      keyboard: true
-    });
-
     validation
     .addField('.validate-form-phone-js', [
       {
@@ -180,22 +179,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ])
     // TODO: переделать закрытие окна после прохождения валидации
     .onSuccess((event) => {
-      // const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
-      //   keyboard: true
-      // })
-      // const requestModal = new bootstrap.Modal('#requestModal', {
-      //   keyboard: true
-      // });
 
-      // requestModal.hide()
-
-      // gratitudeModal.show(event.submitter);
-      // gratitudeModal.show();
-
+      /* блок для эмуляции отправки формы для GitHub pages*/
+      const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+        keyboard: true
+      })
+      gratitudeModal.show();
+      requestModal.hide();
+      /* --------------------------------- */
 
       let formData = new FormData(event.target);
-
-      console.log(...formData);
 
       let xhr = new XMLHttpRequest();
 
@@ -210,14 +203,13 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             gratitudeModal.show();
             console.log('Отправлено');
+            event.target.reset();
           }
         }
       }
 
       xhr.open('POST', 'mail.php', true);
       xhr.send(formData);
-
-      event.target.reset();
     });
   })
 });
