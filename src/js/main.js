@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage: 'Обязательное поле',
       },
     ])
-    // TODO: переделать закрытие окна после прохождения валидации
+
     .onSuccess((event) => {
 
       /* блок для эмуляции отправки формы для GitHub pages*/
@@ -192,24 +192,24 @@ document.addEventListener("DOMContentLoaded", function () {
       event.target.reset();
       /* --------------------------------- */
 
-      let formData = new FormData(event.target);
+      // let formData = new FormData(event.target);
 
-      let xhr = new XMLHttpRequest();
+      // let xhr = new XMLHttpRequest();
 
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
+      // xhr.onreadystatechange = function () {
+      //   if (xhr.readyState === 4) {
+      //     if (xhr.status === 200) {
 
-            requestModal.hide();
-            gratitudeModal.show();
-            console.log('Отправлено');
-            event.target.reset();
-          }
-        }
-      }
+      //       requestModal.hide();
+      //       gratitudeModal.show();
+      //       console.log('Отправлено');
+      //       event.target.reset();
+      //     }
+      //   }
+      // }
 
-      xhr.open('POST', 'mail.php', true);
-      xhr.send(formData);
+      // xhr.open('POST', 'mail.php', true);
+      // xhr.send(formData);
     });
   })
 });
