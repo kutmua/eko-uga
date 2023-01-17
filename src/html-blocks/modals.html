@@ -39,14 +39,14 @@
       </div>
 
       <div class="request-modal__body modal-body">
-        <form class="request__form d-flex _form validate-form-js" action="#">
+        <form class="request__form d-flex _form validate-form-js" action="mail.php" method="POST">
           <div class="name-container request__form-input-container _form__input-container _name-container d-flex">
             <label for="name">Имя</label>
-            <input class="request__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
+            <input class="request__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="">
           </div>
           <div class="phone-container request__form-input-container _form__input-container _phone-container req d-flex">
             <label for="phone">Телефон</label>
-            <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
+            <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
           </div>
           <button class="request__form-btn _form__btn button d-flex">Отправить заявку!</button>
         </form>

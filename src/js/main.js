@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ЗАПУСК ФУНКЦИЙ */
   smoothScroll();
-  window.addEventListener('resize',smoothScroll);
+  window.addEventListener('resize', smoothScroll);
 
 /* -------------------------------------------- */
 
@@ -180,28 +180,44 @@ document.addEventListener("DOMContentLoaded", function () {
     ])
     // TODO: переделать закрытие окна после прохождения валидации
     .onSuccess((event) => {
-      const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
-        keyboard: true
-      })
+      // const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+      //   keyboard: true
+      // })
       // const requestModal = new bootstrap.Modal('#requestModal', {
       //   keyboard: true
       // });
 
-      requestModal.hide()
-      if (requestModal.hide()) {
-        console.log('закрыл');
-      }
-      else {
-        console.log('не закрыл');
-      }
+      // requestModal.hide()
 
       // gratitudeModal.show(event.submitter);
-      gratitudeModal.show();
+      // gratitudeModal.show();
 
-      setTimeout(()=>{
-        event.path[0][0].value = '';
-        event.path[0][1].value = '';
-      }, 500);
+
+      let formData = new FormData(event.target);
+
+      console.log(...formData);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+
+            requestModal.hide()
+
+            const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+              keyboard: true
+            })
+            gratitudeModal.show();
+            console.log('Отправлено');
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      event.target.reset();
     });
   })
 });

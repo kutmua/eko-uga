@@ -1,48 +1,39 @@
-<form class="price-form _form validate-form-js" action="#" method="POST" enctype="multipart/form-data">
+<form class="price-form _form validate-form-js" action="mail.php" method="POST" enctype="multipart/form-data">
   <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
     <label for="select">Выберите из списка</label>
-    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="select" data-form-select="" required>
-      <option value="stroitelniy" selected>Вывезти строительный мусор</option>
-      <option value="bitovoi">Вывезти бытовой мусор</option>
-      <option value="mebel">Вывезти старую мебель</option>
-      <option value="okna">Вывезти окна, двери</option>
-      <option value="derevo">Вывезти дерево, ветки</option>
-      <option value="trava">Вывезти землю, траву</option>
-      <option value="sneg">Вывезти и очистить от снега</option>
-      <option value="demontazh">Произвести демонтаж</option>
-
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="Услуга" data-form-select="" required>
+      <option value="Вывезти строительный мусор" data-value="stroitelniy" selected>Вывезти строительный мусор</option>
+      <option value="Вывезти бытовой мусор" data-value="bitovoi">Вывезти бытовой мусор</option>
+      <option value="Вывезти старую мебель" data-value="mebel">Вывезти старую мебель</option>
+      <option value="Вывезти окна, двери" data-value="okna">Вывезти окна, двери</option>
+      <option value="Вывезти дерево, ветки" data-value="derevo">Вывезти дерево, ветки</option>
+      <option value="Вывезти землю, траву" data-value="trava">Вывезти землю, траву</option>
+      <option value="Вывезти и очистить от снега" data-value="sneg">Вывезти и очистить от снега</option>
+      <option value="Произвести демонтаж" data-value="demontazh">Произвести демонтаж</option>
     </select>
   </div>
 
   <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
     <label for="value">Какой объем в кубах (не обязательно)</label>
-    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="value" data-form-value="" value="1" min="0">
+    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="Объем" data-form-value="" value="1" min="0">
   </div>
 
   <div class="worker-container price-form__input-container _form__input-container _worker-container d-flex">
     <label for="worker">Сколько рабочих нужно</label>
-    <input class="price-form__worker _validate-form__worker _form__worker validate-form-worker-js" type="number" name="worker" data-form-worker="" value="1" min="0">
+    <input class="price-form__worker _validate-form__worker _form__worker validate-form-worker-js" type="number" name="Рабочие" data-form-worker="" value="1" min="0">
   </div>
 
   <div class="tools-container price-form__input-container _form__input-container _tools-container d-flex">
-    <p class="_form-label">Брать ли нам инструменты, мешки? </p>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioYes" checked>
-      <label class="form-check-label" for="toolsRadioYes">
-        Да
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="toolsRadio" id="toolsRadioNo">
-      <label class="form-check-label" for="toolsRadioNo">
-        Нет
-      </label>
-    </div>
+    <label for="select">Брать ли нам инструменты, мешки?</label>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Инструменты (мешки)" name="Инструменты, мешки" data-form-select="">
+      <option value="Да" data-value="Da" selected>Да</option>
+      <option value="Нет" data-value="Net">Нет</option>
+    </select>
   </div>
 
   <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
     <label for="info">Можете описать, что нужно сделать</label>
-    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="info" cols="40" rows="5" data-form-info=""></textarea>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="Описание" cols="40" rows="5" data-form-info=""></textarea>
   </div>
 
   <div class="file-container price-form__input-container _form__input-container _file-container input-group">
@@ -51,12 +42,12 @@
 
   <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
     <label for="name">Имя</label>
-    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="name" data-form-name="">
+    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="">
   </div>
 
   <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
     <label for="phone">Телефон</label>
-    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="phone" data-form-phone="" required>
+    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
   </div>
 
   <button class="price-form__btn _form__btn button d-flex">Отправить заявку!</button>
