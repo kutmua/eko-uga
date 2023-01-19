@@ -536,13 +536,26 @@
   }
 }
 
-
-.dropdown-item-js {
-  &:hover + .ppp {
+// ----------------
+.dropdown-custom {
+  position: relative;
+  &:hover .dropdown-custom__menu {
     display: block;
   }
 }
-.ppp {
+.dropdown-custom__btn {
+  display: block;
+}
+
+.dropdown-custom__menu {
   position: absolute;
   display: none;
+  // top: 0;
+  right: 0;
+  max-width: max-content;
+  min-width: 200px;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2000;
 }
