@@ -150,6 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
     keyboard: true
   })
+  const priceModal = new bootstrap.Modal('#priceModal', {
+    keyboard: true
+  })
 
   forms.forEach(form => {
     // iunput-mask
@@ -189,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       gratitudeModal.show();
       requestModal.hide();
+      priceModal.hide();
       event.target.reset();
       /* --------------------------------- */
 
