@@ -8,6 +8,10 @@
   max-width: 1320px;
 }
 
+.section-padding {
+  padding: 180px 0 70px 0;
+}
+
 .flex {
   display: flex;
 }
@@ -536,13 +540,62 @@
   }
 }
 
-
-.dropdown-item-js {
-  &:hover + .ppp {
-    display: block;
+._service-card {
+  border-radius: 3px;
+  margin-bottom: 44px;
+  ._service-card-container {
+    padding: 20px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    height: 100%;
+    position: relative;
+    border-radius: inherit;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      filter: brightness(50%) blur(1px);
+      -moz-filter: brightness(50%) blur(1px);
+      -ms-filter: brightness(50%) blur(1px);
+      -o-filter: brightness(50%) blur(1px);
+      -webkit-filter: brightness(50%) blur(1px);
+      z-index: -1;
+    }
+    ._service-card-title {
+      margin-top: auto;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      @include font-settings (normal, 600, 24px, normal, $--white_color);
+    }
+    ._service-card-descr {
+      margin: 15px auto;
+      max-width: 340px;
+      @include font-settings (normal, 400, 16px, normal, $--white_color);
+    }
+    ._service-card-price {
+      margin-bottom: 15px;
+      @include font-settings (normal, 600, 28px, normal, $--white_color);
+    }
+    ._service-card-btn,
+    ._service-card-btn-more {
+      position: absolute;
+      bottom: -20px;
+      @include font-settings (normal, 400, 13px, normal, $--white_color);
+    }
+    ._service-card-btn {
+      max-width: 180px;
+      left: 30px;
+    }
+    ._service-card-btn-more {
+      max-width: 150px;
+      right: 30px;
+    }
   }
-}
-.ppp {
-  position: absolute;
-  display: none;
 }

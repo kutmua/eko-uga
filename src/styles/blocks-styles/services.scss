@@ -13,7 +13,7 @@
     max-width: 730px;
     @include font-settings (italic, 600, 18px, normal, $--text_color);
     opacity: .8;
-  }
+  }  
   .services__card {
     border-radius: 3px;
     &:not(:last-child) {

@@ -51,7 +51,8 @@ const srcPaths = {
   srcMainJs: `${srcFolder}/js/*.js`,
   srcBlocksJs: `${srcFolder}/js/blocks-scripts/**/*.js`,
   srcLibrariesJs: `${srcFolder}/js/libraries-scripts/**/*.js`,
-  srcPages: `${srcFolder}/pages/**/*.html`,
+  srcMainPages: `${srcFolder}/main-pages/**/*.html`,
+  srcSecondaryPages: `${srcFolder}/secondary-pages/**/*.html`,
   srcLibrariesStyles: `${srcFolder}/styles/libraries-styles/**/*.css`,
   srcBlocksStyles:`${srcFolder}/styles/blocks-styles/**/*.scss`,
   srcMainStyles: `${srcFolder}/styles/main-styles/**/*.scss`,
@@ -59,6 +60,8 @@ const srcPaths = {
 
 const buildPaths = {
   buildFolderFavicons: `${buildFolder}/img/favicons/`,
+  buildMainPages: `${buildFolder}/main-pages/`,
+  buildSecondaryPages: `${buildFolder}/secondary-pages/`,
   buildFolderFonts: `${buildFolder}/fonts/`,
   buildFolderJs: `${buildFolder}/js/`,
   buildFolderStyles: `${buildFolder}/styles/`,
@@ -103,7 +106,7 @@ const htmlMinify = () => {
 }
 
 const htmlPagesMinify =() => {
-  return gulp.src(srcPaths.srcPages)
+  return gulp.src(srcPaths.srcMainPages)
     .pipe(fileInclude())
     .pipe(typograf({
       locale: ['ru', 'en-US']
@@ -111,7 +114,20 @@ const htmlPagesMinify =() => {
     .pipe(gulpIf(isProd, htmlMin({
       collapseWhitespace: true,
     })))
-    .pipe(gulp.dest(buildFolder))
+    .pipe(gulp.dest(buildPaths.buildMainPages))
+    .pipe(browser.stream())
+}
+
+const htmlSecondaryPages =() => {
+  return gulp.src(srcPaths.srcSecondaryPages)
+    .pipe(fileInclude())
+    .pipe(typograf({
+      locale: ['ru', 'en-US']
+    }))
+    .pipe(gulpIf(isProd, htmlMin({
+      collapseWhitespace: true,
+    })))
+    .pipe(gulp.dest(buildPaths.buildSecondaryPages))
     .pipe(browser.stream())
 }
 
@@ -290,7 +306,14 @@ function watchFiles() {
     `${srcFolder}/*.html`,
     `${srcFolder}/html-blocks/**/*.html`,
   ], htmlMinify);
-  gulp.watch(srcPaths.srcPages, htmlPagesMinify);
+  gulp.watch([
+      srcPaths.srcMainPages,
+      `${srcFolder}/html-blocks/**/*.html`,
+    ], htmlPagesMinify);
+  gulp.watch([
+    srcPaths.srcSecondaryPages,
+    `${srcFolder}/html-blocks/**/*.html`,
+  ], htmlSecondaryPages);
   gulp.watch([
     srcPaths.srcMainStyles,
     srcPaths.srcBlocksStyles,
@@ -315,6 +338,7 @@ function watchFiles() {
 const mainTasks = gulp.series(
   htmlMinify,
   htmlPagesMinify,
+  htmlSecondaryPages,
   jsMinify,
   jsLibraries,
   jsBlocks,
