@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Эко-Юга. Компания по утилизации мусора в городе Краснодар.">
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons//favicon-16x16.png">
+  <link rel="manifest" href="img/favicons//site.webmanifest">
+  <link rel="mask-icon" href="img/favicons//safari-pinned-tab.svg" color="#ff5200">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <!-- fonts -->
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <!-- swiper -->
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/normalize.min.css">
+  <link rel="stylesheet" href="./styles/style.min.css">
+  <link rel="stylesheet" href="./styles/media.min.css">
+  <title>Эко-Юга. Новости.</title>
+</head>
+
+<body>
+  <header class="header">
+  <nav class="header__nav navbar navbar-expand-lg fixed-top">
+    <div class="header__container container">
+      <a class="header__logo navbar-brand d-flex logo" href="index.html">
+        <img src="img/logo.png" alt="Логотип">
+        <span>
+          Эко-Юга
+        </span>
+      </a>
+
+      <button class="header__burger navbar-toggler header-burger-js" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Кнопка бургер меню">
+        <span class="burger-line burger-first-line"></span>
+        <span class="burger-line burger-second-line"></span>
+        <span class="burger-line burger-third-line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse header-nav-js" id="headerNav">
+        <ul class="header__nav-list navbar-nav">
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link link anchor-link" href="#portfolio">Примеры работ</a>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link link anchor-link" href="#discount">Получить скидку</a>
+          </li>
+          <li class="header__nav-list-item nav-item dropdown-li dropdown-center">
+            <a class="header__nav-list-item-link nav-link header-link link anchor-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Наши услуги</a>
+            <div class="arrow"></div>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../vivoz-stroitelnogo-musora.html">Вывоз строительного мусора</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../vivoz-bitovogo-musora.html">Вывоз бытового мусора</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../vivoz-mebeli.html">Вывоз мебели</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../vivoz-dereva.html">Вывоз дерева</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../#">Вывоз чего-то там</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../demontazh.html">Демонтаж</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="../gruzoperevozki.html">Грузоперевозки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link link anchor-link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="header__nav-list-item nav-item">
+            <a class="header__nav-list-item-link nav-link header-link link" href="../news.html">Новости</a>
+          </li>
+        </ul>
+
+        <ul class="header__phones-list">
+          <li class="header__phones-list-item">
+            <a class="header__phones-list-link header-phone-link link" href="tel:+79184187167" aria-label="Наш телефон">
+              + 7 (918) 418-71-67
+            </a>
+          </li>
+          <li class="header__phones-list-item">
+            <a class="header__phones-list-link header-phone-link link" href="tel:+79996306966" aria-label="Наш телефон">
+              + 7 (999) 630-69-66
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <section class="hero section" id="hero">
+    <div class="hero__container container">
+      <div class="row">
+        <div class="col-12">
+          <div id="typed-strings">
+            <p>любые окна и двери</p>
+            <p>строительный мусор</p>
+            <p>бытовой мусор</p>
+            <p>старую мебель</p>
+          </div>
+          <h1 class="hero__title title text-center">
+            Утилизируем <strong id="typed"></strong>в Краснодаре, за собой уберем на 100%
+          </h1>
+
+          <p class="hero__heading text-center heading-small">Соседи не узнают, честно</p>
+          <strong class="offer heading-small m-auto d-block text-center">-30% на первый заказ</strong>
+
+<div class="counter counter-js">
+  <svg class="clock"viewBox="-6 -6 932 274" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path class="shape" fill="#ffffff" d="M671.707057,133 L671.679126,133 C656.247994,166.552191 621.006381,190 580,190 C538.993619,190 503.752006,166.552191 488.320874,133 L488.292943,133 L488.292552,132.99895 C484.173876,121.930171 476.061786,106.4 460,106.4 C443.938214,106.4 435.826106,121.930184 431.707438,132.998977 L431.707057,133 L431.679126,133 C416.247994,166.552191 381.006381,190 340,190 C298.993619,190 263.752006,166.552191 248.320874,133 L248.292943,133 L248.292552,132.99895 C244.173876,121.930171 236.061786,106.4 220,106.4 C203.938214,106.4 195.826106,121.930184 191.707438,132.998977 L191.707057,133 L191.679126,133 C176.247994,166.552191 141.006381,190 100,190 C44.771525,190 0,147.467051 0,95 C0,42.5329488 44.771525,-2.7000624e-14 100,0 C141.006381,1.3500312e-14 176.247994,23.4478091 191.679126,57 L191.707057,57 L191.707448,57.0010498 C195.826124,68.069829 203.938214,83.6 220,83.6 C236.061786,83.6 244.173894,68.0698159 248.292562,57.0010225 L248.292943,57 L248.320874,57 C263.752006,23.4478091 298.993619,-1.3500312e-14 340,0 C381.006381,1.3500312e-14 416.247994,23.4478091 431.679126,57 L431.707057,57 L431.707448,57.0010498 C435.826124,68.069829 443.938214,83.6 460,83.6 C476.061786,83.6 484.173894,68.0698159 488.292562,57.0010225 L488.292943,57 L488.320874,57 C503.752006,23.4478091 538.993619,-1.3500312e-14 580,0 C621.006381,1.3500312e-14 656.247994,23.4478091 671.679126,57 L671.707057,57 L671.707448,57.0010498 C675.826124,68.069829 683.938214,83.6 700,83.6 C716.061786,83.6 724.173894,68.0698159 728.292562,57.0010225 L728.292943,57 L728.320874,57 C743.752006,23.4478091 778.993619,-1.3500312e-14 820,0 C875.228475,2.7000624e-14 920,42.5329488 920,95 C920,147.467051 875.228475,190 820,190 C778.993619,190 743.752006,166.552191 728.320874,133 L728.292943,133 L728.292552,132.99895 C724.173876,121.930171 716.061786,106.4 700,106.4 C683.938214,106.4 675.826106,121.930184 671.707438,132.998977 L671.707057,133 L671.707057,133 Z"></path>
+    <g class="digits" font-size="80">
+      <text x="100" y="123">
+        <tspan data-counter-indicator="day">0</tspan>
+      </text>
+      <text x="340" y="123">
+        <tspan data-counter-indicator="hour">0</tspan>
+      </text>
+      <text x="580" y="123">
+        <tspan data-counter-indicator="minutes">0</tspan>
+      </text>
+      <text x="820" y="123">
+        <tspan data-counter-indicator="seconds">0</tspan>
+      </text>
+    </g>
+    <g class="labels" font-size="32">
+      <text x="100" y="250">
+        <tspan>Дней</tspan>
+      </text>
+      <text x="340" y="250">
+        <tspan>Часов</tspan>
+      </text>
+      <text x="580" y="250">
+        <tspan>Минут</tspan>
+      </text>
+      <text x="820" y="250">
+        <tspan>Секунд</tspan>
+      </text>
+    </g>
+  </svg>
+
+  <div class="counter__form">
+    <div class="counter__form-head">
+      <p class="counter__title text-center">ЗАПОЛНИТЕ ЗАЯВКУ И ПОЛУЧИТЕ -30%!</p>
+    </div>
+
+    <div class="counter__form-body">
+      <form class="counter-form _form validate-form-js" action="mail.php" method="post">
+        <div class="name-container counter__form-input-container _form__input-container _name-container d-flex">
+          <label for="name">Имя</label>
+          <input class="counter-form__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="">
+        </div>
+        <div class="phone-container counter__form-input-container _form__input-container _phone-container req d-flex">
+          <label for="phone">Телефон</label>
+          <input class="counter-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
+        </div>
+        <button class="counter__form-btn _form__btn button d-flex">Отправить заявку!</button>
+      </form>
+    </div>
+
+    <div class="counter__form-footer">
+      <p class="counter__form-footer-descr text-center">Нажимая кнопку, вы даете согласие на</p>
+      <a class="counter__form-footer-link text-center" href="#">обработку персональных данных</a>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer__container container">
+    <div class="row">
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="footer__content footer__content-left d-flex">
+          <a class="footer__logo d-flex logo" href="#">
+            <img src="img/logo.png" alt="Логотип">
+            <span>
+              Эко-Юга
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="footer__content footer__content-middle d-flex">
+          <ul class="footer__list d-flex">
+            <li class="footer__list-item">
+              <a class="footer__list-item-link link anchor-link" href="#portfolio">
+                Примеры работ
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link link anchor-link" href="#discount">
+                Получить скидку
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link link anchor-link" href="#services">
+                Наши услуги
+              </a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__list-item-link link anchor-link" href="#reviews">
+                Отзывы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-md-4 col-sm-12">
+        <div class="footer__content footer__content-right d-flex">
+          <ul class="footer__list-phones d-flex">
+            <li class="footer__list-phones-item">
+              <a class="footer__list-phones-item-link phone-link link" href="tel:+79184187167" aria-label="Наш телефон">
+                + 7 (918) 418-71-67
+              </a>
+            </li>
+            <li class="footer__list-phones-item">
+              <a class="footer__list-phones-item-link phone-link link" href="tel:+79996306966" aria-label="Наш телефон">
+                + 7 (999) 630-69-66
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="privacy-policy-row row">
+      <div class="col-12">
+        <a class="privacy-policy d-block m-auto text-center" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <div class="thanks-modal modal fade" id="gratitudeModal" tabindex="-1" aria-labelledby="Модальное окно благодарности" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="thanks-modal__body modal-body">
+        <svg version="1.1" viewBox="0 0 612 792" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <style type="text/css">
+            .st0{fill:#41AD49;}
+          </style>
+          <g>
+            <path class="st0" d="M562,396c0-141.4-114.6-256-256-256S50,254.6,50,396s114.6,256,256,256S562,537.4,562,396L562,396z    M501.7,296.3l-241,241l0,0l-17.2,17.2L110.3,421.3l58.8-58.8l74.5,74.5l199.4-199.4L501.7,296.3L501.7,296.3z"/>
+          </g>
+        </svg>
+
+        <h2 class="thanks-modal__title text-center">
+          Спасибо!
+        </h2>
+        <h2 class="thanks-modal__title text-center">
+          Ваша заявка отправлена.
+        </h2>
+        <h2 class="thanks-modal__title text-center">
+          В ближайшее время мы с Вами свяжемся!
+        </h2>
+      </div>
+
+      <div class="thanks-modal__footer modal-footer">
+        <button class="thanks-modal__close-btn button m-auto" type="button" data-bs-dismiss="modal" aria-label="Кнопка закрыть Модальное окно благодарности">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="request request-modal modal fade" id="requestModal" tabindex="-1" aria-labelledby="Модальное окно заявки" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="request-modal__header modal-header">
+        <h1 class="request-modal__title modal-title">Заявка</h1>
+        <button type="button" class="request-modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Кнопка закрытия модального окна"></button>
+      </div>
+
+      <div class="request-modal__body modal-body">
+        <form class="request__form d-flex _form validate-form-js" action="mail.php" method="POST">
+          <div class="name-container request__form-input-container _form__input-container _name-container d-flex">
+            <label for="name">Имя</label>
+            <input class="request__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="">
+          </div>
+          <div class="phone-container request__form-input-container _form__input-container _phone-container req d-flex">
+            <label for="phone">Телефон</label>
+            <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
+          </div>
+          <button class="request__form-btn _form__btn button d-flex">Отправить заявку!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="price-modal modal fade" id="priceModal" tabindex="-1" aria-labelledby="Модальное окно расчета стоимости" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="price-modal__header modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form class="price-form _form validate-form-js" action="mail.php" method="POST" enctype="multipart/form-data">
+  <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
+    <label for="select">Выберите из списка</label>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Виды услуг" name="Услуга" data-form-select="" required>
+      <option value="Вывезти строительный мусор" data-value="stroitelniy" selected>Вывезти строительный мусор</option>
+      <option value="Вывезти бытовой мусор" data-value="bitovoi">Вывезти бытовой мусор</option>
+      <option value="Вывезти старую мебель" data-value="mebel">Вывезти старую мебель</option>
+      <option value="Вывезти окна, двери" data-value="okna">Вывезти окна, двери</option>
+      <option value="Вывезти дерево, ветки" data-value="derevo">Вывезти дерево, ветки</option>
+      <option value="Вывезти землю, траву" data-value="trava">Вывезти землю, траву</option>
+      <option value="Вывезти и очистить от снега" data-value="sneg">Вывезти и очистить от снега</option>
+      <option value="Произвести демонтаж" data-value="demontazh">Произвести демонтаж</option>
+    </select>
+  </div>
+
+  <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
+    <label for="value">Какой объем в кубах (не обязательно)</label>
+    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="Объем" data-form-value="" value="1" min="0">
+  </div>
+
+  <div class="worker-container price-form__input-container _form__input-container _worker-container d-flex">
+    <label for="worker">Сколько рабочих нужно</label>
+    <input class="price-form__worker _validate-form__worker _form__worker validate-form-worker-js" type="number" name="Рабочие" data-form-worker="" value="1" min="0">
+  </div>
+
+  <div class="tools-container price-form__input-container _form__input-container _tools-container d-flex">
+    <label for="select">Брать ли нам инструменты, мешки?</label>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select" aria-label="Инструменты (мешки)" name="Инструменты, мешки" data-form-select="">
+      <option value="Да" data-value="Da" selected>Да</option>
+      <option value="Нет" data-value="Net">Нет</option>
+    </select>
+  </div>
+
+  <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
+    <label for="info">Можете описать, что нужно сделать</label>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="Описание" cols="40" rows="5" data-form-info=""></textarea>
+  </div>
+
+  <div class="file-container price-form__input-container _form__input-container _file-container input-group">
+    <input class="form-control" type="file" name="file[]" multiple id="files">
+  </div>
+
+  <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
+    <label for="name">Имя</label>
+    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="">
+  </div>
+
+  <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
+    <label for="phone">Телефон</label>
+    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
+  </div>
+
+  <button class="price-form__btn _form__btn button d-flex">Отправить заявку!</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- main script -->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+<script src="./js/map.min.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/typed.min.js"></script>
+<script src="./js/inputmask.min.js"></script>
+<script src="./js/just-validate.production.min.js"></script>
+<script src="./js/main.min.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 /* -------------------------------------------- */
 
-  /* плавный скролл */
+  /* плавный скролл */ 
   function smoothScroll() {
     const anchors = document.querySelectorAll('.anchor-link');
 
