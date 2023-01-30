@@ -369,3 +369,21 @@
     font-size: 20px;
   }
 }
+
+@media (max-width: 360px) {
+  .contrast {
+    .contrast__slider {
+      .contrast__descr {
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: normal;
+      }
+      .before__descr {
+        left: 6px;
+      }
+      .after__descr {
+        right: 6px;
+      }
+    }
+  }
+}
