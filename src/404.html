@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html-blocks/head.html',{
+    "title": "Эко-Юга. Страница не найдена."
+  })
+  
+<body>
+  @@include('html-blocks/header.html',{})
+
+  <section class="not-found section-padding" id="not-found">
+    <div class="not-found__container container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="not-found__title text-center">
+            404
+          </h1>
+
+          <p class="not-found__descr text-center">Сожалеем, страница не найдена</p>
+
+          <button class="not-found__btn primary-button button m-auto back-btn">Вернуться на главную</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('html-blocks/scripts.html',{})
+</body>
+</html>

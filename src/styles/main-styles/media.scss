@@ -414,6 +414,15 @@
     max-width: 110px;
     right: 5px;
   }
+  .not-found {
+    .not-found__title {
+      font-size: 100px;
+    }
+    .not-found__btn {
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
 }
 
 @media (max-width: 360px) {

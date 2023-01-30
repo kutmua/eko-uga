@@ -1,0 +1,17 @@
+.not-found {
+  .not-found__title {
+    margin-bottom: 30px;
+    font-size: 200px;
+    font-weight: 600;
+    color: $--text_color;
+  }
+  .not-found__descr {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $--text_color;
+  }
+  .not-found__btn {
+    max-width: 210px;
+  }
+}

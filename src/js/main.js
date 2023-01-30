@@ -109,6 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* -------------------------------------------- */
 
+    /* кнопка назад для страницы 404 */
+  document.querySelector('.back-btn').addEventListener('click', () => {
+    history.back();
+  });
+
+/* -------------------------------------------- */
+
     /* слайдер ДО и ПОСЛЕ */
   const slider = document.querySelector('.contrast-slider-js');
   const before = document.querySelector('.before');
