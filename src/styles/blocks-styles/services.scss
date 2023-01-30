@@ -13,54 +13,5 @@
     max-width: 730px;
     @include font-settings (italic, 600, 18px, normal, $--text_color);
     opacity: .8;
-  }  
-  .services__card {
-    border-radius: 3px;
-    &:not(:last-child) {
-      margin-bottom: 44px
-    }
-    .services__card-container {
-      padding: 200px 15px 30px 15px;
-      position: relative;
-      border-radius: inherit;
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: inherit;
-        filter: brightness(50%) blur(1px);
-        -moz-filter: brightness(50%) blur(1px);
-        -ms-filter: brightness(50%) blur(1px);
-        -o-filter: brightness(50%) blur(1px);
-        -webkit-filter: brightness(50%) blur(1px);
-        z-index: -1;
-      }
-      .services__card-title {
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        @include font-settings (normal, 600, 24px, normal, $--white_color);
-      }
-      .services__card-descr {
-        margin: 15px auto;
-        max-width: 340px;
-        @include font-settings (normal, 400, 16px, normal, $--white_color);
-      }
-      .services__card-price {
-        margin-bottom: 15px;
-        @include font-settings (normal, 600, 28px, normal, $--white_color);
-      }
-      .services__card-btn {
-        position: absolute;
-        max-width: 220px;
-        bottom: -20px;
-        left: calc(50% - 110px);
-        @include font-settings (normal, 400, 14px, normal, $--white_color);
-      }
-    }
   }
 }
