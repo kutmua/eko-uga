@@ -239,15 +239,17 @@ document.addEventListener("DOMContentLoaded", function () {
   
     /* city-swiper */  
   const citySwiperSmall = new Swiper(".city__swiper-small", {
-    loop: true,
     spaceBetween: 10,
-    slidesPerView: 1,
+    slidesPerView: 10,
     freeMode: true,
     watchSlidesProgress: true,
   });
   const citySwiperBig = new Swiper(".city__swiper-big", {
     loop: true,
-    spaceBetween: 10,
+    navigation: {
+      nextEl: '.city__swiper-big-btn-next',
+      prevEl: '.city__swiper-big-btn-prev',
+    },
     thumbs: {
       swiper: citySwiperSmall,
     },
