@@ -158,6 +158,14 @@
     margin-bottom: 20px;
 }
 
+  /*stats*/
+  .stats.section {
+    padding: 50px 0 0 0;
+  }
+  .stats.section .stats__descr {
+    margin-bottom: 20px;
+  }
+
   /*address*/
   .address .address-list .address-list__item:not(:last-child) {
     margin-bottom: 0;
@@ -392,6 +400,24 @@
   }
   .team.section .person-container {
     height: 300px;
+  }
+
+  /*stats*/
+  .stats.section {
+    padding: 30px 0 0 0;
+  }
+  .stats.section .stats__descr {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .stats.section .stats__swiper {
+    margin-bottom: 30px;
+  }
+  .stats.section .stats__swiper .stats__swiper-slide .stats-slide-heading {
+    margin-bottom: 10px;
+  }
+  .stats.section .stats__swiper .stats__swiper-slide .stats-slide-descr {
+    font-size: 14px;
   }
 
   /*address*/

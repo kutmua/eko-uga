@@ -109,89 +109,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* -------------------------------------------- */
 
-    /* кнопка назад для страницы 404 */
-  document.querySelector('.back-btn').addEventListener('click', () => {
-    history.back();
-  });
+    /* слайдер ДО и ПОСЛЕ (оставить только для GitHub) */
+  // const slider = document.querySelector('.contrast-slider-js');
+  // const before = document.querySelector('.before');
+  // const beforeImage = before.querySelector('img');
+  // const change = document.querySelector('.change');
+  // const body = document.body;
 
-/* -------------------------------------------- */
+  // let isActive = false;
 
-    /* слайдер ДО и ПОСЛЕ */
-  const slider = document.querySelector('.contrast-slider-js');
-  const before = document.querySelector('.before');
-  const beforeImage = before.querySelector('img');
-  const change = document.querySelector('.change');
-  const body = document.body;
+  // let width = slider.offsetWidth;
+  // beforeImage.style.width = `${width}px`;
 
-  let isActive = false;
+  // change.addEventListener('mousedown', () => {
+  //   isActive = true;
+  // });
 
-  let width = slider.offsetWidth;
-  beforeImage.style.width = `${width}px`;
+  // body.addEventListener('mouseup', () => {
+  //   isActive = false;
+  // });
 
-  change.addEventListener('mousedown', () => {
-    isActive = true;
-  });
+  // body.addEventListener('mouseleave', () => {
+  //   isActive = false;
+  // });
 
-  body.addEventListener('mouseup', () => {
-    isActive = false;
-  });
+  // const beforeAfterSlider = (x) => {
+  //   let shift = Math.max(0, Math.min(x, slider.offsetWidth));
+  //   before.style.width = `${shift}px`;
+  //   change.style.left = `${shift}px`;
+  // };
 
-  body.addEventListener('mouseleave', () => {
-    isActive = false;
-  });
+  // const pauseEvents = (e) => {
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  //   return false;
+  // };
 
-  const beforeAfterSlider = (x) => {
-    let shift = Math.max(0, Math.min(x, slider.offsetWidth));
-    before.style.width = `${shift}px`;
-    change.style.left = `${shift}px`;
-  };
+  // body.addEventListener('mousemove', (e) => {
+  //   if (!isActive) {
+  //     return;
+  //   }
 
-  const pauseEvents = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    return false;
-  };
+  //   let x = e.pageX;
+  //   x -= slider.getBoundingClientRect().left;
+  //   beforeAfterSlider(x);
+  //   pauseEvents(e);
+  // });
 
-  body.addEventListener('mousemove', (e) => {
-    if (!isActive) {
-      return;
-    }
+  // change.addEventListener('touchstart', () => {
+  //   isActive = true;
+  // });
 
-    let x = e.pageX;
-    x -= slider.getBoundingClientRect().left;
-    beforeAfterSlider(x);
-    pauseEvents(e);
-  });
+  // body.addEventListener('touchend', () => {
+  //   isActive = false;
+  // });
 
-  change.addEventListener('touchstart', () => {
-    isActive = true;
-  });
+  // body.addEventListener('touchcancel', () => {
+  //   isActive = false;
+  // });
 
-  body.addEventListener('touchend', () => {
-    isActive = false;
-  });
+  // body.addEventListener('touchmove', (e) => {
+  //   if (!isActive) {
+  //     return;
+  //   }
 
-  body.addEventListener('touchcancel', () => {
-    isActive = false;
-  });
-
-  body.addEventListener('touchmove', (e) => {
-    if (!isActive) {
-      return;
-    }
-
-    let x;
+  //   let x;
     
-    let i;
-    for (i = 0; i < e.changedTouches.length; i++) {
-      x = e.changedTouches[i].pageX; 
-    }
+  //   let i;
+  //   for (i = 0; i < e.changedTouches.length; i++) {
+  //     x = e.changedTouches[i].pageX; 
+  //   }
     
-    x -= slider.getBoundingClientRect().left;
+  //   x -= slider.getBoundingClientRect().left;
 
-    beforeAfterSlider(x);
-    pauseEvents(e);
-  });
+  //   beforeAfterSlider(x);
+  //   pauseEvents(e);
+  // });
 
 /* -------------------------------------------- */
 
@@ -212,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
     /* reviews-swiper */
-  const swiper = new Swiper('.reviews-swiper', {
+  const reviewsSwiper = new Swiper('.reviews-swiper', {
     direction: 'horizontal',
 
     pagination: {
@@ -224,7 +217,21 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: '.reviews-swiper-btn-next',
       prevEl: '.reviews-swiper-btn-prev',
     },
+  });
 
+    /* stats-swiper */
+  const statsSwiper = new Swiper('.stats__swiper', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
+
+    pagination: {
+      el: ".stats__swiper-pagination",
+      renderBullet: function (index, className) {
+        return '<button class="'+ className + ' stats__swiper-btn button stats__swiper-btn-' + (index + 1) + '"></button>';
+      },
+      clickable: true,
+    },
   });
 
     /* iunput-mask, just-validate */
