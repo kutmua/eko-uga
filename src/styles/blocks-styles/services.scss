@@ -14,4 +14,7 @@
     @include font-settings (italic, 600, 18px, normal, $--text_color);
     opacity: .8;
   }
+  ._service-card ._service-card-container ._service-card-btn {
+    left: calc(50% - 90px);
+  }
 }

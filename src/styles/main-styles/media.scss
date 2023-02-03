@@ -461,6 +461,11 @@
     max-width: 110px;
     right: 5px;
   }
+  .services {
+    ._service-card ._service-card-container ._service-card-btn {
+      left: calc(50% - 80px);
+    }
+  }
   .not-found {
     .not-found__title {
       font-size: 100px;
