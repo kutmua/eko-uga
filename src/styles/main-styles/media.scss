@@ -443,6 +443,11 @@
     font-size: 14px;
   }
 
+  /*city*/
+  .city .city__swiper-big .city__swiper-big-btn {
+    width: 80px;
+  }
+
   /*address*/
   .address .address-list .address-list__item{
     flex-wrap: wrap;
@@ -503,6 +508,14 @@
       font-size: 13px;
     }
   }
+    /*city*/
+    .city .city__swiper-big .city__swiper-big-btn {
+      width: 50px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
 }
 
 @media (max-width: 360px) {

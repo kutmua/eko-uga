@@ -243,6 +243,23 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 10,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      200: {
+        slidesPerView: 4
+      },
+      360: {
+        slidesPerView: 5
+      },
+      500: {
+        slidesPerView: 7
+      },
+      650: {
+        slidesPerView: 8
+      },
+      770: {
+        slidesPerView: 10
+      },
+    }
   });
   const citySwiperBig = new Swiper(".city__swiper-big", {
     loop: true,
