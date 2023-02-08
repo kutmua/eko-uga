@@ -21,6 +21,12 @@
     position: relative;
     height: 400px;
     overflow: hidden;
+    &:nth-child(n + 9){
+      display: none;
+    }
+    &.show {
+      display: block;
+    }
     img {
       object-fit: cover;
       width: 100%;
