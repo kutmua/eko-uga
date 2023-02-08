@@ -322,7 +322,7 @@
   </div>
 
   <div class="file-container price-form__input-container _form__input-container _file-container input-group">
-    <!-- <label for="file[]">Можете отправить нам фото</label> -->
+    <label for="file">Можете отправить нам фото</label>
     <input class="form-control" type="file" name="file[]" multiple id="files">
   </div>
 
@@ -334,6 +334,47 @@
   <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
     <label for="phone">Телефон</label>
     <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
+  </div>
+
+  <div class="_form__clock counter-js">
+    <div class="_form__clock-container">
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-day _form__clock-numbers" data-counter-indicator="day"></span>
+        <p>дней</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-hour _form__clock-numbers" data-counter-indicator="hour"></span>
+        <p>часов</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-minutes _form__clock-numbers" data-counter-indicator="minutes"></span>
+        <p>минут</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-seconds _form__clock-numbers" data-counter-indicator="seconds"></span>
+        <p>секунд</p>
+      </div>
+
+      <div class="_form__clock-descr">
+        <svg width="26px" height="30px" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M5.32710816,23.2855687 C7.7889367,13.7070646 10.4757971,7.11703829 13.4291505,3.48008932 C17.1965931,-1.15938127 21.569757,-1.13167763 25.9295252,3.49426878 L24.4740577,4.86598828 C20.9174774,1.09226695 17.9597394,1.07352992 14.9817268,4.74084572 C12.257865,8.09518405 9.68290774,14.4116595 7.29746023,23.6556027 C8.84034628,21.9860444 10.906837,20.3381877 13.4907629,18.7045447 L14.5595391,20.3950231 C9.77324059,23.4210787 6.99379861,26.4010157 6.1720226,29.2751311 L5.96430125,29.2157388 C5.95669217,29.2497994 5.94908504,29.2838916 5.94148004,29.3180155 L3.98937177,28.88296 C4.06068752,28.5629639 4.1321984,28.2456562 4.20390554,27.931036 L4.01198107,27.931036 C4.01198107,24.3192142 2.67921198,20.9854581 -0.016772578,17.8946093 L1.49043505,16.5799515 C3.32784036,18.6864702 4.60905326,20.9243571 5.32710816,23.2855687 Z" id="Combined-Shape" fill="rgb(22, 102, 241)" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+
+        <p>До конца акции</p>
+      </div>
+
+    </div>
   </div>
 
   <button class="price-form__btn _form__btn button d-flex">Рассчитать стоимость со скидкой в -30%</button>
