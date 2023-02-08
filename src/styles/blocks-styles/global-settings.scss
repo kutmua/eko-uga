@@ -463,10 +463,10 @@
   }
   ._form__clock {
     padding: 0 50px;
-    margin: 30px 0;
+    margin: 20px 0 30px 0;
     ._form__clock-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       width: 100%;
       position: relative;
@@ -478,7 +478,7 @@
         position: absolute;
         display: flex;
         top: -25px;
-        right: -40px;
+        right: 0;
         p {
           max-width: 62px;
           @include font-settings (italic, 400, 14px, normal, $--text_color);
@@ -489,7 +489,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        max-width: 76px;
+        max-width: 75px;
         width: 100%;
         p {
           @include font-settings (normal, 400, 14px, normal, $--text_color);

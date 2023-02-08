@@ -248,6 +248,9 @@
 
   ._form {
     box-shadow: none;
+    ._form__clock {
+      padding: 0;
+    }
   }
 
   /*hero*/
@@ -480,6 +483,14 @@
 }
 
 @media (max-width: 380px) {
+  ._form ._form__clock {
+    margin: 20px 0;
+  }
+  ._form ._form__clock ._form__clock-container ._form__clock-descr p {
+    font-size: 12px;
+  }
+
+  /*_service-card*/
   ._service-card ._service-card-container ._service-card-btn, 
   ._service-card ._service-card-container ._service-card-btn-more {
     height: 30px;
@@ -499,6 +510,8 @@
       left: calc(50% - 80px);
     }
   }
+
+  /*404*/
   .not-found {
     .not-found__title {
       font-size: 100px;
@@ -508,14 +521,15 @@
       font-size: 13px;
     }
   }
-    /*city*/
-    .city .city__swiper-big .city__swiper-big-btn {
-      width: 50px;
-      svg {
-        width: 20px;
-        height: 20px;
-      }
+
+  /*city*/
+  .city .city__swiper-big .city__swiper-big-btn {
+    width: 50px;
+    svg {
+      width: 20px;
+      height: 20px;
     }
+  }
 }
 
 @media (max-width: 360px) {
