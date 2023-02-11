@@ -1,0 +1,18 @@
+.cars {
+  .cars__swiper-big {
+    overflow: hidden;
+    .cars__swiper-big-slide,
+    .cars__swiper-small-slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .cars__swiper-big-slide {
+      height: 450px;
+    }
+  }
+}

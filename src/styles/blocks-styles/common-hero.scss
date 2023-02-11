@@ -1,0 +1,16 @@
+.common-hero.section {
+  position: relative;
+  padding: 200px 0 70px 0;
+  background: rgba(0, 0, 0, .7) url(../img/hero-img.webp);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  .common-hero__title {
+    height: 100px;
+  }
+  .common-hero__heading {
+    margin-bottom: 80px;
+    color: $--hero_text_color;
+  }
+}

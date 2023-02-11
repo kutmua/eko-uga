@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* кнопка "показать еще" */
-  const portfolioArray = Array.from(document.querySelector('.portfolio-container-js').children);
-  const showMoreBtn = document.querySelector('.show-more-btn-js');
-  const caseLength = document.querySelectorAll('.portfolio__case').length;
-  let items = 8;
-
-  showMoreBtn.addEventListener('click', () => {
-    items +=2;
-    const visibleItems = portfolioArray.slice(0, items);
-  
-    visibleItems.forEach(el => {
-      el.classList.add('show');
-    })
-  
-    if (visibleItems.length === caseLength) {
-      showMoreBtn.style.display = 'none';
-    }
-  })
 /* -------------------------------------------- */
 
   /* слайдер ДО и ПОСЛЕ (оставить только для GitHub) */
@@ -227,6 +209,14 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbs: {
       swiper: citySwiperSmall,
     },
+  });
+
+    /* cars-swiper */  
+  const carsSwiperSmall = new Swiper(".cars__swiper-small", {
+
+  });
+  const carsSwiperBig = new Swiper(".cars__swiper-big", {
+
   });
 /* -------------------------------------------- */
 })

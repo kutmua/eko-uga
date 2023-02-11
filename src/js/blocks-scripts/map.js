@@ -1,6 +1,6 @@
 ymaps.ready(init);
 function init(){
-  const myMap = new ymaps.Map("map", {
+  const myMap = new ymaps.Map(document.querySelector('.map'), {
     center: [45.02758378, 39.02070407],
     controls: [],
     zoom: 15,

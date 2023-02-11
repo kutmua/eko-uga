@@ -1,5 +1,5 @@
 .motive.section {
-  padding: 70px 0 20px 0;
+  padding: 70px 0;
   .motive__chapter {
     margin-bottom: 50px;
     flex-direction: column;
@@ -14,7 +14,7 @@
       @include font-settings (normal, 600, 28px, normal,  $--text_color);
     }
     .motive__chapter-descr {
-      max-width: 200px;
+      max-width: 230px;
       opacity: .6;
       @include font-settings (normal, 400, 18px, normal,  $--motive_descr);
     }

@@ -6,8 +6,10 @@
   
 <body>
   @@include('../html-blocks/main-pages-header.html',{})
+  @@include('../html-blocks/common-hero.html',{})
+  @@include('../html-blocks/motive-secondary.html',{})
 
-  <section class="demontazh section-padding" id="demontazh">
+  <section class="demontazh section" id="demontazh">
     <div class="demontazh__container container">
       <div class="row">
         <div class="col-12">
@@ -164,8 +166,14 @@
     </div>
   </section>
 
+  @@include('../html-blocks/portfolio-secondary.html',{})
+  @@include('../html-blocks/team-secondary.html',{})
+  @@include('../html-blocks/address-secondary.html',{})
+
   @@include('../html-blocks/main-pages-footer.html',{})
   @@include('../html-blocks/modals.html',{})
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  <script src="../js/map.min.js"></script>
   @@include('../html-blocks/main-pages-scripts.html',{})
 </body>
 </html>
