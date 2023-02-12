@@ -1,8 +1,15 @@
 .cars {
-  .cars__swiper-big {
+  .cars__swiper-big,
+  .cars__swiper-small {
+    margin-bottom: 10px;
     overflow: hidden;
-    .cars__swiper-big-slide,
-    .cars__swiper-small-slide {
+  }
+
+  .cars__swiper-big {
+    height: 400px;
+    position: relative;
+    border-radius: 5px;
+    .cars__swiper-big-slide {
       img {
         width: 100%;
         height: 100%;
@@ -10,9 +17,79 @@
         object-position: center center;
       }
     }
+    .cars__swiper-big-btn {
+      position: absolute;
+      width: 130px;
+      height: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: transparent;
+      transition: background-color .2s linear, opacity .2s linear;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: .2)
+      }
+      &:focus-visible {
+        background-color: rgba($color: #000000, $alpha: .2)
+      }
+      &:active {
+        background-color: rgba($color: #000000, $alpha: .3)
+      }
+    }
+    .cars__swiper-big-btn-prev {
+      left: 0;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .cars__swiper-big-btn-next {
+      right: 0;
+    }
+  }
 
-    .cars__swiper-big-slide {
-      height: 450px;
+  .cars__swiper-small {
+    margin-bottom: 30px;
+    .cars__swiper-small-slide {
+      height: 80px;
+      border-radius: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 5px;
+        filter: grayscale(1);
+        opacity: .8;
+        transition: filter .2s linear, opacity .2s linear;
+      }
+    }
+    .cars__swiper-small-slide.swiper-slide-thumb-active {
+      img{
+        filter: grayscale(0); 
+        opacity: 1; 
+      }
+    }
+  }
+
+  .cars__card-descr {
+    .car-text,
+    .car-specification,
+    .car-name {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .car-name {
+      display: block;
+      text-decoration: underline;
+      @include font-settings (normal, 600, 24px, normal,  $--text_color);
+    }
+    .car-text {
+      @include font-settings (normal, 400, 16px, normal,  $--text_color);
+    }
+    .car-specification {
+      @include font-settings (normal, 400, 16px, normal,  $--text_color);
+      span {
+        @include font-settings (normal, 900, 16px, normal,  $--text_color);
+      }
     }
   }
 }

@@ -213,10 +213,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* cars-swiper */  
   const carsSwiperSmall = new Swiper(".cars__swiper-small", {
-
+    spaceBetween: 10,
+    slidesPerView: 7,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      200: {
+        slidesPerView: 4
+      },
+      360: {
+        slidesPerView: 5
+      },
+      500: {
+        slidesPerView: 5
+      },
+      650: {
+        slidesPerView: 6
+      },
+      770: {
+        slidesPerView: 7
+      },
+    }
   });
-  const carsSwiperBig = new Swiper(".cars__swiper-big", {
 
+  const carsSwiperBig = new Swiper(".cars__swiper-big", {
+    loop: true,
+    navigation: {
+      nextEl: '.cars__swiper-big-btn-next',
+      prevEl: '.cars__swiper-big-btn-prev',
+    },
+    thumbs: {
+      swiper: carsSwiperSmall,
+    },
   });
 /* -------------------------------------------- */
 })
