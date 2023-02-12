@@ -60,7 +60,8 @@ const srcPaths = {
 
 const buildPaths = {
   buildFolderFavicons: `${buildFolder}/img/favicons/`,
-  buildMainPages: `${buildFolder}/main-pages/`,
+  // buildMainPages: `${buildFolder}/main-pages/`,
+  buildMainPages: `${buildFolder}`,
   buildSecondaryPages: `${buildFolder}/secondary-pages/`,
   buildFolderFonts: `${buildFolder}/fonts/`,
   buildFolderJs: `${buildFolder}/js/`,
