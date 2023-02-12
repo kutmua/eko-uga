@@ -358,7 +358,7 @@
       <div class="row">
         <div class="col-xl-6 col-md-6 col-sm-12">
           <div class="cars__card">
-            <div class="cars__swiper-big">
+            <div class="cars__swiper-big cars__swiper-big-1">
               <div class="swiper-wrapper">
                 <div class="cars__swiper-big-slide swiper-slide">
                   <img src="./img/cars-img-1.webp" alt="Фото наших автомобилей">
@@ -402,7 +402,7 @@
               </button>
             </div>
 
-            <div class="cars__swiper-small">
+            <div class="cars__swiper-small cars__swiper-small-1">
               <div class="swiper-wrapper">
                 <div class="cars__swiper-small-slide swiper-slide">
                   <img src="./img/cars-img-1.webp" alt="Фото наших автомобилей">
@@ -438,7 +438,82 @@
               <strong class="car-name">Hyundai Porter</strong>
               <p class="car-text">Идеальный грузовик для реалий нашего города. Подъедет к любому подъезду, проедет там, где другие зависнут.</p>
               <p class="car-specification">Грузоподъемность <span>1 900 КГ.</span> Объем кузова <span>8м3</span></p>
-              <button class="car-btn primary-button m-auto">Заказать</button>
+              <button class="car-btn primary-button m-auto" data-bs-toggle="modal" data-bs-target="#requestModal">Заказать</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-md-6 col-sm-12">
+          <div class="cars__card">
+            <div class="cars__swiper-big cars__swiper-big-2">
+              <div class="swiper-wrapper">
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-1.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-2.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-3.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-4.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-5.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-6.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-big-slide swiper-slide">
+                  <img src="./img/cars4-img-7.webp" alt="Фото наших автомобилей">
+                </div>
+              </div>
+
+              <button class="cars__swiper-big-btn cars__swiper-big-btn-next button">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008" stroke="#e6e6e6" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              
+              <button class="cars__swiper-big-btn cars__swiper-big-btn-prev button">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.91016 19.9201L15.4302 13.4001C16.2002 12.6301 16.2002 11.3701 15.4302 10.6001L8.91016 4.08008" stroke="#e6e6e6" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="cars__swiper-small cars__swiper-small-2">
+              <div class="swiper-wrapper">
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-1.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-2.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-3.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-4.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-5.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-6.webp" alt="Фото наших автомобилей">
+                </div>
+                <div class="cars__swiper-small-slide swiper-slide">
+                  <img src="./img/cars4-img-7.webp" alt="Фото наших автомобилей">
+                </div>
+              </div>
+            </div>
+
+            <div class="cars__card-descr">
+              <strong class="car-name">Газель 4 метра</strong>
+              <p class="car-text">Выносливая и вместительная рабочая лошадка. Заберет любой мусор и доедет куда угодно.</p>
+              <p class="car-specification">Грузоподъемность <span>2 900 КГ.</span> Объем кузова <span>16м3</span></p>
+              <button class="car-btn primary-button m-auto" data-bs-toggle="modal" data-bs-target="#requestModal">Заказать</button>
             </div>
           </div>
         </div>

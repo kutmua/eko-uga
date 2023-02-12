@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
     /* cars-swiper */  
-  const carsSwiperSmall = new Swiper(".cars__swiper-small", {
+  const carsSwiperSmall = new Swiper(".cars__swiper-small-1", {
     spaceBetween: 10,
     slidesPerView: 7,
     freeMode: true,
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const carsSwiperBig = new Swiper(".cars__swiper-big", {
+  const carsSwiperBig = new Swiper(".cars__swiper-big-1", {
     loop: true,
     navigation: {
       nextEl: '.cars__swiper-big-btn-next',
@@ -246,5 +246,42 @@ document.addEventListener("DOMContentLoaded", function () {
       swiper: carsSwiperSmall,
     },
   });
+
+  const carsSwiperSmall2 = new Swiper(".cars__swiper-small-2", {
+    spaceBetween: 10,
+    slidesPerView: 7,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      200: {
+        slidesPerView: 4
+      },
+      360: {
+        slidesPerView: 5
+      },
+      500: {
+        slidesPerView: 5
+      },
+      650: {
+        slidesPerView: 6
+      },
+      770: {
+        slidesPerView: 7
+      },
+    }
+  });
+
+  const carsSwiperBig2 = new Swiper(".cars__swiper-big-2", {
+    loop: true,
+    navigation: {
+      nextEl: '.cars__swiper-big-btn-next',
+      prevEl: '.cars__swiper-big-btn-prev',
+    },
+    thumbs: {
+      swiper: carsSwiperSmall2,
+    },
+  });
+
+
 /* -------------------------------------------- */
 })
