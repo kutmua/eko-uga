@@ -52,7 +52,7 @@ const srcPaths = {
   srcBlocksJs: `${srcFolder}/js/blocks-scripts/**/*.js`,
   srcLibrariesJs: `${srcFolder}/js/libraries-scripts/**/*.js`,
   srcMainPages: `${srcFolder}/main-pages/**/*.html`,
-  srcSecondaryPages: `${srcFolder}/secondary-pages/**/*.html`,
+  srcSecondaryPages: `${srcFolder}/secondary-pages/**/*.*`,
   srcLibrariesStyles: `${srcFolder}/styles/libraries-styles/**/*.css`,
   srcBlocksStyles:`${srcFolder}/styles/blocks-styles/**/*.scss`,
   srcMainStyles: `${srcFolder}/styles/main-styles/**/*.scss`,
@@ -60,9 +60,8 @@ const srcPaths = {
 
 const buildPaths = {
   buildFolderFavicons: `${buildFolder}/img/favicons/`,
-  // buildMainPages: `${buildFolder}/main-pages/`,
   buildMainPages: `${buildFolder}`,
-  buildSecondaryPages: `${buildFolder}/secondary-pages/`,
+  buildSecondaryPages: `${buildFolder}/`,
   buildFolderFonts: `${buildFolder}/fonts/`,
   buildFolderJs: `${buildFolder}/js/`,
   buildFolderStyles: `${buildFolder}/styles/`,
