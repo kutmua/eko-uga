@@ -1,5 +1,8 @@
 .price.section {
-  padding: 0 0 70px 0;
+  padding: 20px 0 70px 0;
+  .price__title {
+    margin-bottom: 50px;
+  }
   .input-group-text,
   .form-control {
     padding: 4px 10px;

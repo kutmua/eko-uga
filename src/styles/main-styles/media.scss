@@ -18,6 +18,18 @@
     font-size: 20px;
   }
 
+  .main-pages {
+    .motive.section,
+    .how-we-work.section,
+    .cars.section,
+    .team.section {
+      padding: 50px 0 0 0;
+    }
+    .demontazh.section {
+      padding: 0 0 50px 0;
+    }
+  }
+
   /*head*/
   .header {
     .header__nav {
@@ -77,21 +89,32 @@
     }
   }
 
+  /*common-hero*/
+  .common-hero.section {
+    padding: 130px 0 50px 0;
+  }
+
+  /*price*/
+  .price.section {
+    padding: 0 0 50px 0;
+  }
+
   /*motive*/
   .motive.section {
     padding: 50px 0 0 0;
   }
-  .motive .motive__chapter .motive__chapter-title {
+  .motive.section .motive__chapter .motive__chapter-title,
+  .motive.motive-mobile .motive__chapter .motive__chapter-title {
     margin-bottom: 5px;
     font-size: 22px;
   }
-  .motive .motive__chapter .motive__chapter-descr {
+  .motive.section .motive__chapter .motive__chapter-descr {
     font-size: 16px;
   }
 
   /*reviews*/
   .reviews.section {
-    padding: 0 0 50px 0;
+    padding: 50px 0 0 0;
   }
   .reviews.section .reviews__wrapper .reviews-swiper .reviews-swiper__slide .reviews-text {
     margin-bottom: 20px;
@@ -182,12 +205,29 @@
 }
 
 @media (max-width: 768px) {
+  /*cars*/
+  .cars__card {
+    margin-bottom: 50px;
+  }
+
+  .main-pages {
+    .team.section {
+      padding: 0;
+    }
+  }
+
+
   /*services*/
   ._service-card ._service-card-container ._service-card-btn {
     left: 30px;
   }
   ._service-card ._service-card-container ._service-card-btn-more {
     right: 30px;
+  }
+
+  /*city*/
+  .city.section {
+    padding: 50px 0;
   }
 
   /*address*/
@@ -253,8 +293,23 @@
     }
   }
 
+  .main-pages {
+    .motive.section,
+    .how-we-work.section,
+    .cars.section,
+    .team.section {
+      padding: 30px 0 0 0;
+    }
+    .demontazh.section {
+      padding: 0 0 30px 0;
+    }
+  }
+
   /*hero*/
   .hero.section {
+    padding: 110px 0 30px 0;
+  }
+  .common-hero.section {
     padding: 110px 0 30px 0;
   }
   .hero.section .hero__title {
@@ -284,30 +339,45 @@
   .motive.section.motive-mobile {
     display: block;
   }
+  .main-pages {
+    .motive.section {
+      display: block;
+      .motive__chapter {
+        margin-bottom: 20px;
+        img {
+        width: 150px;
+        height: 150px;
+        }
+        .motive__chapter-title {
+          font-size: 18px;
+        }
+        .motive__chapter-descr {
+          font-size: 14px;
+        }
+      }
+    }
+  }
   .motive.section {
     padding: 30px 0 0 0;
   }
-  .motive .motive__chapter img {
+  .motive.motive-mobile .motive__chapter img {
     width: 150px;
     height: 150px;
   }
-  .motive .motive__chapter .motive__chapter-title {
+  .motive.motive-mobile .motive__chapter .motive__chapter-title {
     font-size: 18px;
   }
-  .motive .motive__chapter .motive__chapter-descr {
+  .motive.motive-mobile .motive__chapter .motive__chapter-descr {
     font-size: 14px;
   }
-  .motive .motive__chapter {
+  .motive.motive-mobile .motive__chapter {
     margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 30px;
-    }
   }
 
   /*portfolio*/
   .portfolio .portfolio__sub-title {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 15px;
   }
   .portfolio .case-blanket {
     padding: 0px 20px;
@@ -320,13 +390,6 @@
     height: 20px;
   }
 
-  /*discount*/
-  .discount.section .discount__descr {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  /*portfolio*/
   .portfolio .portfolio__case {
     height: 300px;
   }
@@ -340,15 +403,21 @@
     font-size: 16px;
   }
 
+  /*discount*/
+  .discount.section .discount__descr {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
   /*services*/
   .services.section {
-    padding: 30px 0 40px 0;
+    padding: 30px 0 20px 0;
   }
   .services .services-bg-bottom {
     top: -15px;
     height: 20px;
   }
-  .services .services__descr {
+  .services.section .services__descr {
     margin-bottom: 20px;
     font-size: 15px;
   }
@@ -393,9 +462,46 @@
     font-size: 15px;
   }
 
+  /*cars*/
+  .cars.section {
+    padding: 0;
+  }
+  .cars__card {
+    margin-bottom: 30px;
+  }
+  .cars.section .cars__descr {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .cars.section .cars__swiper-small {
+    margin-bottom: 10px;
+  }
+
+  .cars.section .cars__swiper-big .cars__swiper-big-btn {
+    width: 80px;
+  }
+
+  .cars.section .cars__card-descr .car-name {
+    font-size: 18px;
+  }
+  .cars.section .cars__card-descr .car-text {
+    font-size: 15px;
+  }
+
+  .cars.section .cars__card-descr .car-text, 
+  .cars.section .cars__card-descr .car-specification, 
+  .cars.section .cars__card-descr .car-name {
+    margin-bottom: 15px;
+  }
+
+  /*team*/
+  .main-pages .team.section {
+    padding: 0;
+  }
+
   /*reviews*/
   .reviews.section {
-    padding: 0 0 30px 0;
+    padding: 10px 0 30px 0;
   }
   .reviews.section .reviews__wrapper .reviews-swiper .reviews-swiper__slide .reviews-text {
     font-size: 15px;
@@ -447,7 +553,14 @@
   }
 
   /*city*/
-  .city .city__swiper-big .city__swiper-big-btn {
+  .city.section {
+    padding: 30px 0 0 0;
+  }
+  .city.section .city__descr {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .city.section .city__swiper-big .city__swiper-big-btn {
     width: 80px;
   }
 
@@ -470,6 +583,11 @@
   .address .phone-list .phone-list__item .phone-list__item-descr {
     font-size: 14px;
   }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   /*modal*/
   .thanks-modal .thanks-modal__body .thanks-modal__title {
@@ -488,6 +606,31 @@
   }
   ._form ._form__clock ._form__clock-container ._form__clock-descr p {
     font-size: 12px;
+  }
+  ._form ._form__clock ._form__clock-container ._form__clock-container-part {
+    max-width: 55px;
+  }
+  ._form ._form__clock ._form__clock-container ._form__clock-numbers, ._form ._form__clock ._form__clock-container ._form__clock-separator {
+    font-weight: 700;
+    font-size: 45px;
+  }
+
+  .services.section .services__descr {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 730px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  /*cars*/
+  .cars.section .cars__swiper-big .cars__swiper-big-btn {
+    width: 50px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   /*_service-card*/
@@ -523,7 +666,7 @@
   }
 
   /*city*/
-  .city .city__swiper-big .city__swiper-big-btn {
+  .city.section .city__swiper-big .city__swiper-big-btn {
     width: 50px;
     svg {
       width: 20px;

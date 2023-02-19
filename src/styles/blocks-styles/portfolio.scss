@@ -9,12 +9,10 @@
     height: 50px;
     transform: rotate(180deg);
   }
-  .portfolio__title {
-    margin-bottom: 5px;
-  }
   .portfolio__sub-title {
-    margin-bottom: 30px;
-    @include font-settings (normal, 400, 18px, normal,  $--text_color);
+    margin-bottom: 40px;
+    @include font-settings (italic, 600, 18px, normal, $--text_color);
+    opacity: .8;
   }
   .portfolio__case {
     margin-bottom: 24px;

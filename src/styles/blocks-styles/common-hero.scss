@@ -14,3 +14,8 @@
     color: $--hero_text_color;
   }
 }
+.demontazh-page {
+  .common-hero.section {
+    background: rgba(0, 0, 0, .7) url(../img/demontazh-hero-img.webp);
+  }
+}

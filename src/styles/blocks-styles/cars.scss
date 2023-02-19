@@ -1,4 +1,10 @@
-.cars {
+.cars.section {
+  padding: 70px 0 0 0;
+  .cars__descr {
+    margin-bottom: 40px;
+    @include font-settings (italic, 600, 18px, normal,  $--text_color);
+    opacity: 0.8;
+  }
   .cars__swiper-big,
   .cars__swiper-small {
     margin-bottom: 10px;

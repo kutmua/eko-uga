@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 /* -------------------------------------------- */
-
   /* слайдер ДО и ПОСЛЕ (оставить только для GitHub) */
   const slider = document.querySelector('.contrast-slider-js');
   const before = document.querySelector('.before');
@@ -79,208 +78,208 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 /* -------------------------------------------- */
 
-  /* счетчик скидки */
-  const clocks = document.querySelectorAll('.counter-js');
-  const deadline = new Date();
-  // let yearsDifference = 1;
-  // let monthsDifference = 1;
-  // let dayDifference = 1;
-  let hoursDifference = 1;
-  let minutesDifference = 30;
+  // /* счетчик скидки */
+  // const clocks = document.querySelectorAll('.counter-js');
+  // const deadline = new Date();
+  // // let yearsDifference = 1;
+  // // let monthsDifference = 1;
+  // // let dayDifference = 1;
+  // let hoursDifference = 1;
+  // let minutesDifference = 30;
 
-    /* установки для счетчика */
-  deadline.setHours(deadline.getHours() + hoursDifference)
-  deadline.setMinutes(deadline.getMinutes() + minutesDifference);
+  //   /* установки для счетчика */
+  // deadline.setHours(deadline.getHours() + hoursDifference)
+  // deadline.setMinutes(deadline.getMinutes() + minutesDifference);
 
-  function getTimeRemaining(endtime){
-    const t = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor( (t/1000) % 60 );
-    const minutes = Math.floor( (t/1000/60) % 60 );
-    const hours = Math.floor( (t/(1000*60*60)) % 24 );
-    const days = Math.floor( t/(1000*60*60*24) );    
-    return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
-    };
-  }
+  // function getTimeRemaining(endtime){
+  //   const t = Date.parse(endtime) - Date.parse(new Date());
+  //   const seconds = Math.floor( (t/1000) % 60 );
+  //   const minutes = Math.floor( (t/1000/60) % 60 );
+  //   const hours = Math.floor( (t/(1000*60*60)) % 24 );
+  //   const days = Math.floor( t/(1000*60*60*24) );    
+  //   return {
+  //     'total': t,
+  //     'days': days,
+  //     'hours': hours,
+  //     'minutes': minutes,
+  //     'seconds': seconds
+  //   };
+  // }
 
-  function initializeClock(selector, endtime){
-    const daysSpan = selector.querySelector('[data-counter-indicator="day"]');
-    const hoursSpan = selector.querySelector('[data-counter-indicator="hour"]');
-    const minutesSpan = selector.querySelector('[data-counter-indicator="minutes"]');
-    const secondsSpan = selector.querySelector('[data-counter-indicator="seconds"]');
+  // function initializeClock(selector, endtime){
+  //   const daysSpan = selector.querySelector('[data-counter-indicator="day"]');
+  //   const hoursSpan = selector.querySelector('[data-counter-indicator="hour"]');
+  //   const minutesSpan = selector.querySelector('[data-counter-indicator="minutes"]');
+  //   const secondsSpan = selector.querySelector('[data-counter-indicator="seconds"]');
 
-    function updateClock(){
-      const t = getTimeRemaining(endtime);
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = t.hours;
-      minutesSpan.innerHTML = t.minutes;
-      secondsSpan.innerHTML = t.seconds;
+  //   function updateClock(){
+  //     const t = getTimeRemaining(endtime);
+  //     daysSpan.innerHTML = t.days;
+  //     hoursSpan.innerHTML = t.hours;
+  //     minutesSpan.innerHTML = t.minutes;
+  //     secondsSpan.innerHTML = t.seconds;
 
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-    updateClock();
-    const timeinterval = setInterval(updateClock,1000);
-  }
+  //     if (t.total <= 0) {
+  //       clearInterval(timeinterval);
+  //     }
+  //   }
+  //   updateClock();
+  //   const timeinterval = setInterval(updateClock,1000);
+  // }
 
-  clocks.forEach(clock => {
-    initializeClock(clock, deadline);
-  })
+  // clocks.forEach(clock => {
+  //   initializeClock(clock, deadline);
+  // })
 
 /* -------------------------------------------- */
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
   /* typed */
-  const typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 150,
-    backSpeed: 100,
-    loop: true,
-    loopCount: Infinity,
-  });
+  // const typed = new Typed('#typed', {
+  //   stringsElement: '#typed-strings',
+  //   typeSpeed: 150,
+  //   backSpeed: 100,
+  //   loop: true,
+  //   loopCount: Infinity,
+  // });
 
-    /* reviews-swiper */
-  const reviewsSwiper = new Swiper('.reviews-swiper', {
-    direction: 'horizontal',
+  //   /* reviews-swiper */
+  // const reviewsSwiper = new Swiper('.reviews-swiper', {
+  //   direction: 'horizontal',
 
-    pagination: {
-      el: '.reviews-swiper-pagination',
-      clickable: true,
-    },
+  //   pagination: {
+  //     el: '.reviews-swiper-pagination',
+  //     clickable: true,
+  //   },
 
-    navigation: {
-      nextEl: '.reviews-swiper-btn-next',
-      prevEl: '.reviews-swiper-btn-prev',
-    },
-  });
+  //   navigation: {
+  //     nextEl: '.reviews-swiper-btn-next',
+  //     prevEl: '.reviews-swiper-btn-prev',
+  //   },
+  // });
 
-    /* stats-swiper */
-  const statsSwiper = new Swiper('.stats__swiper', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+  //   /* stats-swiper */
+  // const statsSwiper = new Swiper('.stats__swiper', {
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   autoplay: {
+  //     delay: 2500,
+  //     disableOnInteraction: false,
+  //   },
 
-    pagination: {
-      el: ".stats__swiper-pagination",
-      renderBullet: function (index, className) {
-        return '<button class="'+ className + ' stats__swiper-btn button stats__swiper-btn-' + (index + 1) + '"></button>';
-      },
-      clickable: true,
-    },
-  });
+  //   pagination: {
+  //     el: ".stats__swiper-pagination",
+  //     renderBullet: function (index, className) {
+  //       return '<button class="'+ className + ' stats__swiper-btn button stats__swiper-btn-' + (index + 1) + '"></button>';
+  //     },
+  //     clickable: true,
+  //   },
+  // });
   
-    /* city-swiper */  
-  const citySwiperSmall = new Swiper(".city__swiper-small", {
-    spaceBetween: 10,
-    slidesPerView: 10,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      200: {
-        slidesPerView: 4
-      },
-      360: {
-        slidesPerView: 5
-      },
-      500: {
-        slidesPerView: 7
-      },
-      650: {
-        slidesPerView: 8
-      },
-      770: {
-        slidesPerView: 10
-      },
-    }
-  });
-  const citySwiperBig = new Swiper(".city__swiper-big", {
-    loop: true,
-    navigation: {
-      nextEl: '.city__swiper-big-btn-next',
-      prevEl: '.city__swiper-big-btn-prev',
-    },
-    thumbs: {
-      swiper: citySwiperSmall,
-    },
-  });
+  //   /* city-swiper */  
+  // const citySwiperSmall = new Swiper(".city__swiper-small", {
+  //   spaceBetween: 10,
+  //   slidesPerView: 10,
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  //   breakpoints: {
+  //     200: {
+  //       slidesPerView: 4
+  //     },
+  //     360: {
+  //       slidesPerView: 5
+  //     },
+  //     500: {
+  //       slidesPerView: 7
+  //     },
+  //     650: {
+  //       slidesPerView: 8
+  //     },
+  //     770: {
+  //       slidesPerView: 10
+  //     },
+  //   }
+  // });
+  // const citySwiperBig = new Swiper(".city__swiper-big", {
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: '.city__swiper-big-btn-next',
+  //     prevEl: '.city__swiper-big-btn-prev',
+  //   },
+  //   thumbs: {
+  //     swiper: citySwiperSmall,
+  //   },
+  // });
 
-    /* cars-swiper */  
-  const carsSwiperSmall = new Swiper(".cars__swiper-small-1", {
-    spaceBetween: 10,
-    slidesPerView: 7,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      200: {
-        slidesPerView: 4
-      },
-      360: {
-        slidesPerView: 5
-      },
-      500: {
-        slidesPerView: 5
-      },
-      650: {
-        slidesPerView: 6
-      },
-      770: {
-        slidesPerView: 7
-      },
-    }
-  });
+  //   /* cars-swiper */  
+  // const carsSwiperSmall = new Swiper(".cars__swiper-small-1", {
+  //   spaceBetween: 10,
+  //   slidesPerView: 7,
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  //   breakpoints: {
+  //     200: {
+  //       slidesPerView: 4
+  //     },
+  //     360: {
+  //       slidesPerView: 5
+  //     },
+  //     500: {
+  //       slidesPerView: 5
+  //     },
+  //     650: {
+  //       slidesPerView: 6
+  //     },
+  //     770: {
+  //       slidesPerView: 7
+  //     },
+  //   }
+  // });
 
-  const carsSwiperBig = new Swiper(".cars__swiper-big-1", {
-    loop: true,
-    navigation: {
-      nextEl: '.cars__swiper-big-btn-next',
-      prevEl: '.cars__swiper-big-btn-prev',
-    },
-    thumbs: {
-      swiper: carsSwiperSmall,
-    },
-  });
+  // const carsSwiperBig = new Swiper(".cars__swiper-big-1", {
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: '.cars__swiper-big-btn-next',
+  //     prevEl: '.cars__swiper-big-btn-prev',
+  //   },
+  //   thumbs: {
+  //     swiper: carsSwiperSmall,
+  //   },
+  // });
 
-  const carsSwiperSmall2 = new Swiper(".cars__swiper-small-2", {
-    spaceBetween: 10,
-    slidesPerView: 7,
-    freeMode: true,
-    watchSlidesProgress: true,
-    breakpoints: {
-      200: {
-        slidesPerView: 4
-      },
-      360: {
-        slidesPerView: 5
-      },
-      500: {
-        slidesPerView: 5
-      },
-      650: {
-        slidesPerView: 6
-      },
-      770: {
-        slidesPerView: 7
-      },
-    }
-  });
+  // const carsSwiperSmall2 = new Swiper(".cars__swiper-small-2", {
+  //   spaceBetween: 10,
+  //   slidesPerView: 7,
+  //   freeMode: true,
+  //   watchSlidesProgress: true,
+  //   breakpoints: {
+  //     200: {
+  //       slidesPerView: 4
+  //     },
+  //     360: {
+  //       slidesPerView: 5
+  //     },
+  //     500: {
+  //       slidesPerView: 5
+  //     },
+  //     650: {
+  //       slidesPerView: 6
+  //     },
+  //     770: {
+  //       slidesPerView: 7
+  //     },
+  //   }
+  // });
 
-  const carsSwiperBig2 = new Swiper(".cars__swiper-big-2", {
-    loop: true,
-    navigation: {
-      nextEl: '.cars__swiper-big-btn-next',
-      prevEl: '.cars__swiper-big-btn-prev',
-    },
-    thumbs: {
-      swiper: carsSwiperSmall2,
-    },
-  });
+  // const carsSwiperBig2 = new Swiper(".cars__swiper-big-2", {
+  //   loop: true,
+  //   navigation: {
+  //     nextEl: '.cars__swiper-big-btn-next',
+  //     prevEl: '.cars__swiper-big-btn-prev',
+  //   },
+  //   thumbs: {
+  //     swiper: carsSwiperSmall2,
+  //   },
+  // });
 
 
 /* -------------------------------------------- */
