@@ -10,7 +10,7 @@ function init(){
     hintContent: 'Краснодар, Селезнева 4. "Эко-Юга"',
   }, {
     iconLayout: 'default#image',
-    iconImageHref:'./img/placemark.svg',
+    iconImageHref:'../img/placemark.svg',
     iconImageSize: [20, 20],
     iconImageOffset: [-10, -20]
   }),

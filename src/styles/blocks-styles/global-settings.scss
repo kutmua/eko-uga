@@ -775,6 +775,9 @@
 /*------------------------------*/
 /* корректировка падингов для страниц с другой структурой, отличающейся от index */
 .main-pages {
+  .city.section {
+    padding: 70px 0;
+  }
   .motive.section,
   .how-we-work.section,
   .cars.section,

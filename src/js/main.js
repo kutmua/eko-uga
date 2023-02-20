@@ -147,13 +147,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
     /* typed */
-  const typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 150,
-    backSpeed: 100,
-    loop: true,
-    loopCount: Infinity,
-  });
+    if (document.getElementById('typed')){
+      const typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 150,
+        backSpeed: 100,
+        loop: true,
+        loopCount: Infinity,
+      });
+    }
 
     /* iunput-mask, just-validate */
   const inputMask = new Inputmask('+7 (999) 999-99-99');
