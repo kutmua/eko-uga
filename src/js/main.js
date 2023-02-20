@@ -82,17 +82,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // let dayDifference = 1;
   let hoursDifference = 1;
   let minutesDifference = 30;
+  // let secondsDifference = 60;
 
     /* установки для счетчика */
-  deadline.setHours(deadline.getHours() + hoursDifference)
+  deadline.setHours(deadline.getHours() + hoursDifference);
   deadline.setMinutes(deadline.getMinutes() + minutesDifference);
+  // deadline.setSeconds(deadline.getSeconds() + secondsDifference);
 
   function getTimeRemaining(endtime){
     const t = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor( (t/1000) % 60 );
     const minutes = Math.floor( (t/1000/60) % 60 );
     const hours = Math.floor( (t/(1000*60*60)) % 24 );
-    const days = Math.floor( t/(1000*60*60*24) );    
+    const days = Math.floor( t/(1000*60*60*24) );
     return {
       'total': t,
       'days': days,
@@ -110,17 +112,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateClock(){
       const t = getTimeRemaining(endtime);
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = t.hours;
-      minutesSpan.innerHTML = t.minutes;
-      secondsSpan.innerHTML = t.seconds;
 
+      (t.days <= 0) ? daysSpan.innerHTML = '00' : true;
+      (t.days < 10) ? daysSpan.innerHTML = `0${t.days}` : daysSpan.innerHTML = t.days;
+      
+      (t.hours <= 0) ? hoursSpan.innerHTML = '00' : true;
+      (t.hours < 10) ? hoursSpan.innerHTML = `0${t.hours}` : hoursSpan.innerHTML = t.hours;
+    
+      (t.minutes <= 0) ? minutesSpan.innerHTML = '00' : true;
+      (t.minutes < 10) ? minutesSpan.innerHTML = `0${t.minutes}` : minutesSpan.innerHTML = t.minutes;
+
+      (t.seconds <= 0) ? secondsSpan.innerHTML = '00' : true;
+      (t.seconds < 10) ? secondsSpan.innerHTML = `0${t.seconds}` : secondsSpan.innerHTML = t.seconds; 
+      
       if (t.total <= 0) {
         clearInterval(timeinterval);
       }
     }
     updateClock();
-    const timeinterval = setInterval(updateClock,1000);
+    setInterval(updateClock,1000);
   }
 
   clocks.forEach(clock => {

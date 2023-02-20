@@ -292,6 +292,13 @@
       padding: 0;
     }
   }
+  ._form ._form__clock ._form__clock-container ._form__clock-container-part {
+    max-width: 55px;
+  }
+  ._form ._form__clock ._form__clock-container ._form__clock-numbers, ._form ._form__clock ._form__clock-container ._form__clock-separator {
+    font-weight: 700;
+    font-size: 45px;
+  }
 
   .main-pages {
     .motive.section,
