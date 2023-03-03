@@ -26,14 +26,14 @@
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
   @include font-settings (normal, 700, 36px, normal,  $--hero_text_color);
 }
 
 .title-small {
-  margin-bottom: 26px;
+  margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
   @include font-settings (normal, 600, 32px, normal,  $--text_color);
