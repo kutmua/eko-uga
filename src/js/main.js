@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //     if (xhr.status === 200) {
 
       //       requestModal.hide();
+      //       priceModal.hide();
       //       gratitudeModal.show();
       //       console.log('Отправлено');
       //       event.target.reset();

@@ -27,9 +27,11 @@
       padding: 20px 15px;
       .how-we-work__card-title {
         text-transform: uppercase;
+        text-align: center;
         @include font-settings (normal, 700, 16px, normal,  $--text_color);
       }
       .how-we-work__card-descr {
+        text-align: center;
         @include font-settings (normal, 400, 16px, normal,  $--text_color);
         opacity: .7;
       }
