@@ -16,8 +16,15 @@
 
       <div class="collapse navbar-collapse header-nav-js" id="headerNav">
         <ul class="header__nav-list navbar-nav">
-          <li class="header__nav-list-item nav-item">
-            <a class="header__nav-list-item-link nav-link header-link link" href="./about.html">О нас</a>
+          <li class="header__nav-list-item nav-item dropdown-li dropdown-center">
+            <a class="header__nav-list-item-link nav-link header-link link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">О нас</a>
+            <div class="arrow"></div>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item dropdown-custom" href="./about.html">Отзывы</a>
+              </li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+            </ul>
           </li>
           <li class="header__nav-list-item nav-item">
             <a class="header__nav-list-item-link nav-link header-link link" href="./index.html">Примеры работ</a>
@@ -61,9 +68,6 @@
                 <a class="dropdown-item dropdown-custom" href="./gruzchiki.html">Услуги грузчиков</a>
               </li>
             </ul>
-          </li>
-          <li class="header__nav-list-item nav-item">
-            <a class="header__nav-list-item-link nav-link header-link link" href="./index.html">Отзывы</a>
           </li>
           <li class="header__nav-list-item nav-item">
             <a class="header__nav-list-item-link nav-link header-link link" href="./news.html">Новости</a>

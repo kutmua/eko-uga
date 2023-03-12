@@ -649,11 +649,11 @@
       height: 100%;
       object-fit: cover;
       border-radius: inherit;
-      filter: brightness(50%) blur(1px);
-      -moz-filter: brightness(50%) blur(1px);
-      -ms-filter: brightness(50%) blur(1px);
-      -o-filter: brightness(50%) blur(1px);
-      -webkit-filter: brightness(50%) blur(1px);
+      filter: brightness(50%);
+      -moz-filter: brightness(50%);
+      -ms-filter: brightness(50%);
+      -o-filter: brightness(50%);
+      -webkit-filter: brightness(50%);
       z-index: -1;
     }
     ._service-card-title {
