@@ -46,7 +46,10 @@
 .heading-small {
   @include font-settings (normal, 400, 28px, normal,  $--text_color);
 }
-
+/*------------------------------*/
+.header__mobile-container {
+  display: none;
+}
 /*------------------------------*/
 
 .primary-button {
@@ -784,7 +787,14 @@
   .team.section {
     padding: 70px 0 0 0;
   }
-  .demontazh.section {
+  .demontazh.section,
+  .container.section,
+  .gruzchiki.section,
+  .gruzoperevozki.section,
+  .vivoz-bitovogo-musora.section,
+  .vivoz-dereva.section, 
+  .vivoz-mebeli.section, 
+  .vivoz-stroitelnogo-musora.section {
     padding: 20px 0 70px 0;
   }
 }

@@ -33,6 +33,37 @@
     }
   }
 
+  /*header*/
+  .header__desctop-nav.navbar-collapse {
+    display: none;
+  }
+
+  .header__mobile-container {
+    display: block;
+    .header__mobile-nav {
+      padding: 10px 0 100px 0;
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      height: 100vh;
+      top: 80px;
+      left: 0;
+      // opacity: 0;
+      visibility: hidden;
+      overflow: auto;
+      border-top: 1px solid #333;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform .2s linear, opacity .2s linear, visibility .2s linear;
+      &.is-open {
+        // opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+      }
+    }
+  }
+  
+
   /*head*/
   .header {
     .header__nav {
