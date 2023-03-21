@@ -2,7 +2,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <meta name="description" content="Эко-Юга. Компания по утилизации мусора в городе Краснодар.">
+  @@if (page === 'main') {
+  <meta class="meta" name="description" content ="Вывоз мусора в Краснодаре и крае. Широкий спектр услуг по вывозу мусора в компании Эко-Юга. Дешево, круглосуточно вывезем любой мусор по низкой цене">
+  }
+  @@if (page === '404') {
+  <meta class="meta" name="description" content ="Эко-Юга. Страница не найдена. Страница 404">
+  }
   <!-- favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons//apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons//favicon-32x32.png">
