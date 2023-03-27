@@ -124,6 +124,9 @@
   /*common-hero*/
   .common-hero.section {
     padding: 130px 0 50px 0;
+    .hero__heading {
+      margin-bottom: 40px;
+    }
   }
 
   /*price*/
@@ -358,6 +361,9 @@
     height: 160px;
   }
   .hero.section .hero__heading {
+    margin-bottom: 20px;
+  }
+  .common-hero.section .hero__heading {
     margin-bottom: 20px;
   }
   .hero{

@@ -44,7 +44,7 @@
 }
 
 .heading-small {
-  @include font-settings (normal, 400, 28px, normal,  $--text_color);
+  @include font-settings (normal, 600, 32px, normal,  $--text_color);
 }
 /*------------------------------*/
 .header__mobile-container {

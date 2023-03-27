@@ -9,6 +9,9 @@
   .hero__title {
     height: 100px;
   }
+}
+.hero.section,
+.common-hero.section{
   .hero__heading {
     margin-bottom: 80px;
     color: $--hero_text_color;
