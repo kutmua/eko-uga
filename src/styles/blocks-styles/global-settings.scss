@@ -39,12 +39,26 @@
   @include font-settings (normal, 600, 32px, normal,  $--text_color);
 }
 
+.sub-title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-settings (normal, 600, 22px, normal,  $--text_color);
+}
+
 .heading {
   @include font-settings (normal, 400, 32px, normal,  $--text_color);
 }
 
 .heading-small {
   @include font-settings (normal, 600, 32px, normal,  $--text_color);
+}
+
+.descriptions {
+  @include font-settings (normal, 400, 18px, normal,  $--text_color);
+}
+.descriptions-list {
+  list-style-type: circle;
 }
 /*------------------------------*/
 .header__mobile-container {
