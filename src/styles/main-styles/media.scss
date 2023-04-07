@@ -5,6 +5,27 @@
   .section-padding {
     padding: 130px 0 50px 0;
   }
+  .main-pages {
+    .city.section,
+    .how-we-work.section {
+      padding: 50px 0;
+    }
+    .motive.section,
+    .cars.section,
+    .team.section {
+      padding: 50px 0 0 0;
+    }
+    .demontazh.section,
+    .container.section,
+    .gruzchiki.section,
+    .gruzoperevozki.section,
+    .vivoz-bitovogo-musora.section,
+    .vivoz-dereva.section, 
+    .vivoz-mebeli.section, 
+    .vivoz-stroitelnogo-musora.section {
+      padding: 20px 0 50px 0;
+    }
+  }
   .title {
     margin-bottom: 20px;
     font-size: 26px;
@@ -12,6 +33,10 @@
   .title-small {
     margin-bottom: 15px;
     font-size: 23px;
+  }
+  .sub-title {
+    margin-bottom: 15px;
+    font-size: 20px;
   }
   .header-link {
     font-weight: 600;
@@ -58,6 +83,11 @@
         visibility: visible;
         transform: scaleY(1);
       }
+      .header-link {
+        margin: 0 auto;
+        display: block;
+        max-width: max-content;
+      }
     }
   }
   
@@ -103,12 +133,12 @@
       right: 0;
     }
   }
-  .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-  .dropdown-menu[data-bs-popper] {
-    left: -40px;
-  }
+  // .navbar-nav .dropdown-menu {
+  //   position: absolute;
+  // }
+  // .dropdown-menu[data-bs-popper] {
+  //   left: -40px;
+  // }
 
   /*hero*/
   .hero.section {
@@ -305,6 +335,27 @@
   .section-padding {
     padding: 100px 0 30px 0;
   }
+  .main-pages {
+    .city.section,
+    .how-we-work.section {
+      padding: 30px 0;
+    }
+    .motive.section,
+    .cars.section,
+    .team.section {
+      padding: 30px 0 0 0;
+    }
+    .demontazh.section,
+    .container.section,
+    .gruzchiki.section,
+    .gruzoperevozki.section,
+    .vivoz-bitovogo-musora.section,
+    .vivoz-dereva.section, 
+    .vivoz-mebeli.section, 
+    .vivoz-stroitelnogo-musora.section {
+      padding: 20px 0 30px 0;
+    }
+  }
   .title {
     margin-bottom: 20px;
     font-size: 22px;
@@ -312,9 +363,16 @@
   .title-small {
     font-size: 18px;
   }
+  .sub-title {
+    font-size: 16px;
+  }
   .heading-small {
     font-weight: 400;
     font-size: 22px;
+  }
+  .descriptions,
+  .descriptions-list {
+    font-size: 15px;
   }
 
   .contrast {

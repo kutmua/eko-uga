@@ -54,7 +54,8 @@
   @include font-settings (normal, 600, 32px, normal,  $--text_color);
 }
 
-.descriptions {
+.descriptions,
+.descriptions-list {
   @include font-settings (normal, 400, 18px, normal,  $--text_color);
 }
 .descriptions-list {
@@ -220,10 +221,10 @@
     transform: scaleX(1);
     opacity: .7;
   }
-  &:hover:not(:focus-visible) + .arrow{
+  &:hover:not(:focus-visible) .arrow{
     border-color: $--primary_btn_bg;
   }
-  &:hover:not(:focus-visible)::before + .arrow{
+  &:hover:not(:focus-visible)::before .arrow{
     border-color: $--primary_btn_bg;
   }
   &:focus-visible:after{
@@ -233,7 +234,7 @@
   &:focus-visible{
     color: $--white_color;
   }
-  &:focus-visible + .arrow{
+  &:focus-visible .arrow{
     border-color: transparent;
   }
   &:active:not(:focus-visible) {
@@ -256,7 +257,7 @@
     opacity: .7;
   }
 }
-.link.show + .arrow {
+.link.show .arrow {
   transform: rotate(135deg) translate(2px, -2px);
   border-color: $--primary_btn_bg;
 }
