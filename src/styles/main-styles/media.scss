@@ -133,21 +133,16 @@
       right: 0;
     }
   }
-  // .navbar-nav .dropdown-menu {
-  //   position: absolute;
-  // }
-  // .dropdown-menu[data-bs-popper] {
-  //   left: -40px;
-  // }
 
   /*hero*/
   .hero.section {
     padding: 130px 0 50px 0;
     .hero__heading {
       margin-bottom: 40px;
+      font-size: 24px;
     }
-    .hero__title {
-      margin-bottom: 0;
+    .heading-small {
+      font-size: 24px;
     }
   }
 
@@ -156,6 +151,10 @@
     padding: 130px 0 50px 0;
     .hero__heading {
       margin-bottom: 40px;
+      font-size: 24px;
+    }
+    .heading-small {
+      font-size: 24px;
     }
   }
 
@@ -357,7 +356,7 @@
     }
   }
   .title {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 22px;
   }
   .title-small {
@@ -415,14 +414,17 @@
   .common-hero.section {
     padding: 110px 0 30px 0;
   }
-  .hero.section .hero__title {
-    height: 160px;
-  }
+
   .hero.section .hero__heading {
     margin-bottom: 20px;
+    font-size: 20px;
   }
   .common-hero.section .hero__heading {
     margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .common-hero.section .heading-small {
+    font-size: 20px;
   }
   .hero{
     .counter {
