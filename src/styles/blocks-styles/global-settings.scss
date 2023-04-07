@@ -797,11 +797,11 @@
 /*------------------------------*/
 /* корректировка падингов для страниц с другой структурой, отличающейся от index */
 .main-pages {
-  .city.section {
+  .city.section,
+  .how-we-work.section {
     padding: 70px 0;
   }
   .motive.section,
-  .how-we-work.section,
   .cars.section,
   .team.section {
     padding: 70px 0 0 0;
