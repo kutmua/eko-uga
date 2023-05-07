@@ -1,4 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
+  /* seo оптимизация */
+  const telFirstSeo = document.querySelectorAll('.tel-1-seo');
+  const telSecondSeo = document.querySelectorAll('.tel-2-seo');
+  const emailSeo = document.querySelectorAll('.email-seo');
+
+  function seoTarget() {
+    if (emailSeo.length) {
+      emailSeo.forEach(email => {
+        email.addEventListener('click', () => {
+          ym(93183406, 'reachGoal', 'email');
+          return true;
+        })
+      })
+    }
+
+    if (telFirstSeo.length){
+      telFirstSeo.forEach(firstTel => {
+        firstTel.addEventListener('click', () => {
+          ym(93183406, 'reachGoal', 'firstTel');
+          return true;
+        })
+      })
+    }
+
+    if (telSecondSeo.length){
+      telSecondSeo.forEach(secondTel => {
+        secondTel.addEventListener('click', () => {
+          ym(93183406, 'reachGoal', 'secondTel');
+          return true;
+        })
+      })
+    }
+  }
+
+/* -------------------------------------------- */
+
   /* открытие и закрытие бургера */
   const burger = document.querySelector('.header-nav-js');
   const burgerBtn = document.querySelector('.header-burger-js');
@@ -27,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementsByTagName('html')[0].classList.remove('overflow--lock');
     }
   }
+
 /* -------------------------------------------- */
 
   /* плавный скролл */ 
@@ -48,24 +85,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 /* -------------------------------------------- */
-  /* кнопка "показать еще" */
-  const portfolioArray = Array.from(document.querySelector('.portfolio-container-js').children);
-  const showMoreBtn = document.querySelector('.show-more-btn-js');
-  const caseLength = document.querySelectorAll('.portfolio__case').length;
-  let items = 8;
 
-  showMoreBtn.addEventListener('click', () => {
-    items +=2;
-    const visibleItems = portfolioArray.slice(0, items);
+  /* кнопка "показать еще" */
+  if (document.querySelector('.portfolio-container-js')){
+    const portfolioArray = Array.from(document.querySelector('.portfolio-container-js').children);
+    const showMoreBtn = document.querySelector('.show-more-btn-js');
+    const caseLength = document.querySelectorAll('.portfolio__case').length;
+    let items = 8;
   
-    visibleItems.forEach(el => {
-      el.classList.add('show');
+    showMoreBtn.addEventListener('click', () => {
+      items +=2;
+      const visibleItems = portfolioArray.slice(0, items);
+    
+      visibleItems.forEach(el => {
+        el.classList.add('show');
+      })
+    
+      if (visibleItems.length === caseLength) {
+        showMoreBtn.style.display = 'none';
+      }
     })
-  
-    if (visibleItems.length === caseLength) {
-      showMoreBtn.style.display = 'none';
-    }
-  })
+  }
 
 /* -------------------------------------------- */
 
@@ -89,72 +129,118 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* -------------------------------------------- */
 
-  /* счетчик скидки */
+  /* счетчик скидки */ 
   const clocks = document.querySelectorAll('.counter-js');
+  const timerStorage = JSON.parse(localStorage.getItem('timer'));
   const deadline = new Date();
-  // let yearsDifference = 1;
-  // let monthsDifference = 1;
+    // если нужен отсчет от дней
   // let dayDifference = 1;
+    // если нужен отсчет от часов
   let hoursDifference = 1;
+    // если нужен отсчет от минут
   let minutesDifference = 30;
-  // let secondsDifference = 60;
+    // если нужен отсчет от секунд
+  // let secondsDifference = 30;
 
     /* установки для счетчика */
   deadline.setHours(deadline.getHours() + hoursDifference);
   deadline.setMinutes(deadline.getMinutes() + minutesDifference);
   // deadline.setSeconds(deadline.getSeconds() + secondsDifference);
 
-  function getTimeRemaining(endtime){
-    const t = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor( (t/1000) % 60 );
-    const minutes = Math.floor( (t/1000/60) % 60 );
-    const hours = Math.floor( (t/(1000*60*60)) % 24 );
-    const days = Math.floor( t/(1000*60*60*24) );
-    return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
-    };
+  if (!timerStorage || timerStorage.total === 0) {
+    clocks.forEach(clock => {
+      getTimeRemaining(clock, false)
+
+      const timeInterval = setInterval(() => {
+        let t = getTimeRemaining(clock, false);
+
+        if (t <= 0) {
+          clearInterval(timeInterval);
+          localStorage.removeItem('timer');
+        }
+      }, 1000);
+    })
+  }
+  else {
+    clocks.forEach(clock => {
+      getTimeRemaining(clock, true)
+
+      const timeInterval = setInterval(() => {
+        let t = getTimeRemaining(clock, true);
+
+        if (t <= 0) {
+          clearInterval(timeInterval);
+          localStorage.removeItem('timer');
+        }
+      }, 1000);
+    })
+  } 
+
+
+  function getTimeRemaining(selector, check){
+    if (check === false) { 
+      let t = Date.parse(deadline) - Date.parse(new Date());
+      let time = {};
+      
+      time = {
+        total: t,
+        seconds : Math.floor( (t/1000) % 60),
+        minutes : Math.floor( (t/1000/60) % 60),
+        hours : Math.floor( (t/(1000*60*60)) % 24),
+        days : Math.floor( t/(1000*60*60*24))
+      };
+
+      drawTimer (selector, time);  
+      localStorage.setItem('timer', JSON.stringify(time));
+
+      return t
+    }
+    else {
+      const timerStorage = JSON.parse(localStorage.getItem('timer'));
+      let t;      
+      if (timerStorage.total > 0) {
+        t = timerStorage.total - 200;
+      }
+      let time = {};
+
+      time = {
+        total: t,
+        seconds : Math.floor( ((t/1000) % 60) ),
+        minutes : Math.floor( ((t/1000/60) % 60) ),
+        hours : Math.floor( ((t/(1000*60*60)) % 24) ),
+        days : Math.floor( (t/(1000*60*60*24)) )
+      };
+
+      drawTimer (selector, time);
+      localStorage.setItem('timer', JSON.stringify(time));
+
+      return t
+    }
   }
 
-  function initializeClock(selector, endtime){
+  function drawTimer(selector, time) {
     const daysSpan = selector.querySelector('[data-counter-indicator="day"]');
     const hoursSpan = selector.querySelector('[data-counter-indicator="hour"]');
     const minutesSpan = selector.querySelector('[data-counter-indicator="minutes"]');
     const secondsSpan = selector.querySelector('[data-counter-indicator="seconds"]');
 
-    function updateClock(){
-      const t = getTimeRemaining(endtime);
-
-      (t.days <= 0) ? daysSpan.innerHTML = '00' : true;
-      (t.days < 10) ? daysSpan.innerHTML = `0${t.days}` : daysSpan.innerHTML = t.days;
-      
-      (t.hours <= 0) ? hoursSpan.innerHTML = '00' : true;
-      (t.hours < 10) ? hoursSpan.innerHTML = `0${t.hours}` : hoursSpan.innerHTML = t.hours;
+    (time.days <= 0) ? daysSpan.innerHTML = '00' : true;
+    (time.days < 10) ? daysSpan.innerHTML = `0${time.days}` : daysSpan.innerHTML = time.days;
     
-      (t.minutes <= 0) ? minutesSpan.innerHTML = '00' : true;
-      (t.minutes < 10) ? minutesSpan.innerHTML = `0${t.minutes}` : minutesSpan.innerHTML = t.minutes;
+    (time.hours <= 0) ? hoursSpan.innerHTML = '00' : true;
+    (time.hours < 10) ? hoursSpan.innerHTML = `0${time.hours}` : hoursSpan.innerHTML = time.hours;
+  
+    (time.minutes <= 0) ? minutesSpan.innerHTML = '00' : true;
+    (time.minutes < 10) ? minutesSpan.innerHTML = `0${time.minutes}` : minutesSpan.innerHTML = time.minutes;
 
-      (t.seconds <= 0) ? secondsSpan.innerHTML = '00' : true;
-      (t.seconds < 10) ? secondsSpan.innerHTML = `0${t.seconds}` : secondsSpan.innerHTML = t.seconds; 
-      
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-    updateClock();
-    setInterval(updateClock,1000);
+    (time.seconds <= 0) ? secondsSpan.innerHTML = '00' : true;
+    (time.seconds < 10) ? secondsSpan.innerHTML = `0${time.seconds}` : secondsSpan.innerHTML = time.seconds; 
   }
-
-  clocks.forEach(clock => {
-    initializeClock(clock, deadline);
-  })
 
 /* -------------------------------------------- */
 
   /* ЗАПУСК ФУНКЦИЙ */
+  seoTarget();
   smoothScroll();
   window.addEventListener('resize', smoothScroll);
 
@@ -175,6 +261,13 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 
   forms.forEach(form => {
+    const formBtnSubmit = form.querySelector('._form__btn.disable');
+
+    formBtnSubmit.addEventListener('click', function () {
+      ym(93183406, 'reachGoal', 'formid');
+      return true;
+    });
+
     // iunput-mask
     const inputTel = form.querySelector('input[type="tel"]');
 
@@ -192,9 +285,20 @@ document.addEventListener("DOMContentLoaded", function () {
         validator: (value)=>{
           let phone = inputMask.unmaskedvalue(value);
           if (phone.length === 10){
+            if(formBtnSubmit.classList.contains('disable') && formBtnSubmit.hasAttribute('disabled')){
+              formBtnSubmit.removeAttribute('disabled');
+              formBtnSubmit.classList.remove('disable');
+            }
             return true
           }
-          else return false
+          else {
+            if(!formBtnSubmit.classList.contains('disable') && !formBtnSubmit.hasAttribute('disabled')){
+              formBtnSubmit.setAttribute('disabled', '');
+              formBtnSubmit.classList.add('disable');
+            }
+            return false
+          }
+            
         },
         errorMessage: 'Введите номер телефона',
       },
@@ -205,6 +309,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ])
 
     .onSuccess((event) => {
+
+      if(!formBtnSubmit.classList.contains('disable') && !formBtnSubmit.hasAttribute('disabled')){
+        formBtnSubmit.setAttribute('disabled', '');
+        formBtnSubmit.classList.add('disable');
+      }
 
       /* блок для эмуляции отправки формы для GitHub pages*/
       const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {

@@ -476,8 +476,11 @@
     background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
     @include font-settings(normal, 400, 18px, normal, $--counter_btn_text);
     transition: background-color .2s linear, transform .2s linear;
-    &:hover,
-    &:focus-visible  {
+    &.disable{
+      cursor: not-allowed;
+    }
+    &:hover:not(.disable),
+    &:focus-visible:not(.disable){
       transform: translateY(-2px);
       background: rgb(223,89,89);
       background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
@@ -485,7 +488,7 @@
       background: linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(70,0,0,1) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df5959",endColorstr="#460000",GradientType=1);
     }
-    &:active {
+    &:active:not(.disable) {
       background: rgb(223,89,89);
       background: -moz-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
       background: -webkit-linear-gradient(180deg, rgba(223,89,89,1) 50%, rgba(252,0,0,1) 100%);
