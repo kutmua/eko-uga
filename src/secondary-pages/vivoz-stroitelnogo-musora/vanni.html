@@ -5,7 +5,7 @@
     'page': 'vanni'
   })
   
-<body class="vivoz-stroitelnogo-musora-detail-page main-pages">
+<body class="vivoz-stroitelnogo-musora-detail-page main-pages messenger-body">
   @@include('../../html-blocks/secondary-pages-header.html',{})
   <section class="common-hero vanni-hero section section-padding" id="common-hero">
     <div class="common-hero__container container">
@@ -19,20 +19,47 @@
     </div>
   </section>
 
-  <section class="vivoz-stroitelnogo-musora-detail section">
+  @@include('../../html-blocks/sections/motive-secondary.html',{})
+  @@include('../../html-blocks/sections/portfolio-secondary.html',{})
+  @@include('../../html-blocks/sections/discount-main.html',{})
+  @@include('../../html-blocks/sections/how-we-work-secondary.html',{})
+
+  <section class="vivoz-stroitelnogo-musora-detail vanni-detail detail section">
     <div class="vivoz-stroitelnogo-musora-detail__container container">
       <div class="row">
         <div class="col-12">
-          <h1>Описание услуги</h1>
+          <h2 class="vanni-detail__title title-small">Вывоз ванн в Краснодаре </h2>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Компания «Эко-Юга», оказывает услуги по <strong>вывозу ванн</strong> и других больших и нестандартных предметов, таких как старая мебель, бытовая техника, строительный мусор и т.д. Это позволяет избавиться от ненужных вещей, которые занимают много места и мешают повседневным делам.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Первое и самое главное преимущество – это экономия времени и сил. Ведь сами выносить ванну и загружать её в машину – очень трудоемкая и неприятная задача. Если же обратиться к профессионалам, они сделают все быстро и качественно, не отнимая у вас время и силы.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Кроме того, вывоз ванны с грузчиками гораздо безопаснее, чем самостоятельная утилизация. Профессионалы знают, как правильно обращаться с тяжелыми предметами, как его правильно упаковывать и перевозить. Это позволяет избежать неприятностей, таких как травмы.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-4">
+            Еще одно преимущество – это возможность выбора удобного для вас времени вывоза ванны. Вы можете заказать услугу в любое удобное для вас время – днем или ночью, в будние дни или выходные. Это позволяет сэкономить время и не мешать повседневным делам.
+          </p>
+
+          <h3 class="vanni-detail__sub-title sub-title">Почему необходимо заказать вывоз ванны?</h3>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Наша компания по вывозу ванн с грузчиками имеет специальную технику и оборудование, что позволяет выполнять работу быстро и эффективно. Это гарантирует безопасность и качество выполнения работ.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Одним из дополнительных удобств является то, что компания «Эко-Юга», предлагает не только вывоз ванны, но и её погрузку, а так же  уборку территории. Это позволяет сэкономить еще больше времени и сил.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Еще одним важным преимуществом является возможность экономии денег. Компания «Эко-Юга», предлагает различные тарифы, которые позволяют выбрать наиболее подходящий вариант для вас. Кроме того, самостоятельная утилизация строительных материалов может привести к дополнительным расходам на транспортировку и обработку.
+          </p>
+          <p class="vanni-detail__descr descriptions mb-3">
+            Наконец, компании по вывозу мусора с грузчиками гарантируют полную конфиденциальность и безопасность данных клиентов. Вся информация о заказах и клиентах хранится в строгой конфиденциальности и не передается третьим лицам.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  @@include('../../html-blocks/sections/motive-secondary.html',{})
-  @@include('../../html-blocks/sections/portfolio-secondary.html',{})
-  @@include('../../html-blocks/sections/discount-main.html',{})
-  @@include('../../html-blocks/sections/how-we-work-secondary.html',{})
   @@include('../../html-blocks/sections/cars-secondary.html',{})
   @@include('../../html-blocks/sections/team-secondary.html',{})
   @@include('../../html-blocks/sections/reviews-main.html',{})
@@ -44,6 +71,7 @@
 
   @@include('../../html-blocks/secondary-pages-footer.html',{})
   @@include('../../html-blocks/modals.html',{})
+  @@include('../../html-blocks/messenger-link.html',{})
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
   <script src="../js/map-secondary.min.js"></script>
   @@include('../../html-blocks/secondary-pages-scripts.html',{})

@@ -345,6 +345,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // xhr.open('POST', 'mail.php', true);
       // xhr.send(formData);
+
+      // location.replace("https://eko-yuga.ru/thanks-page");
     });
   })
 

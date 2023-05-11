@@ -58,6 +58,31 @@
     }
   }
 
+  /*messenger*/
+  .messenger-body {
+    position: relative;
+  }
+  .messenger {
+    display: block;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100000;
+    .messenger__link {
+      display: block;
+      width: 50px;
+      height: 50px;
+      svg {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
   /*header*/
   .header__desctop-nav.navbar-collapse {
     display: none;

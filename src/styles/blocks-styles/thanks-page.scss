@@ -1,0 +1,13 @@
+.thanks-page-section.section {
+  padding: 150px 0;
+  .thanks-page-section__title {
+    margin-bottom: 20px;
+    color: $--text_color;
+  }
+  svg {
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+}

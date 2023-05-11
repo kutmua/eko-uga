@@ -5,7 +5,7 @@
     'page': 'usluga-gruzchikov'
   })
   
-<body class="vivoz-stroitelnogo-musora-detail-page main-pages">
+<body class="vivoz-stroitelnogo-musora-detail-page main-pages messenger-body">
   @@include('../../html-blocks/secondary-pages-header.html',{})
   <section class="common-hero usluga-gruzchikov-hero section section-padding" id="common-hero">
     <div class="common-hero__container container">
@@ -19,20 +19,56 @@
     </div>
   </section>
 
-  <section class="vivoz-stroitelnogo-musora-detail section">
+  @@include('../../html-blocks/sections/motive-secondary.html',{})
+  @@include('../../html-blocks/sections/portfolio-secondary.html',{})
+  @@include('../../html-blocks/sections/discount-main.html',{})
+  @@include('../../html-blocks/sections/how-we-work-secondary.html',{})
+
+  <section class="vivoz-stroitelnogo-musora-detail usluga-gruzchikov-detail detail section">
     <div class="vivoz-stroitelnogo-musora-detail__container container">
       <div class="row">
         <div class="col-12">
-          <h1>Описание услуги</h1>
+          <h2 class="usluga-gruzchikov-detail__title title-small">Услуги грузчиков в Краснодаре</h2>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-4">
+            В жизни довольно часто происходят ситуации, когда требуются <strong>услуги грузчиков</strong>, которые выполняют работу, связанную с перемещением тяжелых предметов. Со многими видами погрузочно-разгрузочных работ могут справиться только физически крепкие ребята. Для переноса тяжестей они используют специальные приспособления, которые помогают облегчить тяжелый труд.
+          </p>
+
+          <h3 class="usluga-gruzchikov-detail__sub-title sub-title">Функциональные обязанности</h3>
+          <p class="usluga-gruzchikov-detail__descr descriptions">
+            На разных предприятиях обязанности грузчиков могут отличаться. Однако все они способны выполнять работы по:
+          </p>
+          <ol class="usluga-gruzchikov-detail__descr-list descriptions-list mb-3">
+            <li>подъему предметов на нужный этаж;</li>
+            <li>погрузке-разгрузке;</li>
+            <li>перемещению грузов разными способами;</li>
+            <li>монтажу-демонтажу оборудования.</li>
+          </ol>
+
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-3">
+            Грузчики нужны при переезде, доставке грузов. Клиентам удобно, когда транспортные компании оказывают комплексные услуги по погрузке-разгрузке.
+          </p>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-4">
+            Грузчики нередко требуются при проведении строительных, ремонтных работ. Например, при перепланировке квартиры приходится рушить стены. Объемы строительного мусора при этом становятся огромными. Справиться самостоятельно с таким количеством крупных отходов слишком сложно. Грузчики помогут оперативно вынести из помещения весь скопившийся мусор.
+          </p>
+
+          <h3 class="usluga-gruzchikov-detail__sub-title sub-title">Переезд</h3>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-3">
+            Помощники со специальными навыками могут понадобиться также при переезде офиса, предприятия, квартиры. Бригада грузчиков сможет эффективно выполнить погрузку-разгрузку перевозимого имущества. Профессиональные кадры справляются с подобными задачами, быстро и аккуратно.
+          </p>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-3">
+            Если клиент заказывает в нашей компании переезд под ключ, то проблема перевозки вещей ложится на плечи персонала нашей службы. При этом грузчики занимаются упаковкой скарба, демонтажом и сборкой мебели, погрузкой вещей в транспортное средство. Профессиональные работники, имеющие необходимые навыки в вопросах доставки грузов, следят за удобным расположением вещей в кузове машины. Коробки, мебельные элементы надежно фиксируются крепежными элементами, что способствует безопасной перевозке грузов.
+          </p>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-3">
+            По прибытии в пункт назначения грузчики выгружают вещи из машины, заносят их на нужный этаж и расставляют по местам. Предоставление качественных услуг позволяет клиентам сберечь свои силы и время. 
+          </p>
+          <p class="usluga-gruzchikov-detail__descr descriptions mb-3">
+            Поэтому спрос на подобный сервис постоянно возрастает. 
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  @@include('../../html-blocks/sections/motive-secondary.html',{})
-  @@include('../../html-blocks/sections/portfolio-secondary.html',{})
-  @@include('../../html-blocks/sections/discount-main.html',{})
-  @@include('../../html-blocks/sections/how-we-work-secondary.html',{})
   @@include('../../html-blocks/sections/cars-secondary.html',{})
   @@include('../../html-blocks/sections/team-secondary.html',{})
   @@include('../../html-blocks/sections/reviews-main.html',{})
@@ -44,6 +80,7 @@
 
   @@include('../../html-blocks/secondary-pages-footer.html',{})
   @@include('../../html-blocks/modals.html',{})
+  @@include('../../html-blocks/messenger-link.html',{})
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
   <script src="../js/map-secondary.min.js"></script>
   @@include('../../html-blocks/secondary-pages-scripts.html',{})

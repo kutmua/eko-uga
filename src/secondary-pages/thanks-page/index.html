@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../../html-blocks/secondary-pages-head.html',{
+    'title': 'Спасибо за заявку | "Эко-Юга"',
+    'page': 'thanks-page'
+  })
+  
+<body class="thanks-page main-pages">
+  @@include('../../html-blocks/secondary-pages-header.html',{})
+
+  <section class="thanks-page-section section" id="thanks-page-section">
+    <div class="thanks-page-container container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="thanks-page-section__title title text-center">
+            Спасибо!
+          </h2>
+          <h2 class="thanks-page-section__title title text-center">
+            Ваша заявка отправлена.
+          </h2>
+          <h2 class="thanks-page-section__title title text-center">
+            Мы перезвоним Вам через 60 секунд!
+          </h2>
+  
+          <svg version="1.1" viewBox="0 0 612 792" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <style type="text/css">
+              .st0{fill:#41AD49;}
+            </style>
+            <g>
+              <path class="st0" d="M562,396c0-141.4-114.6-256-256-256S50,254.6,50,396s114.6,256,256,256S562,537.4,562,396L562,396z    M501.7,296.3l-241,241l0,0l-17.2,17.2L110.3,421.3l58.8-58.8l74.5,74.5l199.4-199.4L501.7,296.3L501.7,296.3z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('../../html-blocks/modals.html',{})
+  @@include('../../html-blocks/secondary-pages-scripts.html',{})
+  <script>
+    setTimeout(() => {
+      location.replace("https://eko-yuga.ru");
+    }, 3000);
+  </script>
+</body>
+</html>
