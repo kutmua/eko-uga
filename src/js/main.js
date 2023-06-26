@@ -319,34 +319,38 @@ document.addEventListener("DOMContentLoaded", function () {
       const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
         keyboard: true
       })
-      requestModal.hide();
-      priceModal.hide();
-      gratitudeModal.show();
-      event.target.reset();
+      // requestModal.hide();
+      // priceModal.hide();
+      // gratitudeModal.show();
+      // event.target.reset();
       /* --------------------------------- */
 
       /* рабочий блок отправки формы на почту для хостинга*/
-      // let formData = new FormData(event.target);
+      let formData = new FormData(event.target);
 
-      // let xhr = new XMLHttpRequest();
+      let xhr = new XMLHttpRequest();
 
-      // xhr.onreadystatechange = function () {
-      //   if (xhr.readyState === 4) {
-      //     if (xhr.status === 200) {
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            requestModal.hide();
+            priceModal.hide();
+            console.log('Отправлено');
+            event.target.reset();
+          }
+        }
+      }
 
-      //       requestModal.hide();
-      //       priceModal.hide();
-      //       gratitudeModal.show();
-      //       console.log('Отправлено');
-      //       event.target.reset();
-      //     }
-      //   }
-      // }
-
-      // xhr.open('POST', 'mail.php', true);
-      // xhr.send(formData);
-
-      // location.replace("https://eko-yuga.ru/thanks-page");
+      if (document.querySelector('.send-main-page.hidden')) {
+        xhr.open('POST', 'mail.php', true);
+        xhr.send(formData);
+        location.replace("https://eko-yuga.ru/thanks-page");
+      }
+      else if (document.querySelector('.send-secondary-page.hidden')) {
+        xhr.open('POST', '../mail.php', true);
+        xhr.send(formData);
+        location.replace("https://eko-yuga.ru/thanks-page");
+      }
     });
   })
 

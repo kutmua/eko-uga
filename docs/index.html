@@ -29,13 +29,13 @@
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
   <!-- swiper -->
-  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20230516094803">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css?_v=20230626133337">
 
   <!-- styles -->
-  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20230516094803">
-  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20230516094803">
-  <link rel="stylesheet" href="./styles/style.min.css?_v=20230516094803">
-  <link rel="stylesheet" href="./styles/media.min.css?_v=20230516094803">
+  <link rel="stylesheet" href="./styles/bootstrap.min.css?_v=20230626133337">
+  <link rel="stylesheet" href="./styles/normalize.min.css?_v=20230626133337">
+  <link rel="stylesheet" href="./styles/style.min.css?_v=20230626133337">
+  <link rel="stylesheet" href="./styles/media.min.css?_v=20230626133337">
   <title>Вывоз мусора в Краснодаре: цена от 1000р | «Эко-Юга»</title>
 
   <!-- Yandex.Metrika counter -->
@@ -59,6 +59,7 @@
 
 <body class="messenger-body">
   <header class="header">
+  <div class="send-main-page hidden"></div>
   <nav class="header__nav navbar navbar-expand-lg fixed-top">
     <div class="header__container container">
       <a class="header__logo navbar-brand d-flex logo" type="button">
@@ -78,14 +79,17 @@
         <ul class="header__nav-list navbar-nav">
           <li class="header__nav-list-item nav-item dropdown-li dropdown-center">
             <a class="header__nav-list-item-link nav-link header-link link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              О нас
+              О компании
               <div class="arrow"></div>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item dropdown-custom" href="./about/reviews.html">Отзывы</a>
+                <a class="dropdown-item dropdown-custom" href="./about/index.html">О нас</a>
               </li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="./reviews/index.html">Отзывы</a>
+              </li>
             </ul>
           </li>
 
@@ -159,14 +163,17 @@
         <ul class="header__nav-list navbar-nav">
           <li class="header__nav-list-item nav-item dropdown-li dropdown-center">
             <a class="header__nav-list-item-link nav-link header-link link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              О нас
+              О компании
               <div class="arrow"></div>
             </a>
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item dropdown-custom" href="./about/reviews.html">Отзывы</a>
+                <a class="dropdown-item dropdown-custom" href="./about/index.html">О нас</a>
               </li>
-              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item dropdown-custom" href="./reviews/index.html">Отзывы</a>
+              </li>
             </ul>
           </li>
 
@@ -842,7 +849,7 @@
             <img class="how-we-work__card-img" src="img/how-we-work-card-img1.webp" alt="Фото карточки-Как мы работаем">
 
             <div class="how-we-work__card-content">
-              <h5 class="how-we-work__card-title">СВЯЖИТЕСЬ С НАМИ</h5>
+              <h4 class="how-we-work__card-title">СВЯЖИТЕСЬ С НАМИ</h4>
               <p class="how-we-work__card-descr">Отправьте заявку на сайте и мы свяжемся с вами в течение 3х минут</p>
             </div>
           </div>
@@ -854,7 +861,7 @@
             <img class="how-we-work__card-img" src="img/how-we-work-card-img2.webp" alt="Фото карточки-Как мы работаем">
 
             <div class="how-we-work__card-content">
-              <h5 class="how-we-work__card-title">ПОДТВЕРДИТЕ ЗАКАЗ</h5>
+              <h4 class="how-we-work__card-title">ПОДТВЕРДИТЕ ЗАКАЗ</h4>
               <p class="how-we-work__card-descr">Мы рассчитаем и уточним стоимость заказа</p>
             </div>
           </div>
@@ -866,7 +873,7 @@
             <img class="how-we-work__card-img" src="img/how-we-work-card-img3.webp" alt="Фото карточки-Как мы работаем">
 
             <div class="how-we-work__card-content">
-              <h5 class="how-we-work__card-title">ВЫПОЛНЕНИЕ ЗАКАЗА</h5>
+              <h4 class="how-we-work__card-title">ВЫПОЛНЕНИЕ ЗАКАЗА</h4>
               <p class="how-we-work__card-descr">Выполнение всех работ с нашей стороны, а также уборка за собой</p>
             </div>
           </div>
@@ -878,7 +885,7 @@
             <img class="how-we-work__card-img" src="img/how-we-work-card-img4.webp" alt="Фото карточки-Как мы работаем">
 
             <div class="how-we-work__card-content">
-              <h5 class="how-we-work__card-title">ЗАВЕРШЕНИЕ РАБОТЫ</h5>
+              <h4 class="how-we-work__card-title">ЗАВЕРШЕНИЕ РАБОТЫ</h4>
               <p class="how-we-work__card-descr">После окончания работы оплата с вашей стороны</p>
             </div>
           </div>
@@ -1776,7 +1783,7 @@
 
     <div class="privacy-policy-row row">
       <div class="col-12">
-        <a class="privacy-policy d-block m-auto text-center" href="#">Политика конфиденциальности</a>
+        <a class="privacy-policy d-block m-auto text-center" href="./privacy-policy/index.html">Политика конфиденциальности</a>
       </div>
     </div>
   </div>
@@ -1818,7 +1825,7 @@
     <div class="modal-content">
 
       <div class="request-modal__header modal-header">
-        <h1 class="request-modal__title modal-title">Заявка</h1>
+        <h2 class="request-modal__title modal-title">Заявка</h2>
         <button type="button" class="request-modal__btn-close btn-close" data-bs-dismiss="modal" aria-label="Кнопка закрытия модального окна"></button>
       </div>
 
@@ -1968,14 +1975,14 @@
     </svg>
   </a>
 </div>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20230516094803"></script>
-  <script src="./js/map.min.js?_v=20230516094803"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU&_v=20230626133337"></script>
+  <script src="./js/map.min.js?_v=20230626133337"></script>
   <!-- main script -->
-<script src="./js/swiper-bundle.min.js?_v=20230516094803"></script>
-<script src="./js/bootstrap.bundle.min.js?_v=20230516094803"></script>
-<script src="./js/inputmask.min.js?_v=20230516094803"></script>
-<script src="./js/just-validate.production.min.js?_v=20230516094803"></script>
-<script src="./js/index.min.js?_v=20230516094803"></script>
-<script src="./js/main.min.js?_v=20230516094803"></script>
+<script src="./js/swiper-bundle.min.js?_v=20230626133337"></script>
+<script src="./js/bootstrap.bundle.min.js?_v=20230626133337"></script>
+<script src="./js/inputmask.min.js?_v=20230626133337"></script>
+<script src="./js/just-validate.production.min.js?_v=20230626133337"></script>
+<script src="./js/index.min.js?_v=20230626133337"></script>
+<script src="./js/main.min.js?_v=20230626133337"></script>
 </body>
 </html>
