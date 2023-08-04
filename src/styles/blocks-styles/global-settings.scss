@@ -819,24 +819,49 @@
   }
   #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
     background-color: #ffffff!important;
-    padding: 3px 8px;
+    padding: 5px 10px;
   }
   #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
-    border-color: #666666!important;
+    border-color: #666666;
     border-radius: 5px;
+    transition: border-color .2s linear;
+    &:hover,
+    :focus-visible,
+    :active{
+      border-color: #ffd875!important;
+    }
   }
-  #ya-site-form0 .ya-site-form__form * {
-    font-size: 15px !important;
+  .ya-site-form__form * {
     font-weight: 600;
   }
-  #ya-site-form0 .ya-site-form__submit {
+  .ya-site-form__submit {
     display: block;
     width: auto;
     margin: 0 0 0 5px;
-    padding: 5px;
+    padding: 6px;
     background-color: #ffd875;
     border-radius: 5px;
+    transition: background-color .2s linear, transform .2s linear;
+    &:hover,
+    &:focus-visible {
+      background-color: #ffc01f;
+      transform: translateY(-2px);
+    }
+    &:active {
+      background-color: #ffd875;
+      transform: translateY(0);
+    }
   }
+}
+/* результаты поиска */
+.b-head.b-head_type_search-simple {
+  display: none;
+}
+.b-body-items {
+  padding-left: 0px!important;
+}
+#ya-site-results .b-serp-item__number {
+  display: none;
 }
 
 /*------------------------------*/
@@ -861,4 +886,9 @@
   .vivoz-stroitelnogo-musora.section {
     padding: 20px 0 70px 0;
   }
+}
+/*------------------------------*/
+/* для корректного отображения загрузки страницы */
+html {
+  visibility:hidden;
 }

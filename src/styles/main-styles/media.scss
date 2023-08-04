@@ -43,6 +43,20 @@
     font-size: 20px;
   }
 
+  /* поиск яндекс */
+  .search {
+    #ya-site-form1 .ya-site-form__search-input {
+      padding: 10px 12px;
+    }
+    #ya-site-form1 .ya-site-form__form .ya-site-form__input-text {
+      padding: 10px;
+      border-radius: 5px;
+    }
+    #ya-site-form1 .ya-site-form__submit {
+      padding: 11px;
+    }
+  }
+
   .main-pages {
     .city.section {
       padding: 50px 0;

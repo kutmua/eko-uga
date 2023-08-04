@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  /* для корректного отображения загрузки страницы */
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+
+/* -------------------------------------------- */
+
   /* seo оптимизация */
   const telFirstSeo = document.querySelectorAll('.tel-1-seo');
   const telSecondSeo = document.querySelectorAll('.tel-2-seo');
