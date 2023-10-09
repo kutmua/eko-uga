@@ -48,7 +48,9 @@
             <label for="phone">Телефон</label>
             <input class="request__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
           </div>
-          <button class="request__form-btn _form__btn button d-flex disable" disabled>Отправить заявку!</button>
+          <input type="hidden" data-token-id="token" name="token">
+          <input class="d-none validate-form-botName-js" type="text" name="name" placeholder="Имя">
+          <button class="request__form-btn _form__btn button d-flex disable" type="submit" disabled>Отправить заявку!</button>
         </form>
       </div>
     </div>
@@ -65,6 +67,21 @@
 
       <div class="modal-body">
         @@include('price-form.html',{})
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="price-modal modal fade" id="demontazhPriceModal" tabindex="-1" aria-labelledby="Модальное окно расчета стоимости" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="price-modal__header modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        @@include('./demontazh-section/demontazh-price-form.html',{})
       </div>
     </div>
   </div>

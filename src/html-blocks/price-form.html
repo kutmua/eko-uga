@@ -32,7 +32,7 @@
 
   <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
     <label for="info">Можете описать, что нужно сделать</label>
-    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="Описание" cols="40" rows="5" data-form-info=""></textarea>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="Описание" cols="40" rows="5" data-form-info="" maxlength='150' placeholder="Максимальная длинна 150 символов"></textarea>
   </div>
 
   <div class="file-container price-form__input-container _form__input-container _file-container input-group">
@@ -91,5 +91,7 @@
     </div>
   </div>
 
-  <button class="price-form__btn _form__btn button d-flex disable" disabled>Рассчитать стоимость со скидкой в -30%</button>
+  <input type="hidden" data-token-id="token" name="token">
+  <input class="d-none validate-form-botName-js" type="text" name="name" placeholder="Имя">
+  <button class="price-form__btn _form__btn button d-flex disable" type="submit" disabled>Рассчитать стоимость со скидкой в -30%</button>
 </form>

@@ -48,7 +48,9 @@
           <label for="phone">Телефон</label>
           <input class="counter-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
         </div>
-        <button class="counter__form-btn _form__btn button d-flex disable" disabled>Отправить заявку!</button>
+        <input type="hidden" data-token-id="token" name="token">
+        <input class="d-none validate-form-botName-js" type="text" name="name" placeholder="Имя">
+        <button type="submit" class="counter__form-btn _form__btn button d-flex disable" disabled>Отправить заявку!</button>
       </form>
     </div>
 

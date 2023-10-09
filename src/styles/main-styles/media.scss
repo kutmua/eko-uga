@@ -42,6 +42,14 @@
     font-weight: 600;
     font-size: 20px;
   }
+  .demontazh-offer {
+    font-size: 17px;
+  }
+
+  /* стили капчи */
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
 
   /* поиск яндекс */
   .search {
@@ -188,27 +196,26 @@
   }
 
   /*hero*/
-  .hero.section {
-    padding: 130px 0 50px 0;
-    .hero__heading {
-      margin-bottom: 40px;
-      font-size: 24px;
-    }
-    .heading-small {
-      font-size: 24px;
-    }
-  }
-
-  /*common-hero*/
+  .hero.section,
   .common-hero.section {
     padding: 130px 0 50px 0;
     .hero__heading {
       margin-bottom: 40px;
       font-size: 24px;
     }
+    .hero__heading-third {
+      margin-bottom: 20px;
+    }
     .heading-small {
       font-size: 24px;
     }
+    .heading-third {
+      font-size: 20px;
+    }
+  }
+  .demontazh-page .common-hero.section .hero__heading-third,
+  .demontazh-detail-page .common-hero.section .hero__heading-third {
+    margin-bottom: 40px;
   }
 
   /*price*/
@@ -383,7 +390,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 576px) { 
   .section {
     padding: 30px 0;
   }
@@ -422,17 +429,19 @@
     font-size: 16px;
   }
   .heading-small {
-    font-weight: 400;
     font-size: 22px;
   }
   .descriptions,
   .descriptions-list {
     font-size: 15px;
   }
-
-  .contrast {
-    display: block;
+  .demontazh-offer {
+    display: none;
   }
+
+  // .contrast {
+  //   // display: block;
+  // }
 
   ._form {
     box-shadow: none;
@@ -482,14 +491,18 @@
   .common-hero.section .heading-small {
     font-size: 20px;
   }
-  .hero{
-    .counter {
-      display: none;
-    }
-    .offer {
-      display: none;
-    }
+  .demontazh-page .common-hero.section .hero__heading-third,
+  .demontazh-detail-page .common-hero.section .hero__heading-third {
+    margin-bottom: 40px;
   }
+  // .hero{
+  //   .counter {
+  //     display: none;
+  //   }
+  //   .offer {
+  //     display: none;
+  //   }
+  // }
 
   /*price*/
   .price.section {
@@ -547,7 +560,8 @@
     margin-bottom: 20px;
     font-size: 15px;
   }
-  .portfolio .case-blanket {
+  .portfolio .case-blanket,
+  .news .case-blanket {
     padding: 0px 20px;
   }
   .portfolio .portfolio__more-case-btn {
@@ -558,15 +572,18 @@
     height: 20px;
   }
 
-  .portfolio .portfolio__case {
+  .portfolio .portfolio__case, 
+  .news .news__case {
     height: 300px;
   }
 
-  .portfolio .case-blanket .case-blanket__title {
+  .portfolio .case-blanket .case-blanket__title,
+  .news .case-blanket .case-blanket__title {
     margin-bottom: 10px;
     font-size: 18px;
   }
-  .portfolio .case-blanket .case-blanket__descr {
+  .portfolio .case-blanket .case-blanket__descr, 
+  .news .case-blanket .case-blanket__descr {
     margin-bottom: 10px;
     font-size: 16px;
   }
@@ -812,12 +829,14 @@
     bottom: -15px;
     font-size: 12px;
   }
-  ._service-card ._service-card-container ._service-card-btn {
+  ._service-card ._service-card-container ._service-card-btn,
+  ._service-card ._service-card-container ._service-card-btn-more {
     max-width: 160px;
+  }
+  ._service-card ._service-card-container ._service-card-btn {
     left: 5px;
   }
   ._service-card ._service-card-container ._service-card-btn-more {
-    max-width: 130px;
     right: 5px;
   }
   .services {
@@ -871,5 +890,66 @@
   }
   ._form ._form__btn {
     padding: 5px;
+  }
+
+  ._service-card ._service-card-container ._service-card-btn,
+  ._service-card ._service-card-container ._service-card-btn-more {
+    font-size: 11px;
+    max-width: 140px;
+  }
+}
+
+@media (pointer:coarse) {
+  .link {
+    outline: none;
+    &:hover:not(:focus-visible),
+    &:focus-visible {
+      color: #333;
+    }
+
+    &:hover:not(:focus-visible)::before {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    &:hover:not(:focus-visible) .arrow, 
+    &:focus-visible .arrow{
+      border-color: #333;
+    }
+    &:hover:not(:focus-visible)::before .arrow{
+      color: #333;
+    }
+    &:focus-visible:after{
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:active:not(:focus-visible) {
+      color: #DF5959;
+    }
+    &:active:not(:focus-visible) .arrow{
+      border-color: #DF5959;
+    }
+    &:active:not(:focus-visible)::before {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+  }
+  .link.show {
+    &:hover:not(:focus-visible),
+    &:focus-visible {
+      color: #DF5959;
+    }
+    &:hover:not(:focus-visible)::before,
+    &:focus-visible::before {
+      transform: scaleX(1);
+      opacity: .7;
+    }
+    &:active {
+      color: #DF5959;
+    }
+  }
+  .link.show:hover:not(:focus-visible) .arrow,
+  .link.show:focus-visible .arrow {
+    transform: rotate(135deg) translate(2px, -2px);
+    border-color: #DF5959;
   }
 }

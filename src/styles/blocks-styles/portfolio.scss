@@ -1,4 +1,5 @@
-.portfolio {
+.portfolio,
+.news {
   background-color: $--portfolio_bg_color;
   position: relative;
   .portfolio-bg-bottom {
@@ -14,7 +15,8 @@
     @include font-settings (italic, 600, 18px, normal, $--text_color);
     opacity: .8;
   }
-  .portfolio__case {
+  .portfolio__case,
+  .news__case {
     margin-bottom: 24px;
     position: relative;
     height: 400px;

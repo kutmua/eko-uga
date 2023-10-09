@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function() {
+// document.addEventListener("DOMContentLoaded", function () {
   /* для корректного отображения загрузки страницы */
   document.getElementsByTagName("html")[0].style.visibility = "visible";
 
@@ -253,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ИНИЦИАЛИЗАЦИЯ БИБЛИОТЕК */
     /* iunput-mask, just-validate */
+  const siteKey = '6Ld8ZaonAAAAALB2L3TwOVkXYJrs7Wi06uCCX65U';
   const inputMask = new Inputmask('+7 (999) 999-99-99');
   const forms = document.querySelectorAll('.validate-form-js');
   const requestModal = new bootstrap.Modal('#requestModal', {
@@ -267,24 +269,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   forms.forEach(form => {
     const formBtnSubmit = form.querySelector('._form__btn.disable');
-
+  
     formBtnSubmit.addEventListener('click', function () {
       ym(93183406, 'reachGoal', 'formid');
       return true;
     });
-
+  
     // iunput-mask
     const inputTel = form.querySelector('input[type="tel"]');
-
+  
     inputMask.mask(inputTel);
-
+  
     /* --------- */
-
+  
     // just-validate
     const validation = new JustValidate(form, {
       errorFieldCssClass: 'is-invalid',
     });
     validation
+    .addField('.validate-form-botName-js', [
+      {
+        validator: (value)=>{
+          if (value.length > 0) {
+            location.replace("https://eko-yuga.ru/404.html");
+            return false;
+          }
+          else return true;
+        },
+        errorMessage: 'Обязательное поле',
+      },
+    ])
     .addField('.validate-form-phone-js', [
       {
         validator: (value)=>{
@@ -312,50 +326,87 @@ document.addEventListener("DOMContentLoaded", function () {
         errorMessage: 'Обязательное поле',
       },
     ])
-
+  
     .onSuccess((event) => {
-
       if(!formBtnSubmit.classList.contains('disable') && !formBtnSubmit.hasAttribute('disabled')){
         formBtnSubmit.setAttribute('disabled', '');
         formBtnSubmit.classList.add('disable');
       }
 
-      /* блок для эмуляции отправки формы для GitHub pages*/
-      const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
-        keyboard: true
-      })
+      /* блок reCaptcha */
+      let tk = '';
+  
+      grecaptcha.ready(function() {
+        grecaptcha.execute(siteKey, {action: 'homepage'}).then(function(token) {
+          tk = token;
+          form.querySelector('[data-token-id]').value = token;
+
+          let reCaptchaPhpPath = '';
+          const data = new URLSearchParams();
+
+          for (const pair of new FormData(form)) {
+            data.append(pair[0], pair[1]);
+          }
+
+          if (document.querySelector('.send-main-page.hidden')) {
+            reCaptchaPhpPath = 'reCaptcha.php'; 
+          }
+          else if (document.querySelector('.send-secondary-page.hidden')) {
+            reCaptchaPhpPath = '../reCaptcha.php';
+          }
+          
+          fetch(reCaptchaPhpPath, {
+            method: 'post',
+            body: data,
+          })
+          .then(response => response.json())
+          .then(result => {
+            if (result['om_score'] >= 0.5) {
+              console.log('Person');
+              // отправка данных на почту
+              let formData = new FormData(event.target);
+              let xhr = new XMLHttpRequest();
+
+              xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                  if (xhr.status === 200) {
+                    requestModal.hide();
+                    priceModal.hide();
+                    console.log('Отправлено');
+                    event.target.reset();
+                  }
+                }
+              }
+          
+              if (document.querySelector('.send-main-page.hidden')) {
+                xhr.open('POST', 'mail.php', true);
+                xhr.send(formData);
+                location.replace("https://eko-yuga.ru/thanks-page");
+              }
+              else if (document.querySelector('.send-secondary-page.hidden')) {
+                xhr.open('POST', '../mail.php', true);
+                xhr.send(formData);
+                location.replace("https://eko-yuga.ru/thanks-page");
+              }
+              
+            } 
+            else {
+              console.log('Bot');
+              alert("Извините! Вы не прошли проверку на робота. Повторите запрос позже!");
+            }
+          });
+        });
+      });
+
+
+      /* блок для эмуляции отправки формы для GitHub */
+      // const gratitudeModal = new bootstrap.Modal('#gratitudeModal', {
+      //   keyboard: true
+      // })
       // requestModal.hide();
       // priceModal.hide();
       // gratitudeModal.show();
       // event.target.reset();
-      /* --------------------------------- */
-
-      /* рабочий блок отправки формы на почту для хостинга*/
-      let formData = new FormData(event.target);
-
-      let xhr = new XMLHttpRequest();
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            requestModal.hide();
-            priceModal.hide();
-            console.log('Отправлено');
-            event.target.reset();
-          }
-        }
-      }
-
-      if (document.querySelector('.send-main-page.hidden')) {
-        xhr.open('POST', 'mail.php', true);
-        xhr.send(formData);
-        location.replace("https://eko-yuga.ru/thanks-page");
-      }
-      else if (document.querySelector('.send-secondary-page.hidden')) {
-        xhr.open('POST', '../mail.php', true);
-        xhr.send(formData);
-        location.replace("https://eko-yuga.ru/thanks-page");
-      }
     });
   })
 
@@ -497,4 +548,5 @@ document.addEventListener("DOMContentLoaded", function () {
       swiper: carsSwiperSmall2,
     },
   });
-});
+// });
+};

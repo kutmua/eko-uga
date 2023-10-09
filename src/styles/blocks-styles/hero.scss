@@ -9,8 +9,24 @@
 }
 .hero.section,
 .common-hero.section{
+  .hero__heading,
+  .hero__heading-third {
+    color: $--hero_text_color;
+  }
   .hero__heading {
     margin-bottom: 80px;
-    color: $--hero_text_color;
+  }
+  .hero__heading-third {
+    margin-bottom: 40px;
+  }
+}
+
+.demontazh-page .common-hero.section,
+.demontazh-detail-page .common-hero.section {
+  .hero__heading {
+    margin-bottom: 5px;
+  }
+  .hero__heading-third {
+    margin-bottom: 50px;
   }
 }

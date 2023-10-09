@@ -1,0 +1,113 @@
+<form class="price-form _form validate-form-js" action="mail.php" method="POST" enctype="multipart/form-data">
+  <div class="select-container price-form__input-container _form__input-container _select-container req d-flex">
+    <label for="select">Выберите из списка</label>
+    <select class="price-form__select _validate-form__select _form__select validate-form-select-js form-select overflow-auto" size="1" aria-label="Виды услуг" name="Услуга" data-form-select="" required>
+      <option value="Демонтаж блоков" data-value="stroitelniy" selected>Демонтаж блоков</option>
+      <option value="Демонтаж деревянного пола" data-value="bitovoi">Демонтаж деревянного пола</option>
+      <option value="Демонтаж домов" data-value="mebel">Демонтаж домов</option>
+      <option value="Демонтаж дверей" data-value="okna">Демонтаж дверей</option>
+      <option value="Снос гаража" data-value="derevo">Снос гаража</option>
+      <option value="Демонтаж стен из гипсокартона" data-value="trava">Демонтаж стен из гипсокартона</option>
+      <option value="Демонтаж кладки" data-value="sneg">Демонтаж кладки</option>
+      <option value="Демонтаж сооружений и конструкций" data-value="derevo">Демонтаж сооружений и конструкций</option>
+      <option value="Демонтаж крыши" data-value="trava">Демонтаж крыши</option>
+      <option value="Демонтаж кровли" data-value="sneg">Демонтаж кровли</option>
+      <option value="Демонтаж линолеума" data-value="derevo">Демонтаж линолеума</option>
+      <option value="Демонтаж натяжных потолков" data-value="trava">Демонтаж натяжных потолков</option>
+      <option value="Демонтаж обоев" data-value="sneg">Демонтаж обоев</option>
+      <option value="Демонтаж окон" data-value="derevo">Демонтаж окон</option>
+      <option value="Демонтаж оконных блоков" data-value="trava">Демонтаж оконных блоков</option>
+      <option value="Демонтаж паркета" data-value="sneg">Демонтаж паркета</option>
+      <option value="Демонтаж перегородок из гкл" data-value="derevo">Демонтаж перегородок из гкл</option>
+      <option value="Демонтаж перегородок из кирпича" data-value="trava">Демонтаж перегородок из кирпича</option>
+      <option value="Демонтаж плитки в ванной" data-value="sneg">Демонтаж плитки в ванной</option>
+      <option value="Демонтаж плитки" data-value="sneg">Демонтаж плитки</option>
+      <option value="Демонтаж пола" data-value="sneg">Демонтаж пола</option>
+      <option value="Демонтаж помещений" data-value="sneg">Демонтаж помещений</option>
+      <option value="Демонтаж сараев" data-value="sneg">Демонтаж сараев</option>
+      <option value="Демонтаж кровли из шифера" data-value="sneg">Демонтаж кровли из шифера</option>
+      <option value="Демонтаж штукатурки" data-value="sneg">Демонтаж штукатурки</option>
+      <option value="Демонтаж стен" data-value="sneg">Демонтаж стен</option>
+      <option value="Демонтаж стяжки" data-value="sneg">Демонтаж стяжки</option>
+      <option value="Демонтаж ворот" data-value="sneg">Демонтаж ворот</option>
+      <option value="Демонтаж заборов" data-value="sneg">Демонтаж заборов</option>
+      <option value="Демонтаж зданий и сооружений" data-value="sneg">Демонтаж зданий и сооружений</option>
+      <option value="Расширение дверных проемов" data-value="sneg">Расширение дверных проемов</option>
+      <option value="Разборка стен" data-value="sneg">Разборка стен</option>
+      <option value="Демонтажные работы" data-value="sneg">Демонтажные работы</option>
+      <option value="Демонтаж гаража" data-value="sneg">Демонтаж гаража</option>
+      <option value="Снос стен и перегородок" data-value="sneg">Снос стен и перегородок</option>
+      <option value="Демонтаж зданий и домов" data-value="sneg">Демонтаж зданий и домов</option>
+    </select>
+  </div>
+
+  <div class="value-container price-form__input-container _form__input-container _value-container d-flex">
+    <label for="value">Какой объем в кубах (не обязательно)</label>
+    <input class="price-form__value _validate-form__value _form__value validate-form-value-js" type="number" name="Объем" data-form-value="" value="1" min="0">
+  </div>
+
+  <div class="info-container price-form__input-container _form__input-container _info-container d-flex">
+    <label for="info">Можете описать, что нужно сделать</label>
+    <textarea class="price-form__info _validate-form__info _form__info validate-form-info-js" name="Описание" cols="40" rows="5" data-form-info="" maxlength='150' placeholder="Максимальная длинна 150 символов"></textarea>
+  </div>
+
+  <div class="file-container price-form__input-container _form__input-container _file-container input-group">
+    <label for="files">Можете отправить нам фото</label>
+    <input class="form-control" type="file" name="file[]" multiple id="files">
+  </div>
+
+  <div class="name-container price-form__input-container _form__input-container _name-container d-flex">
+    <label for="ФИО">Имя</label>
+    <input class="price-form__name _validate-form__name _form__name validate-form-name-js" type="text" name="ФИО" data-form-name="" placeholder="Имя">
+  </div>
+
+  <div class="phone-container price-form__input-container _form__input-container _phone-container req d-flex">
+    <label for="phone">Телефон</label>
+    <input class="price-form__phone _validate-form__phone _form__phone validate-form-phone-js" type="tel" name="Телефон" data-form-phone="" required>
+  </div>
+
+  <div class="_form__clock counter-js">
+    <div class="_form__clock-container">
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-day _form__clock-numbers" data-counter-indicator="day">00</span>
+        <p>дней</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-hour _form__clock-numbers" data-counter-indicator="hour">00</span>
+        <p>часов</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-minutes _form__clock-numbers" data-counter-indicator="minutes">00</span>
+        <p>минут</p>
+      </div>
+
+      <span class="_form__clock-separator">:</span>
+
+      <div class="_form__clock-container-part">
+        <span class="_form__clock-seconds _form__clock-numbers" data-counter-indicator="seconds">00</span>
+        <p>секунд</p>
+      </div>
+
+      <div class="_form__clock-descr">
+        <svg width="26px" height="30px" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M5.32710816,23.2855687 C7.7889367,13.7070646 10.4757971,7.11703829 13.4291505,3.48008932 C17.1965931,-1.15938127 21.569757,-1.13167763 25.9295252,3.49426878 L24.4740577,4.86598828 C20.9174774,1.09226695 17.9597394,1.07352992 14.9817268,4.74084572 C12.257865,8.09518405 9.68290774,14.4116595 7.29746023,23.6556027 C8.84034628,21.9860444 10.906837,20.3381877 13.4907629,18.7045447 L14.5595391,20.3950231 C9.77324059,23.4210787 6.99379861,26.4010157 6.1720226,29.2751311 L5.96430125,29.2157388 C5.95669217,29.2497994 5.94908504,29.2838916 5.94148004,29.3180155 L3.98937177,28.88296 C4.06068752,28.5629639 4.1321984,28.2456562 4.20390554,27.931036 L4.01198107,27.931036 C4.01198107,24.3192142 2.67921198,20.9854581 -0.016772578,17.8946093 L1.49043505,16.5799515 C3.32784036,18.6864702 4.60905326,20.9243571 5.32710816,23.2855687 Z" id="Combined-Shape" fill="rgb(22, 102, 241)" fill-rule="nonzero"></path>
+          </g>
+        </svg>
+
+        <p>До конца акции</p>
+      </div>
+
+    </div>
+  </div>
+
+  <input type="hidden" data-token-id="token" name="token">
+  <input class="d-none validate-form-botName-js" type="text" name="name" placeholder="Имя">
+  <button class="price-form__btn _form__btn button d-flex disable" type="submit" disabled>Рассчитать стоимость со скидкой в -10%</button>
+</form>

@@ -1,3 +1,12 @@
+.demontazh-page .discount.section,
+.demontazh-detail-page .discount.section {
+  background: rgba(0, 0, 0, .7) url(../img/demontazh-discount-bg.webp);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
 .discount.section {
   background: rgba(0, 0, 0, .7) url(../img/discount-bg.webp);
   background-blend-mode: darken;
